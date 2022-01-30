@@ -12,8 +12,8 @@
 module.exports = {
   title: 'My Site',
   tagline: 'The tagline of my site',
-  url: 'https://markolofsen.github.io/unrealos_doc/',
-  baseUrl: '/',
+  url: 'https://markolofsen.github.io',
+  baseUrl: '/unrealos_doc/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
