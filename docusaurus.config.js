@@ -10,8 +10,8 @@
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
+  title: 'UnrealOS',
+  tagline: `With Pixel Streaming, you run a packaged Unreal Engine application on a desktop PC or a server in the cloud, along with a small stack of web services that are included with the Unreal Engine.`,
   url: 'https://markolofsen.github.io',
   baseUrl: '/unrealos_doc/',
   onBrokenLinks: 'throw',
@@ -21,7 +21,7 @@ module.exports = {
   projectName: 'unrealos_doc', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Facebook Project',
+      title: 'UnrealOS',
       logo: {
         alt: 'My Facebook Project Logo',
         src: 'img/logo.svg',
@@ -33,13 +33,19 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        // {to: 'blog', label: 'Blog', position: 'left'},
         // Please keep GitHub link to the right for consistency.
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/markolofsen/pixel-streaming',
           label: 'GitHub',
           position: 'right',
         },
+        {
+          href: 'https://www.npmjs.com/package/pixel-streaming',
+          label: 'NPM',
+          position: 'right',
+        },
+
       ],
     },
     footer: {
