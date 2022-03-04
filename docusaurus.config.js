@@ -12,9 +12,14 @@
 module.exports = {
   title: 'UnrealOS',
   tagline: `With Pixel Streaming, you run a packaged Unreal Engine application on a desktop PC or a server in the cloud, along with a small stack of web services that are included with the Unreal Engine.`,
-  url: 'https://markolofsen.github.io',
+  
+  url: 'https://metaeditor.io/',
   baseUrl: '/',
-  // baseUrl: '/unrealos_doc/', // for gh-pages
+
+  // # for gh-pages
+  // url: 'https://markolofsen.github.io',
+  // baseUrl: '/unrealos_doc/',
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
