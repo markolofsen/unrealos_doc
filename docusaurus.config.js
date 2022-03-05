@@ -10,8 +10,8 @@
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'UnrealOS',
-  tagline: `With Pixel Streaming, you run a packaged Unreal Engine application on a desktop PC or a server in the cloud, along with a small stack of web services that are included with the Unreal Engine.`,
+  title: 'MetaEditor for Unreal Engine',
+  tagline: `MetaEditor — helps integrate Unreal Engine v.5 in the browser. Allows you to send commands and get callbacks from the stream server with launched Unreal Engine.`,
 
   url: 'https://metaeditor.io',
   baseUrl: '/',
@@ -27,9 +27,9 @@ module.exports = {
   projectName: 'unrealos_doc', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'UnrealOS',
+      title: 'MetaEditor',
       logo: {
-        alt: 'My Facebook Project Logo',
+        alt: 'MetaEditor',
         src: 'img/logo.svg',
       },
       items: [
@@ -39,18 +39,24 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        // {to: 'blog', label: 'Blog', position: 'left'},
+        {to: 'https://ps.metaeditor.io', label: 'Demo', position: 'left'},
+        {to: 'blog', label: 'Blog', position: 'left'},
         // Please keep GitHub link to the right for consistency.
         {
-          href: 'https://github.com/markolofsen/pixel-streaming',
-          label: 'GitHub',
+          href: 'https://unrealos.com',
+          label: 'unrealos.com',
           position: 'right',
         },
-        {
-          href: 'https://www.npmjs.com/package/pixel-streaming',
-          label: 'NPM',
-          position: 'right',
-        },
+        // {
+        //   href: 'https://github.com/markolofsen/pixel-streaming',
+        //   label: 'GitHub',
+        //   position: 'right',
+        // },
+        // {
+        //   href: 'https://www.npmjs.com/package/pixel-streaming',
+        //   label: 'NPM',
+        //   position: 'right',
+        // },
 
       ],
     },
@@ -61,13 +67,13 @@ module.exports = {
           title: 'Learn',
           items: [
             {
-              label: 'Style Guide',
+              label: 'Documentation',
               to: 'docs/',
             },
-            {
-              label: 'Second Doc',
-              to: 'docs/doc2',
-            },
+            // {
+            //   label: 'Second Doc',
+            //   to: 'docs/doc2',
+            // },
           ],
         },
         {
@@ -75,15 +81,15 @@ module.exports = {
           items: [
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              href: 'https://stackoverflow.com/questions/tagged/metaeditor',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: 'https://twitter.com/metaeditor',
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://discordapp.com/invite/metaeditor',
             },
           ],
         },
@@ -96,40 +102,40 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/facebook/metaeditor',
             },
           ],
         },
-        {
-          title: 'Legal',
-          // Please do not remove the privacy and terms, it's a legal requirement.
-          items: [
-            {
-              label: 'Privacy',
-              href: 'https://opensource.facebook.com/legal/privacy/',
-            },
-            {
-              label: 'Terms',
-              href: 'https://opensource.facebook.com/legal/terms/',
-            },
-            {
-              label: 'Data Policy',
-              href: 'https://opensource.facebook.com/legal/data-policy/',
-            },
-            {
-              label: 'Cookie Policy',
-              href: 'https://opensource.facebook.com/legal/cookie-policy/',
-            },
-          ],
-        },
+        // {
+        //   title: 'Legal',
+        //   // Please do not remove the privacy and terms, it's a legal requirement.
+        //   items: [
+        //     {
+        //       label: 'Privacy',
+        //       href: 'https://opensource.facebook.com/legal/privacy/',
+        //     },
+        //     {
+        //       label: 'Terms',
+        //       href: 'https://opensource.facebook.com/legal/terms/',
+        //     },
+        //     {
+        //       label: 'Data Policy',
+        //       href: 'https://opensource.facebook.com/legal/data-policy/',
+        //     },
+        //     {
+        //       label: 'Cookie Policy',
+        //       href: 'https://opensource.facebook.com/legal/cookie-policy/',
+        //     },
+        //   ],
+        // },
       ],
       logo: {
-        alt: 'Facebook Open Source Logo',
+        alt: 'UnrealOS',
         src: 'img/oss_logo.png',
-        href: 'https://opensource.facebook.com',
+        href: 'https://unrealos.com',
       },
       // Please do not remove the credits, help to publicize Docusaurus :)
-      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} UnrealOS, Inc.`,
     },
   },
   presets: [

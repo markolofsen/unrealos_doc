@@ -21,8 +21,8 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+      MetaEditor is a complete solution for running and testing projects built by Unreal Engine.
+      You can connect any web components to interact with the streaming server.
       </>
     ),
   },
@@ -31,8 +31,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        MetaEditor allows you to focus on the development of Unreal Engine, and we will take care of all the work of integrating into the browser.
       </>
     ),
   },
@@ -41,8 +40,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        A complete solution for launching your own project based on ReactJS and Pixel Streaming. MetaEditor allows you to customize the interaction between the browser and the Unreal Engine project.
       </>
     ),
   },
@@ -66,14 +64,18 @@ function Feature({imageUrl, title, description}) {
 export default function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
+  const previewUrl = useBaseUrl('assets/preview.png');
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description="MetaEditor — helps integrate Unreal Engine v.5 in the browser. Allows you to send commands and get callbacks from the stream server with launched Unreal Engine.">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
+
+          <img className={styles.preview} src={previewUrl} alt={siteConfig.title} />
+
           <div className={styles.buttons}>
             <Link
               className={clsx(

@@ -9,8 +9,8 @@
 
 module.exports = {
   someSidebar: {
-    PixelStreaming: ['doc4'],
-    Docusaurus: ['doc1', 'doc2', 'doc3',],
-    Features: ['mdx'],
+    PixelStreaming: ['ps_main'],
+    // Docusaurus: ['doc1', 'doc2', 'doc3',],
+    // Features: ['mdx'],
   },
 };

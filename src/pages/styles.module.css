@@ -25,6 +25,13 @@
   }
 }
 
+.preview {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
 .buttons {
   display: flex;
   align-items: center;
