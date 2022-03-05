@@ -22,7 +22,7 @@ module.exports = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
   organizationName: 'markolofsen', // Usually your GitHub org/user name.
   projectName: 'unrealos_doc', // Usually your repo name.
   themeConfig: {
@@ -161,6 +161,10 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: 'G-MCJPYV0KFS',
+          anonymizeIP: true,
         },
       },
     ],
