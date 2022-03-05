@@ -101,9 +101,14 @@ module.exports = {
               to: 'blog',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/metaeditor',
+              label: 'Contacts',
+              href: 'https://unrealos.com/contacts/',
             },
+
+            // {
+            //   label: 'GitHub',
+            //   href: 'https://github.com/facebook/metaeditor',
+            // },
           ],
         },
         // {

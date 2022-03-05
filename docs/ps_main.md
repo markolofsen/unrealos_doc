@@ -18,11 +18,7 @@ Connects to running [STUN and TURN Servers](https://docs.unrealengine.com/4.27/e
 
 ## Installation
 
-```bash
-npm install pixel-streaming
-# or
-yarn add pixel-streaming
-```
+[Instruction](ps_installation)
 
 ## Usage
 

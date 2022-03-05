@@ -9,7 +9,7 @@
 
 module.exports = {
   someSidebar: {
-    PixelStreaming: ['ps_main'],
+    PixelStreaming: ['ps_main', 'ps_installation', 'ps_support'],
     // Docusaurus: ['doc1', 'doc2', 'doc3',],
     // Features: ['mdx'],
   },
