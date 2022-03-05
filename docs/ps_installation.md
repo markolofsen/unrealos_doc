@@ -9,7 +9,7 @@ sidebar_label: Installation
 
   `git clone repo`
 
-2. Change to the root directory and set up the environment:
+2. Open root directory and set up the environment:
 
   `npm run install` or `yarn install`
 
