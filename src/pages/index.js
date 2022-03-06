@@ -74,16 +74,26 @@ export default function Home() {
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
 
-          <img className={styles.preview} src={previewUrl} alt={siteConfig.title} />
+          {/*<img className={styles.preview} src={previewUrl} alt={siteConfig.title} />*/}
+
+          <iframe className={styles.preview} src="https://www.youtube.com/embed/MrJ5xhJpB6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
           <div className={styles.buttons}>
             <Link
               className={clsx(
-                'button button--outline button--secondary button--lg',
+                'button button--contained button--secondary button--lg',
                 styles.getStarted,
               )}
               to={useBaseUrl('docs/')}>
-              Get Started
+              Documentation
+            </Link>
+            <Link
+              className={clsx(
+                'button button--contained button--secondary button--lg',
+                styles.getStarted,
+              )}
+              href="https://ps.metaeditor.io">
+              Demo
             </Link>
           </div>
         </div>

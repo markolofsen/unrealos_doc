@@ -27,15 +27,26 @@
 
 .preview {
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
+  height: 400px;
   border-radius: 10px;
-  margin-bottom: 30px;
+  margin: 20px 0 30px;
+}
+
+@media screen and (max-width: 966px) {
+  .preview {
+    height: 250px;
+  }
 }
 
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.getStarted {
+  margin: 5px;
+  padding: 15px 25px;
 }
 
 .features {

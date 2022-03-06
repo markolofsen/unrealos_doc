@@ -9,7 +9,17 @@
 
 module.exports = {
   someSidebar: {
-    PixelStreaming: ['ps_main', 'ps_installation', 'ps_support'],
+    'Documentation': [
+      'ps_main',
+      'ps_installation',
+      'ps_support',
+      {
+        "type": "link",
+        "label": "Demo",
+        "href": "https://ps.metaeditor.io"
+      },
+    ],
+
     // Docusaurus: ['doc1', 'doc2', 'doc3',],
     // Features: ['mdx'],
   },
