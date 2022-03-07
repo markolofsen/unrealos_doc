@@ -2,16 +2,24 @@
 id: ps_installation
 title: Installation instructions
 sidebar_label: Installation
-
 ---
+
+import variables from '@site/variables.js';
 
 1. Download the repository:
 
-  `git clone repo`
+  <pre>
+    <code>
+      git clone {variables.repo.git}
+    </code>
+  </pre>
 
 2. Open root directory and set up the environment:
 
-  `npm run install` or `yarn install`
+  ```bash
+  npm run install
+  # or yarn install
+  ```
 
 3. Set up the configuration:
 
@@ -25,4 +33,7 @@ sidebar_label: Installation
 
 5. Run the project:
 
-  `npm run start` or `yarn start`
+  ```bash
+  npm run start
+  # or yarn start
+  ```

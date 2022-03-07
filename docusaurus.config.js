@@ -7,6 +7,8 @@
  * @format
  */
 
+const variables = require('./variables.js');
+
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -48,20 +50,10 @@ module.exports = {
         {to: 'blog', label: 'Blog', position: 'left'},
         // Please keep GitHub link to the right for consistency.
         {
-          href: 'https://unrealos.com',
-          label: 'unrealos.com',
+          href: variables.repo.url,
+          label: 'GitHub',
           position: 'right',
         },
-        // {
-        //   href: 'https://github.com/markolofsen/pixel-streaming',
-        //   label: 'GitHub',
-        //   position: 'right',
-        // },
-        // {
-        //   href: 'https://www.npmjs.com/package/pixel-streaming',
-        //   label: 'NPM',
-        //   position: 'right',
-        // },
 
       ],
     },
@@ -86,15 +78,15 @@ module.exports = {
           items: [
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/metaeditor',
+              href: 'https://stackoverflow.com/questions/tagged/'+variables.namespace,
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/metaeditor',
+              href: 'https://twitter.com/'+variables.namespace,
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/metaeditor',
+              href: 'https://discordapp.com/invite/'+variables.namespace,
             },
           ],
         },
@@ -107,13 +99,12 @@ module.exports = {
             },
             {
               label: 'Contacts',
-              href: 'https://unrealos.com/contacts/',
+              href: variables.contacts.url,
             },
-
-            // {
-            //   label: 'GitHub',
-            //   href: 'https://github.com/facebook/metaeditor',
-            // },
+            {
+              label: 'Issues',
+              href: variables.repo.issues,
+            },
           ],
         },
         // {
@@ -140,12 +131,12 @@ module.exports = {
         // },
       ],
       logo: {
-        alt: 'UnrealOS',
+        alt: variables.company.name,
         src: 'img/oss_logo.png',
-        href: 'https://unrealos.com',
+        href: variables.company.url,
       },
       // Please do not remove the credits, help to publicize Docusaurus :)
-      copyright: `Copyright © ${new Date().getFullYear()} UnrealOS, Inc.`,
+      copyright: `Copyright © ${new Date().getFullYear()} ${variables.company.name}, Inc.`,
     },
   },
   presets: [
@@ -155,20 +146,18 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/markolofsen/unrealos_doc/edit/main/',
+          editUrl: variables.presets.editUrl,
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/markolofsen/unrealos_doc/edit/main/',
+          editUrl: variables.presets.editUrl,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
         gtag: {
-          trackingID: 'G-MCJPYV0KFS',
+          trackingID: variables.config.googleTag,
           anonymizeIP: true,
         },
       },

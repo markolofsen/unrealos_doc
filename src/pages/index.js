@@ -76,7 +76,7 @@ export default function Home() {
 
           {/*<img className={styles.preview} src={previewUrl} alt={siteConfig.title} />*/}
 
-          <iframe className={styles.preview} src="https://www.youtube.com/embed/MrJ5xhJpB6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe className={styles.preview} src="https://www.youtube.com/embed/videoseries?list=PLvmabfuPusIu_0mo4oPdj5gnL9_L_qqxh&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
           <div className={styles.buttons}>
             <Link
