@@ -15,6 +15,10 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
+// docs
+import Description from '@site/docs/ps_main.md'
+
+
 const features = [
   {
     title: 'Easy to Use',
@@ -55,8 +59,8 @@ function Feature({imageUrl, title, description}) {
           <img className={styles.featureImage} src={imgUrl} alt={title} />
         </div>
       )}
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <h3 className="text--center">{title}</h3>
+      <p className="text--center">{description}</p>
     </div>
   );
 }
@@ -99,6 +103,7 @@ export default function Home() {
         </div>
       </header>
       <main>
+
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
@@ -115,6 +120,13 @@ export default function Home() {
             </div>
           </section>
         )}
+
+        <section className={styles.description}>
+          <div className="container">
+            <Description name="ps_main" />
+          </div>
+        </section>
+
       </main>
     </Layout>
   );

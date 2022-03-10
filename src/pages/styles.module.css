@@ -49,6 +49,30 @@
   padding: 15px 25px;
 }
 
+.description {
+  width: 100%;
+}
+.description div {
+  padding: 5rem;
+  max-width: 800px;
+  margin: 0 auto 5rem;
+  background-color: rgba(255,255,255, .03);
+  border-radius: 10px;
+}
+/* .description img {
+  max-width: 600px;
+} */
+
+@media screen and (max-width: 966px) {
+  .description div {
+    /* max-width: 100%; */
+    padding: 2rem;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+
 .features {
   display: flex;
   align-items: center;
@@ -57,6 +81,7 @@
 }
 
 .featureImage {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
+  margin: 40px 0;
 }
