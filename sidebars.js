@@ -12,6 +12,7 @@ module.exports = {
     'Documentation': [
       'ps_main',
       'ps_installation',
+      'ps_node',
       'ps_support',
       {
         "type": "link",

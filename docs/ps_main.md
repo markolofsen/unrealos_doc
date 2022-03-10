@@ -9,190 +9,84 @@ slug: /
 
 MetaEditor.io — helps integrate Unreal Engine v.5 in the browser. Allows you to send commands and get callbacks from the stream server with launched Unreal Engine.
 
-Connects to running [STUN and TURN Servers](https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/PixelStreaming/Hosting/).
-
-
 ![img](/assets/preview.png)
 
 ---
 
-## Installation
+The standard implementation of PixelStreaming greatly complicates the development of your own reactive web applications for Unreal Engine. Initially, PixelStreaming is a no-architecture javascript solution for interacting with reactive web frameworks. Adapting standard PixelStreaming for ReactJS is a very long and laborious process, which significantly increases development time, because. there are a lot of technical problems to solve related to the peculiarities of browsers, devices and reactive technologies (like ReactJS, Angular or Vue).
 
-[Instruction](ps_installation)
+MetaEditor is a professional web application development solution based on ReactJS and PixelStreaming.
 
-## Usage
+### **Advantages**
 
-```javascript
-import React from 'react';
+MetaEditor solves most of the possible problems when developing web applications for streaming from Unreal Engine:
 
-// libs
-import PixelStreaming, {DebugData} from 'pixel-streaming';
+- Cloud streaming solution
+- Plugin for Unreal Engine IDE
+- Developer tools
+- A set of professional web components
+- Adaptation for mobile devices
+- Progress bar with the process of starting a cloud server
+- Video quality optimization, connection speed control
+- Notifications. For example, if the connection is lost or there is no activity
 
-function App() {
-  const refPixelStreaming = React.useRef(null)
-  const [serverData, setServerData] = React.useState({host: 'http://127.0.0.1', port: 80})
+**Flexibility**
 
-  const actionClass = new class {
-    constructor() {
-      this.ref = refPixelStreaming.current
-    }
+When developing MetaEditor, we created a universal architecture that makes it easy to deploy and customize your ReactJS application without the risk of breaking something.
 
-    _emit(type, value, verification_id=undefined) {
-      this.ref.emit({type, value, verification_id})
-    }
+MetaEditor allows you to focus on developing the interface of your application, built on top of it, without delving into the complex technical details of Pixel Streaming technology.
 
-    emitTestCommand(value) {
-      this._emit('test_command_type', value)
-    }
-  }
+**Components**
 
-  const renderForm = ({state, initConnection}) => {
-    if(state.loaded) {
-      return (
-        <button onClick={() => actionClass.emitTestCommand(11)}>
-          Test command
-        </button>
-      )
-    }
+We have created and adapted a set of ReactJS components that solve the basic tasks of your web application (taking into account the features of streaming video).
 
-    return (
-      <form onSubmit={(event) => {
-        event.preventDefault()
-        event.stopPropagation()
+**MetaEditor Features**
 
-        initConnection()
-      }}>
-        <input type="text" placeholder="http://127.0.0.1" value={serverData.host} onChange={(event) => setServerData(c => ({
-          ...c, host: event.target.value
-        }))} />
-        <input style={{width: 50}} type="number" placeholder="80" value={serverData.port} onChange={(event) => setServerData(c => ({
-          ...c, port: event.target.value
-        }))} />
-        <button type="submit">Connect</button>
-      </form>
-    )
-  }
+- ReactJS
+- Pixel streaming
+- Material (MUI)
+- Next.js
 
-  return (
-    <div>
+### **Unreal Engine Plugin**
 
-      <PixelStreaming
-        ref={refPixelStreaming}
-        onLoad={(payload) => {
-          console.warn('loaded', payload);
-        }}
-        onConnect={() => {
-          console.warn('connected');
-        }}
-        onRestart={() => {
-          // ...
-        }}
-        onError={(payload) => {
-          console.error('error', payload);
-        }}
-        onClose={(payload) => {
-          console.error('closed', payload);
-        }}
-        onCallback={(payload => {
-          console.warn('callback', payload);
-        })}
-        onProgress={(payload) => {
-          console.warn('progress', payload);
-        }}
-        onDebug={(payload) => {
-          console.warn('debug', payload);
-        }}
-        secondsToStart={300}
-        autoConnect={false}
-        host={serverData.host}
-        port={serverData.port} >
-        {({state, initConnection}) => (
-          <div style={{padding: 30}}>
+Also, we have developed a plug-in for Unreal Engine 5, with the help of which your web application interacts with a project on Unreal Engine.
 
-            {renderForm({state, initConnection})}
+Commands sent to the Unreal Engine from MetaEditor are asynchronous, so each command receives a response when executed.
 
-            {<pre>{JSON.stringify(state, null, 4)}</pre>}
+We have added the possibility of one-way callbacks, so the MetaEditor interface responds to events in the Unreal Engine. For example, when clicking on some 3D object in your application, you can launch the [MetaMask](https://metamask.io/) plugin using [web3.js](https://www.npmjs.com/package/web3)
 
-            <DebugData
-              show
-              style={{width: 300, backgroundColor: 'rgba(0,0,0,.2)'}}
-            />
+### **Developer Tools**
 
-          </div>
-        )}
-      </PixelStreaming>
+When developing a web application for Unreal Engine, it is important to have convenient testing tools:
 
-    </div>
-  )
-}
+- Local connection. The ability to connect to a local server to test web applications during development without leaving the Unreal Engine IDE.
+- Team manager. A detailed report on all sent commands and received callbacks, with the ability to add your own commands.
+- State tree. Shows the current state of your webrtc streaming.
+- Emergency reboot. Allows you to restart the streaming server in case of any error (suitable for cloud streaming).
+- Advanced logging system. MetaEditor decomposes system messages from a webrtc connection and displays them in the developer's interface.
+- [Sentry](https://sentry.io/) to track errors on the side of the client session
 
-export default App
-```
+### **Cloud Streaming**
 
-## Props
+Cloud Streaming from MetaEditor allows you to dynamically scale cloud servers to stream your 3D content created in Unreal Engine.
 
-| Prop           | Description                                                                                                                                                                                                                                                                                                                 | Type       |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| secondsToStart | Approximate stream start time in seconds.<br/>Default: `0`                                                                                                                                                                                                                                                                  | `int`      |
-| autoConnect    | Connect to stream automatically. <br/>Default: `true`                                                                                                                                                                                                                                                                       | `bool`     |
-| host           | String host to url with signal server.<br/>If host starts wih `https` then it will be used `wss` <br/>If starts with `http` then will be used `ws`<br/>Example: `https://uuid1234567890.streamdomain.com`                                                                                                                   | `string`   |
-| port           | Port of signal server.<br/>Default: `80`                                                                                                                                                                                                                                                                                    | `int`      |
-| children       | The function receives parameters and renders the nested component <br/>Example: `{(payload) => (...)}` <br/><br/>**Incoming parameters:** <br/>`state` — [Object with state data](#ps-state)<br/>`initConnection()` — If `autoConnect={false}`, then use the `initConnection()` function to manually connect to the stream. | `function` |
-| onLoad         | When the stream started                                                                                                                                                                                                                                                                                                     | `function` |
-| onConnect      | Called when the stream is running                                                                                                                                                                                                                                                                                           |            |
-| onRestart      | Called when the stream is restarted                                                                                                                                                                                                                                                                                         | `function` |
-| onError        | Called on errors in the webrtc connection                                                                                                                                                                                                                                                                                   |            |
-| onClose        | Called if the webrtc connection is closed                                                                                                                                                                                                                                                                                   |            |
-| onCallback     | Called when the stream server sends callbacks                                                                                                                                                                                                                                                                               |            |
-| onProgress     | Return progress in percentage based on `secondsToStart`                                                                                                                                                                                                                                                                     | `function` |
-| onDebug        | Incoming parameters:<br/>`onDebug={({type, payload}) => {...}}`<br/><br/>Types: `func, log, warn, info, error`                                                                                                                                                                                                              | `function` |
+The system automatically launches the required number of cloud servers, for example, at the time of a large influx of users.
 
+Thanks to autoscaling, you can significantly optimize the cost of renting servers for streaming.
 
-<h2 id="ps-state">Reference object data</h2>
+To control cloud servers in real time, you can use the MetaEditor app from the App Store. You'll receive push notifications, manage active connections, and control cloud computing costs.
 
-`refPixelStreaming.current.state`
+**Parameters:**
 
-| Variable              | Default                 | Description |
-| --------------------- | ----------------------- | ----------- |
-| aggregated_stats      | `false`                 |             |
-| callback_caller       | `false`                 |             |
-| callback_loading      | `false`                 |             |
-| closed                | `false`                 |             |
-| connect               | `false`                 |             |
-| error                 | `false`                 |             |
-| last_interaction      | `null`                  |             |
-| loaded                | `false`                 |             |
-| mouse_moving          | `false`                 |             |
-| quality_speed         | `false`                 |             |
-| resolution_multiplier | `1.5`                   |             |
-| stream_config         | `false`                 |             |
-| users_count           | `0`                     |             |
-| window_size           | `{width: 0, height: 0}` |             |
+- cost optimization
+- up to 5.000 simultaneous connections
+- AWS data center
+- OS Linux
+- any server configurations with GPU.
+- fast project update
 
-## Send command to stream server
+## Future plans
 
-```javascript
-refPixelStreaming.current.emit({
- type: 'string', //key of command
- value: 0, //string, bool, number
- verification_id: undefined, //server response with execute command by verification id
-})
-```
-
-## Attention!
-
-- React v.`17.0.2`
-
-- Apply style `pointerEvents: 'none'` to all JSX elements that overlap the stream.
-
-## Built With
-
-- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
-- [Unreal Engine Pixel Streaming](https://docs.unrealengine.com/5.0/en-US) - Library for Unreal Engine.
-- [Styled Jss](https://www.npmjs.com/package/styled-jss) - Styled Components on top of JSS
-
----
-
-**Use with pleasure!**
-
-[UnrealOS.com](http://unrealos.com/) Team
+- Publishing MetaEditor plugin in UE Marketplace
+- Improved documentation
+- Development of MetaEditor for Angular and Vue
