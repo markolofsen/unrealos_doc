@@ -60,7 +60,7 @@ We have added the possibility of one-way callbacks, so the MetaEditor interface 
 When developing a web application for Unreal Engine, it is important to have convenient testing tools:
 
 - Local connection. The ability to connect to a local server to test web applications during development without leaving the Unreal Engine IDE.
-- Team manager. A detailed report on all sent commands and received callbacks, with the ability to add your own commands.
+- Command manager. A detailed report on all sent commands and received callbacks, with the ability to add your own commands.
 - State tree. Shows the current state of your webrtc streaming.
 - Emergency reboot. Allows you to restart the streaming server in case of any error (suitable for cloud streaming).
 - Advanced logging system. MetaEditor decomposes system messages from a webrtc connection and displays them in the developer's interface.
