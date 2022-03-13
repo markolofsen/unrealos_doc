@@ -1,7 +1,6 @@
 ---
-id: ps_node
-title: Module for node.js
-sidebar_label: Module for node.js
+title: Node module settings
+sidebar_label: Settings
 ---
 
 # Module for node.js

@@ -9,17 +9,26 @@
 
 module.exports = {
   someSidebar: {
-    'Documentation': [
-      'ps_main',
-      'ps_installation',
-      'ps_node',
-      'ps_support',
+    'Main': [
+      'main/description',
+      'main/support',
       {
         "type": "link",
         "label": "Demo",
         "href": "https://ps.metaeditor.io"
       },
     ],
+    'ReactJS framework': [
+      'reactjs/installation',
+      'reactjs/config',
+    ],
+    'Node.js library': [
+      'nodejs/settings',
+    ],
+    'Developer tools': [
+      'dev/hotkeys',
+    ],
+
 
     // Docusaurus: ['doc1', 'doc2', 'doc3',],
     // Features: ['mdx'],

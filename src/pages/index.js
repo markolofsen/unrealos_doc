@@ -16,7 +16,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 // docs
-import Description from '@site/docs/ps_main.md'
+import Description from '@site/docs/main/description.md'
 
 
 const features = [

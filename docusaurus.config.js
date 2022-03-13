@@ -12,8 +12,8 @@ const variables = require('./variables.js');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'MetaEditor for Unreal Engine',
-  tagline: `MetaEditor — helps integrate Unreal Engine v.5 in the browser. Allows you to send commands and get callbacks from the stream server with launched Unreal Engine.`,
+  title: 'MetaEditor — Pixel Streaming for Unreal Engine (ReactJS)',
+  tagline: `MetaEditor streamlines PixelStreaming development to allow businesses to easily deploy and customize their ReactJS application for Unreal Engine.`,
 
   url: 'https://metaeditor.io',
   baseUrl: '/',
@@ -86,7 +86,7 @@ module.exports = {
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/'+variables.namespace,
+              href: variables.contacts.discordUrl,
             },
           ],
         },

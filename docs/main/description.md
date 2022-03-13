@@ -1,5 +1,5 @@
 ---
-id: ps_main
+id: description
 title: Description
 sidebar_label: Description
 slug: /

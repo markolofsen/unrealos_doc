@@ -14,6 +14,7 @@ module.exports = {
   },
   contacts: {
     url: 'https://unrealos.com/contacts/',
+    discordUrl: 'https://discordapp.com/invite/eGHKuQ3BHM',
   },
   config: {
     googleTag: 'G-MCJPYV0KFS',
