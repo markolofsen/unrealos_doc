@@ -4,9 +4,9 @@ module.exports = {
   namespace: 'metaeditor',
   homepage: 'https://metaeditor.io',
   repo: {
-    url: 'https://github.com/markolofsen/pixel_streaming_nextjs',
-    git: 'https://github.com/markolofsen/pixel_streaming_nextjs.git',
-    issues: 'https://github.com/markolofsen/pixel_streaming_nextjs/issues',
+    url: 'https://github.com/markolofsen/metaeditor',
+    git: 'https://github.com/markolofsen/metaeditor.git',
+    issues: 'https://github.com/markolofsen/metaeditor/issues',
   },
   company: {
     name: 'UnrealOS',
