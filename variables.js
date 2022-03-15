@@ -1,12 +1,13 @@
 
+const namespace = 'metaeditor'
 
 module.exports = {
-  namespace: 'metaeditor',
+  namespace,
   homepage: 'https://metaeditor.io',
   repo: {
-    url: 'https://github.com/markolofsen/metaeditor',
-    git: 'https://github.com/markolofsen/metaeditor.git',
-    issues: 'https://github.com/markolofsen/metaeditor/issues',
+    url: `https://github.com/markolofsen/${namespace}`,
+    git: `https://github.com/markolofsen/${namespace}.git`,
+    issues: `https://github.com/markolofsen/${namespace}/issues`,
   },
   company: {
     name: 'UnrealOS',
@@ -15,6 +16,8 @@ module.exports = {
   contacts: {
     url: 'https://unrealos.com/contacts/',
     discordUrl: 'https://discordapp.com/invite/eGHKuQ3BHM',
+    stackoverflowUrl: `https://stackoverflow.com/questions/tagged/${namespace}`,
+    twitterUrl: `https://twitter.com/${namespace}`,
   },
   config: {
     googleTag: 'G-MCJPYV0KFS',

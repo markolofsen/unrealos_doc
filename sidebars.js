@@ -28,6 +28,11 @@ module.exports = {
     'Developer tools': [
       'dev/hotkeys',
     ],
+    'Cloud Streaming': [
+      'streaming/desc',
+      'streaming/spec',
+      'streaming/faq',
+    ]
 
 
     // Docusaurus: ['doc1', 'doc2', 'doc3',],

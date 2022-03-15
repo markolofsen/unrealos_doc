@@ -10,3 +10,4 @@ sidebar_label: Hot keys
 | -------- | ---------------------------------- |
 | `Ctrl+Z` | Show debug panel                   |
 | `Ctrl+R` | Manual restart cloud stream server |
+| `Ctrl+F` | Fullscreen mode                    |

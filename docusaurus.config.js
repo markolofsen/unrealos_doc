@@ -15,7 +15,7 @@ module.exports = {
   title: 'MetaEditor — Pixel Streaming for Unreal Engine (ReactJS)',
   tagline: `MetaEditor streamlines PixelStreaming development to allow businesses to easily deploy and customize their ReactJS application for Unreal Engine.`,
 
-  url: 'https://metaeditor.io',
+  url: variables.homepage,
   baseUrl: '/',
 
   // # for gh-pages
@@ -78,11 +78,11 @@ module.exports = {
           items: [
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/'+variables.namespace,
+              href: variables.contacts.stackoverflowUrl,
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/'+variables.namespace,
+              href: variables.contacts.twitterUrl,
             },
             {
               label: 'Discord',
