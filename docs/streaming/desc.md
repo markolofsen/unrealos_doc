@@ -3,7 +3,7 @@ title: Cloud Streaming Platform
 sidebar_label: Description
 ---
 
-## **Deploy. Scale. Stream.**
+## **Deploy. Stream. Scale.**
 
 ## **The next generation of enterprise streaming.**
 

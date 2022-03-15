@@ -18,9 +18,13 @@ module.exports = {
         "href": "https://ps.metaeditor.io"
       },
     ],
-    'ReactJS framework': [
+    'MetaEditor': [
       'reactjs/installation',
       'reactjs/config',
+    ],
+    'Customzation': [
+      'ui/material/icons',
+      'ui/material/theme',
     ],
     'Node.js library': [
       'nodejs/settings',
