@@ -12,8 +12,8 @@ const variables = require('./variables.js');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'MetaEditor — Pixel Streaming for Unreal Engine (ReactJS)',
-  tagline: `MetaEditor streamlines PixelStreaming development to allow businesses to easily deploy and customize their ReactJS application for Unreal Engine.`,
+  title: variables.seo.title,
+  tagline: variables.seo.description,
 
   url: variables.homepage,
   baseUrl: '/',
@@ -28,8 +28,19 @@ module.exports = {
   organizationName: 'markolofsen', // Usually your GitHub org/user name.
   projectName: 'unrealos_doc', // Usually your repo name.
   themeConfig: {
+    image: variables.seo.ogImage,
+    // metadata: [{name: 'twitter:card', content: 'summary'}],
+    announcementBar: {
+      id: 'support_us',
+      content:
+        `Tell us <a target="_blank" rel="noopener noreferrer" href="${variables.repo.issues}">how to improve</a> MetaEditor`,
+      backgroundColor: '#fafbfc',
+      textColor: '#091E42',
+      isCloseable: false,
+    },
+
     colorMode: {
-      defaultMode: 'light',
+      defaultMode: 'dark',
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },

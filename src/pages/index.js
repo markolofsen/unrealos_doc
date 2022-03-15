@@ -11,9 +11,12 @@ import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
+
+import variables from '/variables.js';
 
 // docs
 import Description from '@site/docs/main/description.md'
@@ -71,8 +74,9 @@ export default function Home() {
   const previewUrl = useBaseUrl('assets/preview.png');
   return (
     <Layout
-      title={`${siteConfig.title}`}
-      description="MetaEditor — helps integrate Unreal Engine v.5 in the browser. Allows you to send commands and get callbacks from the stream server with launched Unreal Engine.">
+      title={siteConfig.title}
+      description={siteConfig.tagline}>
+
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>

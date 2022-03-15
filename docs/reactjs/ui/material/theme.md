@@ -11,7 +11,6 @@ import React from 'react';
 // styles
 import { styled, css } from 'styles/snippets'
 import { styled, darken, lighten, alpha } from 'styles/snippets'
-import { styled, darken, alpha } from '@mui/material/styles';
 
 const RootDiv = styled.div(theme => ({
 }))

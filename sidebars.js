@@ -23,8 +23,8 @@ module.exports = {
       'reactjs/config',
     ],
     'Customzation': [
-      'ui/material/icons',
-      'ui/material/theme',
+      'reactjs/ui/material/icons',
+      'reactjs/ui/material/theme',
     ],
     'Node.js library': [
       'nodejs/settings',
@@ -32,14 +32,11 @@ module.exports = {
     'Developer tools': [
       'dev/hotkeys',
     ],
-    'Cloud Streaming': [
-      'streaming/desc',
-      'streaming/spec',
-      'streaming/faq',
-    ]
+    // 'Cloud Streaming': [
+    //   'streaming/desc',
+    //   'streaming/spec',
+    //   'streaming/faq',
+    // ]
 
-
-    // Docusaurus: ['doc1', 'doc2', 'doc3',],
-    // Features: ['mdx'],
   },
 };
