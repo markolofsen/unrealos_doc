@@ -32,6 +32,7 @@ module.exports = {
     ],
     'Developer tools': [
       'dev/hotkeys',
+      'dev/localhost',
     ],
     // 'Cloud Streaming': [
     //   'streaming/desc',
