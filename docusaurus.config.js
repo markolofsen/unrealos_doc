@@ -32,11 +32,14 @@ module.exports = {
     // metadata: [{name: 'twitter:card', content: 'summary'}],
     announcementBar: {
       id: 'support_us',
-      content:
-        `Tell us <a target="_blank" rel="noopener noreferrer" href="${variables.repo.issues}">how to improve</a> MetaEditor`,
-      backgroundColor: '#fafbfc',
-      textColor: '#091E42',
-      isCloseable: false,
+      content: `
+        <a href="/careers" rel="noopener noreferrer" style="display: block; text-decoration: auto;">
+          <b>C++ programmer needed!</b>
+        </a>
+      `,
+      backgroundColor: 'var(--ifm-color-primary)',
+      textColor: '#fff',
+      isCloseable: true,
     },
 
     colorMode: {
@@ -57,9 +60,11 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'https://ps.metaeditor.io', label: 'Demo', position: 'left'},
-        {to: 'blog', label: 'Blog', position: 'left'},
+        // {to: 'blog', label: 'Blog', position: 'left'},
+        {to: 'careers', label: 'Careers', position: 'left'},
+        {to: 'contacts', label: 'Contacts', position: 'left'},
         // Please keep GitHub link to the right for consistency.
+        {to: 'https://ps.metaeditor.io', label: 'Demo', position: 'right'},
         {
           href: variables.repo.url,
           label: 'GitHub',
@@ -77,6 +82,10 @@ module.exports = {
             {
               label: 'Documentation',
               to: 'docs/',
+            },
+            {
+              label: 'Issues',
+              href: variables.repo.issues,
             },
             // {
             //   label: 'Second Doc',
@@ -104,17 +113,17 @@ module.exports = {
         {
           title: 'More',
           items: [
+            // {
+            //   label: 'Blog',
+            //   to: 'blog',
+            // },
             {
-              label: 'Blog',
-              to: 'blog',
+              label: 'Careers',
+              to: 'careers',
             },
             {
               label: 'Contacts',
-              href: variables.contacts.url,
-            },
-            {
-              label: 'Issues',
-              href: variables.repo.issues,
+              to: 'contacts',
             },
           ],
         },
@@ -162,6 +171,8 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: variables.presets.editUrl,
+          docLayoutComponent: '@theme/DocPage',
+          docItemComponent: '@theme/DocItem',
         },
         blog: {
           showReadingTime: true,

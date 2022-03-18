@@ -13,6 +13,7 @@ module.exports = {
   company: {
     name: 'UnrealOS',
     url: 'https://unrealos.com',
+    email: 'info@unrealos.com',
   },
   seo: {
     ogImage: '/img/og_default.jpg',

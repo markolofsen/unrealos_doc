@@ -3,6 +3,8 @@ title: Technical Specs
 sidebar_label: Technical Specs
 ---
 
+import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
 ### Supported Game Engines
 
 > Unreal Engine 4.23, 4.24, 4.26;
@@ -64,3 +66,5 @@ sidebar_label: Technical Specs
 > Singapore
 
 > Sydney (AWS regions)
+
+<DocsMessage />

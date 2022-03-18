@@ -11,7 +11,6 @@ module.exports = {
   someSidebar: {
     'Main': [
       'main/description',
-      'main/support',
       {
         "type": "link",
         "label": "Demo",
@@ -21,6 +20,8 @@ module.exports = {
     'MetaEditor': [
       'reactjs/installation',
       'reactjs/config',
+      'reactjs/streaming',
+      'reactjs/deployment',
     ],
     'Customzation': [
       'reactjs/ui/material/icons',

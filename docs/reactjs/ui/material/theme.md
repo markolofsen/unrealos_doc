@@ -3,6 +3,9 @@ title: Material Theme
 sidebar_label: Theme
 ---
 
+import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
+
 ### Samples
 
 ```javascript
@@ -84,3 +87,5 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 ```
+
+<DocsMessage />

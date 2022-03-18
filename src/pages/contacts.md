@@ -1,12 +1,14 @@
----
-id: support
-title: Support
-sidebar_label: Support
----
+# Contacts
+
+> We are actively developing MetaEditor, any feedback is welcome!
+
+
 
 import variables from '@site/variables.js';
 
-### Community:
+<br />
+
+## Community
 
 <ul>
   <li>
@@ -20,8 +22,9 @@ import variables from '@site/variables.js';
   </li>
 </ul>
 
+<br />
 
-### Contacts:
+## Support
 
 <ul>
   <li>

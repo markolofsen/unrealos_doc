@@ -3,6 +3,8 @@ title: Cloud Streaming Platform
 sidebar_label: Description
 ---
 
+import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
 ## **Deploy. Stream. Scale.**
 
 ## **The next generation of enterprise streaming.**
@@ -44,3 +46,5 @@ Scalable Pixel Streaming is an extensible and unopinionated framework for automa
 ### **High performance, high fidelity**
 
 > Deploy cutting-edge 3D projects with our real-time ray tracing supported cloud rendering platform.
+
+<DocsMessage />

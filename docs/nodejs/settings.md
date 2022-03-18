@@ -3,6 +3,8 @@ title: Node module settings
 sidebar_label: Settings
 ---
 
+import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
 # Module for node.js
 
 Connects to running [STUN and TURN Servers](https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/PixelStreaming/Hosting/).
@@ -186,3 +188,5 @@ refPixelStreaming.current.emit({
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 - [Unreal Engine Pixel Streaming](https://docs.unrealengine.com/5.0/en-US) - Library for Unreal Engine.
 - [Styled Jss](https://www.npmjs.com/package/styled-jss) - Styled Components on top of JSS
+
+<DocsMessage />
