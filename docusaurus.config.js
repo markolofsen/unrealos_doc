@@ -189,4 +189,17 @@ module.exports = {
       },
     ],
   ],
+
+
+  // https://docusaurus.io/docs/api/docusaurus-config#scripts
+  clientModules: [
+    require.resolve('./src/scripts/chat.js'),
+  ],
+  scripts: [
+    // {
+    //   src: 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+    //   async: true,
+    // },
+  ],
+
 };
