@@ -10,7 +10,7 @@
 module.exports = {
   someSidebar: {
     'Main': [
-      'main/description',
+      'description',
       {
         "type": "link",
         "label": "Demo",

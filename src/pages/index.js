@@ -19,7 +19,7 @@ import styles from './styles.module.css';
 import variables from '/variables.js';
 
 // docs
-import Description from '@site/docs/main/description.md'
+import Description from '@site/docs/description.md'
 
 
 const features = [

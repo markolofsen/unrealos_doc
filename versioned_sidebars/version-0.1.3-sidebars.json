@@ -1,0 +1,29 @@
+{
+  "someSidebar": {
+    "Main": [
+      "description",
+      {
+        "type": "link",
+        "label": "Demo",
+        "href": "https://ps.metaeditor.io"
+      }
+    ],
+    "MetaEditor": [
+      "reactjs/installation",
+      "reactjs/config",
+      "reactjs/streaming",
+      "reactjs/deployment"
+    ],
+    "Customzation": [
+      "reactjs/ui/material/icons",
+      "reactjs/ui/material/theme"
+    ],
+    "Node.js library": [
+      "nodejs/settings"
+    ],
+    "Developer tools": [
+      "dev/hotkeys",
+      "dev/localhost"
+    ]
+  }
+}

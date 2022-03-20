@@ -47,19 +47,35 @@ module.exports = {
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
+    prism: {
+      defaultLanguage: 'javascript',
+    },
     navbar: {
       title: 'MetaEditor',
       logo: {
         alt: 'MetaEditor',
         src: 'img/logo.svg',
       },
+      hideOnScroll: true,
       items: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
+          type: 'docsVersion',
           position: 'left',
+          to: '/docs',
+          label: 'Docs',
         },
+        {
+          type: 'docsVersionDropdown',
+          position: 'right',
+          // dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+          dropdownActiveClassDisabled: true,
+        },
+        // {
+        //   to: 'docs/',
+        //   activeBasePath: 'docs',
+        //   label: 'Docs',
+        //   position: 'left',
+        // },
         // {to: 'blog', label: 'Blog', position: 'left'},
         {to: 'careers', label: 'Careers', position: 'left'},
         {to: 'contacts', label: 'Contacts', position: 'left'},
@@ -173,6 +189,13 @@ module.exports = {
           editUrl: variables.presets.editUrl,
           docLayoutComponent: '@theme/DocPage',
           docItemComponent: '@theme/DocItem',
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: '0.1.4',
+              // path: '0.1.3',
+            },
+          },
         },
         blog: {
           showReadingTime: true,
