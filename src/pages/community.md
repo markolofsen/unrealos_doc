@@ -1,7 +1,7 @@
-# Contacts
-
-> We are actively developing MetaEditor, any feedback is welcome!
-
+---
+title: Community
+---
+# We are actively developing MetaEditor, any feedback is welcome!
 
 
 import variables from '@site/variables.js';
@@ -24,10 +24,10 @@ import variables from '@site/variables.js';
 
 <br />
 
-## Support
+## Cooperation
 
 <ul>
   <li>
-    <a href={variables.contacts.url}>Contact Us</a>
+    <a href={variables.contacts.url}>Contact with Us</a>
   </li>
 </ul>

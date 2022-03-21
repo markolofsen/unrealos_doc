@@ -145,7 +145,6 @@ export default App
 | onProgress     | Return progress in percentage based on `secondsToStart`                                                                                                                                                                                                                                                                     | `function` |
 | onDebug        | Incoming parameters:<br/>`onDebug={({type, payload}) => {...}}`<br/><br/>Types: `func, log, warn, info, error`                                                                                                                                                                                                              | `function` |
 
-
 <h2 id="ps-state">Reference object data</h2>
 
 `refPixelStreaming.current.state`

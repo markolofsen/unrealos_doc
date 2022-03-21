@@ -33,7 +33,7 @@ module.exports = {
   presets: {
     editUrl: 'https://github.com/markolofsen/unrealos_doc/edit/main/',
   },
-  npmItems: ['pixel-streaming', 'metaeditor', 'epic.js'].map(slug => ({
+  npmItems: ['pixel-streaming', 'metaeditor'].map(slug => ({
     label: slug,
     href: 'https://www.npmjs.com/package/'+slug,
   })),

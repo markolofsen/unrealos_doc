@@ -9,6 +9,11 @@
 
 const variables = require('./variables.js');
 
+const VersionsArchived = require('./versionsArchived.json');
+const ArchivedVersionsDropdownItems = Object.entries(VersionsArchived).splice(
+  0,
+  5,
+);
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -30,17 +35,18 @@ module.exports = {
   themeConfig: {
     image: variables.seo.ogImage,
     // metadata: [{name: 'twitter:card', content: 'summary'}],
-    announcementBar: {
-      id: 'support_us',
-      content: `
-        <a href="/careers" rel="noopener noreferrer" style="display: block; text-decoration: auto;">
-          <b>C++ programmer needed!</b>
-        </a>
-      `,
-      backgroundColor: 'var(--ifm-color-primary)',
-      textColor: '#fff',
-      isCloseable: true,
-    },
+
+    // announcementBar: {
+    //   id: 'support_us',
+    //   content: `
+    //     <a href="/careers" rel="noopener noreferrer" style="display: block; text-decoration: auto;">
+    //       <b>C++ programmer needed!</b>
+    //     </a>
+    //   `,
+    //   backgroundColor: 'var(--ifm-color-primary)',
+    //   textColor: '#fff',
+    //   isCloseable: true,
+    // },
 
     colorMode: {
       defaultMode: 'dark',
@@ -58,27 +64,47 @@ module.exports = {
       },
       hideOnScroll: true,
       items: [
+
+        // left
+
         {
           type: 'docsVersion',
           position: 'left',
           to: '/docs',
           label: 'Docs',
         },
+        {to: 'community', label: 'Community', position: 'left'},
+
+        // right
+
+        // {
+        //   type: 'docsVersionDropdown',
+        //   position: 'right',
+        //   // dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+        //   dropdownActiveClassDisabled: true,
+        // },
         {
           type: 'docsVersionDropdown',
           position: 'right',
-          // dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
           dropdownActiveClassDisabled: true,
+          dropdownItemsAfter: [
+            ...ArchivedVersionsDropdownItems.map(
+              ([versionName, versionUrl]) => ({
+                label: versionName,
+                href: versionUrl,
+              }),
+            ),
+            // {
+            //   href: 'https://v1.docusaurus.io',
+            //   label: '1.x.x',
+            // },
+            {
+              to: '/versions',
+              label: 'All versions',
+            },
+          ],
         },
-        // {
-        //   to: 'docs/',
-        //   activeBasePath: 'docs',
-        //   label: 'Docs',
-        //   position: 'left',
-        // },
-        // {to: 'blog', label: 'Blog', position: 'left'},
-        {to: 'careers', label: 'Careers', position: 'left'},
-        {to: 'contacts', label: 'Contacts', position: 'left'},
+
         // Please keep GitHub link to the right for consistency.
         {to: 'https://ps.metaeditor.io', label: 'Demo', position: 'right'},
         {
@@ -103,10 +129,6 @@ module.exports = {
               label: 'Issues',
               href: variables.repo.issues,
             },
-            // {
-            //   label: 'Second Doc',
-            //   to: 'docs/doc2',
-            // },
           ],
         },
         {
@@ -138,8 +160,8 @@ module.exports = {
               to: 'careers',
             },
             {
-              label: 'Contacts',
-              to: 'contacts',
+              label: 'Community',
+              to: 'community',
             },
           ],
         },
@@ -192,10 +214,18 @@ module.exports = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: '0.1.4',
+              label: '0.1.3',
               // path: '0.1.3',
+              // banner: 'none' | 'unreleased' | 'unmaintained'; // the banner to show at the top of a doc of that version
+              // badge: true,
             },
+            // '1.0.0': {
+            //     label: 'Android SDK v1.0.0',
+            //     path: 'android-1.0.0',
+            //     banner: 'unmaintained',
+            // },
           },
+          onlyIncludeVersions: ['current', '0.1.2'],
         },
         blog: {
           showReadingTime: true,
@@ -212,7 +242,6 @@ module.exports = {
       },
     ],
   ],
-
 
   // https://docusaurus.io/docs/api/docusaurus-config#scripts
   clientModules: [
