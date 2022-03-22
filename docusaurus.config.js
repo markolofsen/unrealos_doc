@@ -73,11 +73,11 @@ module.exports = {
           to: '/docs',
           label: 'Docs',
         },
-        {
-          to: 'pricing',
-          label: 'Pricing',
-          position: 'left',
-        },
+        // {
+        //   to: 'pricing',
+        //   label: 'Pricing',
+        //   position: 'left',
+        // },
         {
           to: 'community',
           label: 'Community',

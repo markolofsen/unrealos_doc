@@ -27,7 +27,9 @@ This command generates static content into the `build` directory and can be serv
 ### Deployment
 
 ```
-GIT_USER=markolofsen USE_SSH=true yarn deploy && open https://github.com/markolofsen/unrealos_doc/settings/pages
+yarn build
+GIT_USER=markolofsen USE_SSH=true yarn deploy
+open https://github.com/markolofsen/unrealos_doc/settings/pages
 ```
 
 
