@@ -1,47 +1,115 @@
 // material
 import {
-    styled as styled_,
+    // styled as styled_,
     darken,
     lighten,
     alpha,
-    useTheme,
+    // useTheme,
 } from '@mui/material/styles';
-import { makeStyles, withStyles } from '@mui/styles';
+// import { makeStyles } from '@mui/styles';
+
+import styled_ from 'styled-jss'
+
 
 // colors
-import { blue as color_primary } from '@mui/material/colors';
+import {
+    blue as primary,
+    lime as secondary,
+    green as success,
+} from '@mui/material/colors';
 
 
-const styled = new class {
+
+const theme = new class {
     constructor() {
-        this.styled = (obj, cb) => styled_(obj)(({ theme }) => cb(theme))
+
+    }
+    spacing(...args) {
+        const _size = .5
+        return args.map(i => {
+            if (typeof i === 'number') {
+                return `${i * _size}rem`
+            }
+            return i
+
+        }).join(' ')
+
+    }
+    get palette() {
+        return {
+            background: {
+                default: 'var(--ifm-color-emphasis-100)',
+                paper: 'var(--ifm-color-emphasis-0)',
+            },
+            primary: {
+                ...primary,
+                main: primary[500],
+            },
+            secondary: {
+                ...secondary,
+                main: secondary[500],
+            },
+            success: {
+                ...success,
+                main: success[500],
+            },
+        }
+    }
+    get typography() {
+        const hTag = (s) => {
+            const fontWeight = s * (100 * 2.3)
+            return {
+                fontSize: `${s}rem`,
+                fontWeight: fontWeight > 500 ? fontWeight : 500,
+            }
+        }
+        const pTag = (s) => {
+            return {
+                fontSize: `${s}rem`,
+            }
+        }
+
+        return {
+            h1: hTag(4),
+            h2: hTag(3),
+            h3: hTag(2.3),
+            h4: hTag(2),
+            h5: hTag(1.3),
+            h6: hTag(1.2),
+            body1: pTag(1.1),
+            body2: pTag(.9),
+            subtitle1: {},
+            subtitle2: {},
+            caption: {},
+            fontWeightBold: 700,
+        }
+    }
+}
+
+export const styled = new class {
+    constructor() {
+        this.styled = (obj, cb) => {
+            return styled_(obj)(cb(theme))
+        }
     }
     ul(cb) { return this.styled('ul', cb); }
     ol(cb) { return this.styled('ol', cb); }
     div(cb) { return this.styled('div', cb); }
 
     custom(obj, cb) { return this.styled(obj, cb); }
-
-    withStyles(obj, cb) {
-        return withStyles(theme => cb(theme))(obj);
-    }
 }
 
 // const styled = (obj, cb) => styled_(obj)(({ theme }) => cb(theme))
+
 /* Usage styled:
-import {styled, makeStyles} from 'styles/snippets'
-
-const useStyles = makeStyles(theme => ({
-}))
-const classes = useStyles();
-
+import {styled} from 'styles/snippets'
 
 const RootList = styled.ul(theme => ({
   backgroundColor: 'red',
 }))
 */
 
-const css = new class {
+export const css = new class {
     constructor() { }
 
     makeRadius(...payload) {
@@ -58,7 +126,7 @@ const css = new class {
 
 }
 
-const media = new class {
+export const media = new class {
 
     /*
     Usage in css:
@@ -97,18 +165,8 @@ const media = new class {
     }
 }
 
-const colors = {
-    primary: color_primary,
-}
-
 export {
-    styled,
-    makeStyles,
-    useTheme,
     darken,
     lighten,
     alpha,
-    css,
-    media,
-    colors,
 }

@@ -16,8 +16,8 @@ import {
 
 
 const defaultColors = {
-  default: '#212637',
-  paper: '#1A1F2E',
+  default: 'var(--ifm-color-emphasis-100)',
+  paper: 'var(--ifm-color-emphasis-0)',
   borderColor: 'rgba(255,255,255, .1)',
 }
 
@@ -82,7 +82,6 @@ const theme = createTheme({
           touchAction: 'manipulation',
         },
         body: {
-          minHeight: '100vh',
           padding: 0,
           margin: 0,
           fontFamily: ['Montserrat', 'Helvetica', 'Arial', 'sans-serif'].join(', '),
