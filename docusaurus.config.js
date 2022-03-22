@@ -168,10 +168,10 @@ module.exports = {
               label: 'Community',
               to: 'community',
             },
-            {
-              label: 'Pricing',
-              to: 'pricing',
-            },
+            // {
+            //   label: 'Pricing',
+            //   to: 'pricing',
+            // },
           ],
         },
         {
@@ -261,6 +261,9 @@ module.exports = {
     //   src: 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
     //   async: true,
     // },
+  ],
+  stylesheets: [
+    "https://fonts.googleapis.com/icon?family=Material+Icons",
   ],
 
 };
