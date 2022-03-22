@@ -73,16 +73,29 @@ module.exports = {
           to: '/docs',
           label: 'Docs',
         },
-        {to: 'community', label: 'Community', position: 'left'},
+        // {
+        //   to: 'pricing',
+        //   label: 'Pricing',
+        //   position: 'left',
+        // },
+        {
+          to: 'community',
+          label: 'Community',
+          position: 'left',
+        },
+        {
+          href: 'https://ps.metaeditor.io',
+          label: 'Demo',
+          position: 'left',
+        },
 
         // right
 
-        // {
-        //   type: 'docsVersionDropdown',
-        //   position: 'right',
-        //   // dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
-        //   dropdownActiveClassDisabled: true,
-        // },
+        {
+          href: variables.repo.url,
+          label: 'GitHub',
+          position: 'right',
+        },
         {
           type: 'docsVersionDropdown',
           position: 'right',
@@ -103,14 +116,6 @@ module.exports = {
               label: 'All versions',
             },
           ],
-        },
-
-        // Please keep GitHub link to the right for consistency.
-        {to: 'https://ps.metaeditor.io', label: 'Demo', position: 'right'},
-        {
-          href: variables.repo.url,
-          label: 'GitHub',
-          position: 'right',
         },
 
       ],
@@ -162,6 +167,10 @@ module.exports = {
             {
               label: 'Community',
               to: 'community',
+            },
+            {
+              label: 'Pricing',
+              to: 'pricing',
             },
           ],
         },

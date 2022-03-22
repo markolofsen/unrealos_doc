@@ -11,11 +11,11 @@ module.exports = {
   someSidebar: {
     'Main': [
       'description',
-      {
-        "type": "link",
-        "label": "Demo",
-        "href": "https://ps.metaeditor.io"
-      },
+      // {
+      //   "type": "link",
+      //   "label": "Demo",
+      //   "href": "https://ps.metaeditor.io"
+      // },
     ],
     'MetaEditor': [
       'reactjs/installation',
