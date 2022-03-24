@@ -259,6 +259,12 @@ function getData() {
             enterprise: <SmartIcon variant="yes" />,
           },
           {
+            label: 'Collective development of commands',
+            community: <SmartIcon variant="no" />,
+            business: <SmartIcon variant="yes" />,
+            enterprise: <SmartIcon variant="yes" />,
+          },
+          {
             label: 'Notification module for debugging commands and callbacks',
             community: <SmartIcon variant="yes" />,
             business: <SmartIcon variant="yes" />,
