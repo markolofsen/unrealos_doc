@@ -8,19 +8,34 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Button from '@mui/material/Button'
 
 // styles
-import { styled } from '@site/src/styles/snippets'
+import { styled, media } from '@site/src/styles/snippets'
 
 
 const HeaderList = styled.ul(theme => ({
-
+    [media.down.md]: {
+        marginBottom: '1rem !important',
+    },
     '& > li': {
         display: 'flex',
         flexDirection: 'column',
         padding: theme.spacing(4, 3, 2),
+        '&:nth-child(1)': {
+            [media.down.sm]: {
+                display: 'none',
+            },
+        },
         '&:nth-child(3)': {
+
+            [media.up.md]: {
+                border: `solid 1px rgba(255,255,255, .1)`,
+                borderBottom: 0,
+                borderRadius: '10px 10px 0 0',
+                backgroundColor: 'rgba(255,255,255, .05)',
+            },
+        },
+        [media.down.sm]: {
             border: `solid 1px rgba(255,255,255, .1)`,
-            borderBottom: 0,
-            borderRadius: '10px 10px 0 0',
+            borderRadius: 10,
             backgroundColor: 'rgba(255,255,255, .05)',
         },
         '& > [data-el="reccomend"]': {
@@ -69,7 +84,7 @@ const HeaderList = styled.ul(theme => ({
 }))
 
 
-function TableHeader() {
+function TableHeader({ menuIndex }) {
 
     const data = getTable()
 
@@ -79,7 +94,7 @@ function TableHeader() {
                 <label>Plans</label>
             </li>
             {data.map((item, index) => (
-                <li key={index}>
+                <li key={index} data-mobile-hidden={index !== menuIndex}>
 
                     {item.slug === 'business' && (
                         <div data-el="reccomend">
@@ -104,14 +119,7 @@ function TableHeader() {
                     </div>
 
                     {item.button}
-                    {/* <Button
-                  endIcon={<Icon>chevron_right</Icon>}
-                  size="large"
-                  color="primary"
-                  variant={item.button.isOutlined ? 'outlined' : 'contained'}
-                  disabled={.disabled}>
-                  {item.button.label}
-                </Button> */}
+
                 </li>
             ))}
         </HeaderList>

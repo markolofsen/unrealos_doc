@@ -56,16 +56,31 @@ const theme = new class {
         }
     }
     get typography() {
+        const getFontSize = s => {
+            let mobileSize = s * .8
+            mobileSize = mobileSize < 1 ? 1 : mobileSize
+
+            return {
+                [media.down.md]: {
+                    fontSize: `${mobileSize}rem`,
+                },
+                [media.up.md]: {
+                    fontSize: `${s}rem`,
+                },
+            }
+        }
+
         const hTag = (s) => {
             const fontWeight = s * (100 * 2.3)
             return {
-                fontSize: `${s}rem`,
+
                 fontWeight: fontWeight > 500 ? fontWeight : 500,
+                ...getFontSize(s),
             }
         }
         const pTag = (s) => {
             return {
-                fontSize: `${s}rem`,
+                ...getFontSize(s),
             }
         }
 

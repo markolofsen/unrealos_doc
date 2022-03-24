@@ -65,7 +65,7 @@ const listKeys = ['community', 'business', 'enterprise']
 
 
 
-function TableGroupRows({ index, group }) {
+function TableGroupRows({ index, group, menuIndex }) {
 
   const [isExpanded, setIsExpanded] = React.useState(false)
 
@@ -78,7 +78,7 @@ function TableGroupRows({ index, group }) {
           </li>
 
           {listKeys.map((key, i) => (
-            <li key={`${index}-${i}-title`}>
+            <li key={`${index}-${i}-title`} data-mobile-hidden={index !== menuIndex}>
               {!isExpanded && <Icon>unfold_more</Icon>}
             </li>
           ))}
@@ -98,7 +98,7 @@ function TableGroupRows({ index, group }) {
                     const value = row[key]
 
                     return (
-                      <li key={`${index}-${i}-value`}>
+                      <li key={`${index}-${i}-value`} data-mobile-hidden={i !== menuIndex}>
                         {value}
                       </li>
                     )
@@ -115,7 +115,7 @@ function TableGroupRows({ index, group }) {
 }
 
 
-function renderRow(title, list) {
+function renderRow(title, list, menuIndex) {
   return (
     <>
       <RowGroupTitle>
@@ -127,7 +127,8 @@ function renderRow(title, list) {
           return (
             <TableGroupRows
               index={index}
-              group={item} />
+              group={item}
+              menuIndex={menuIndex} />
           )
         }
 
@@ -138,7 +139,7 @@ function renderRow(title, list) {
             </li>
 
             {listKeys.map((key, i) => (
-              <li key={`${index}-${i}`}>
+              <li key={`${index}-${i}`} data-mobile-hidden={i !== menuIndex}>
                 {item[key]}
               </li>
             ))}
@@ -150,14 +151,14 @@ function renderRow(title, list) {
   )
 }
 
-function TableRows() {
+function TableRows({ menuIndex }) {
   const data = getData()
 
   return (
     <>
-      {renderRow('MetaEditor SDK (open-source)', data.client)}
-      {renderRow('UE Plugin (open-source)', data.plugin)}
-      {renderRow('Support', data.support)}
+      {renderRow('MetaEditor SDK (open-source)', data.client, menuIndex)}
+      {renderRow('UE Plugin (open-source)', data.plugin, menuIndex)}
+      {renderRow('Support', data.support, menuIndex)}
     </>
   )
 }

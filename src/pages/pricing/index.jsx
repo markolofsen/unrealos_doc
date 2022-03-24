@@ -6,25 +6,28 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
-
 // styles
-import { styled } from '@site/src/styles/snippets'
-
-// material
-import Icon from '@mui/material/Icon'
-import Typography from '@mui/material/Typography'
+import { styled, media } from '@site/src/styles/snippets'
 
 // blocks
 import TableHeader from './TableHeader';
 import TableRows from './TableRows'
 
+// components
+import MobileTabs from './components/MobileTabs'
+
 
 const PageHeaderList = styled.ul(theme => ({
   listStyle: 'none none',
-
-  padding: theme.spacing(10, 0, 15),
   maxWidth: 700,
   margin: '0 auto',
+
+  [media.down.sm]: {
+    padding: theme.spacing(5, 0, 10),
+  },
+  [media.up.sm]: {
+    padding: theme.spacing(10, 0, 15),
+  },
 
   '& > li': {
     textAlign: 'center',
@@ -33,7 +36,14 @@ const PageHeaderList = styled.ul(theme => ({
     ...theme.typography.h2,
     '& > span': {
       color: theme.palette.success.main,
-    }
+    },
+    [media.down.sm]: {
+      paddingBottom: theme.spacing(10),
+      lineHeight: '3rem',
+      '& > span': {
+        display: 'block',
+      }
+    },
   },
   '& > [data-li="subtilte"]': {
     ...theme.typography.h6,
@@ -44,9 +54,21 @@ const PageHeaderList = styled.ul(theme => ({
 }))
 
 const TableDiv = styled.div(theme => ({
-  borderTop: `solid 1px rgba(255,255,255, .1)`,
-  padding: theme.spacing(10, 0, 20),
 
+  ...theme.typography.body1,
+
+  // [media.down.sm]: {
+  //   padding: theme.spacing(50, 0, 10),
+  // },
+  [media.up.sm]: {
+    padding: theme.spacing(10, 0, 20),
+    borderTop: `solid 1px rgba(255,255,255, .1)`,
+  },
+
+
+  // [media.down.md]: {
+  //   fontSize: '0.9rem',
+  // },
   '& ul': {
     listStyle: 'none none',
     margin: 0,
@@ -59,9 +81,21 @@ const TableDiv = styled.div(theme => ({
         flexGrow: 1,
       },
       '&:nth-child(n+2)': {
-        flex: '0 0 25%',
-        maxWidth: '25%',
+        width: '100%',
+        [media.up.md]: {
+          flex: '0 0 25%',
+          maxWidth: '25%',
+        },
+
       },
+    },
+  },
+
+
+  // For mobiles
+  [media.down.sm]: {
+    '& [data-mobile-hidden="true"]': {
+      display: 'none',
     },
   },
 
@@ -75,12 +109,13 @@ export default function Pricing() {
     siteConfig: { organizationName, projectName },
   } = useDocusaurusContext();
 
+  const [menuIndex, setMenuIndex] = React.useState(0)
+
   return (
     <Layout
       title="Pricing"
       description="">
       <main className="container margin-vert--lg">
-
 
         <PageHeaderList>
           <li>
@@ -96,9 +131,11 @@ export default function Pricing() {
           </li>
         </PageHeaderList>
 
+        <MobileTabs value={menuIndex} onChange={setMenuIndex} />
+
         <TableDiv>
-          <TableHeader />
-          <TableRows />
+          <TableHeader menuIndex={menuIndex} />
+          <TableRows menuIndex={menuIndex} />
         </TableDiv>
 
       </main>

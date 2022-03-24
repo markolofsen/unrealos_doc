@@ -1,5 +1,5 @@
 // styles
-import { styled } from '@site/src/styles/snippets'
+import { styled, media } from '@site/src/styles/snippets'
 
 
 const RowList = styled.ul(theme => ({
@@ -16,13 +16,19 @@ const RowList = styled.ul(theme => ({
     },
     '&:nth-child(n+2)': {
       alignItems: 'center',
+      [media.down.md]: {
+        flex: '1 0 50%',
+        maxWidth: '50%'
+      }
     },
 
     '&:nth-child(3)': {
-      border: `solid 1px rgba(255,255,255, .1)`,
-      borderTop: 0,
-      borderBottom: 0,
-      backgroundColor: 'rgba(255,255,255, .05)',
+      [media.up.md]: {
+        border: `solid 1px rgba(255,255,255, .1)`,
+        borderTop: 0,
+        borderBottom: 0,
+        backgroundColor: 'rgba(255,255,255, .05)',
+      }
     },
 
   },
