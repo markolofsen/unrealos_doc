@@ -1,12 +1,7 @@
 {
   "someSidebar": {
     "Main": [
-      "description",
-      {
-        "type": "link",
-        "label": "Demo",
-        "href": "https://ps.metaeditor.io"
-      }
+      "description"
     ],
     "MetaEditor": [
       "reactjs/installation",

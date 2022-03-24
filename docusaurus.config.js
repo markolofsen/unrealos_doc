@@ -73,11 +73,11 @@ module.exports = {
           to: '/docs',
           label: 'Docs',
         },
-        // {
-        //   to: 'pricing',
-        //   label: 'Pricing',
-        //   position: 'left',
-        // },
+        {
+          to: 'pricing',
+          label: 'Pricing',
+          position: 'left',
+        },
         {
           to: 'community',
           label: 'Community',
@@ -223,7 +223,7 @@ module.exports = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: '0.1.3',
+              label: '1.0.0',
               // path: '0.1.3',
               // banner: 'none' | 'unreleased' | 'unmaintained'; // the banner to show at the top of a doc of that version
               // badge: true,
@@ -234,7 +234,8 @@ module.exports = {
             //     banner: 'unmaintained',
             // },
           },
-          onlyIncludeVersions: ['current', '0.1.2'],
+          // onlyIncludeVersions: ['current', '0.1.2'],
+          onlyIncludeVersions: ['current'],
         },
         blog: {
           showReadingTime: true,

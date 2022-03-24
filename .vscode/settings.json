@@ -28,6 +28,8 @@
         "strings": false
     },
     "window.zoomLevel": 1,
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "editor.tabSize": 2,
     "editor.fontFamily": "JetBrains Mono, Fira Code",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
