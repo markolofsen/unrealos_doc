@@ -140,7 +140,7 @@ const getTable = () => {
             description: 'Get started with the industry-standard UI library for building React user interfaces (open-source, MIT licensed).',
             price: {
                 value: 0,
-                text: '– free forever.'
+                text: '– free forever.',
             },
             button: (
                 <Link
@@ -159,8 +159,8 @@ const getTable = () => {
             name: 'Business',
             description: 'Suitable for professional developers building enterprise solutions for a large audience.',
             price: {
-                value: 186,
-                text: '/ developer.'
+                value: 700,
+                text: '/ month.',
             },
             button: (
                 <Link
@@ -179,8 +179,8 @@ const getTable = () => {
             name: 'Enterprise',
             description: 'Unlock all the most advanced features and professional support.',
             price: {
-                value: 599,
-                text: '/ developer.'
+                value: '*',
+                text: '/ month',
             },
             button: (
                 <Link

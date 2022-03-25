@@ -134,6 +134,10 @@ module.exports = {
               label: 'Issues',
               href: variables.repo.issues,
             },
+            {
+              label: 'Feature Requests',
+              href: 'feature-requests/',
+            },
           ],
         },
         {

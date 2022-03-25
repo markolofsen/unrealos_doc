@@ -10,7 +10,13 @@ import variables from '@site/variables.js';
 
 ## Community
 
+
 <ul>
+  <li>
+    <a href="/feature-requests/">
+      Feature Requests
+    </a>
+  </li>
   <li>
     Ask your question on <a href={variables.contacts.stackoverflowUrl}>StackOverflow</a>
   </li>
