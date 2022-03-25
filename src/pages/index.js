@@ -9,18 +9,31 @@
 
 import React from 'react';
 import clsx from 'clsx';
-import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
 
+// theme
+import Layout from '@theme/Layout';
+import Image from '@theme/IdealImage';
+
+// docusaurus
+import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+
+// styles
 import styles from './styles.module.css';
+import { styled, media } from '@site/src/styles/snippets'
 
-import variables from '/variables.js';
-
-// docs
+// blocks
 import Description from '@site/docs/description.md'
+import Quotes from '@site/src/data/quotes';
 
+
+
+const QuotesSectionDiv = styled.div(theme => ({
+  backgroundColor: 'rgba(255,255,255, .03)',
+  padding: theme.spacing(10, 0),
+  marginBottom: theme.spacing(5),
+}))
 
 const features = [
   {
@@ -28,8 +41,8 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-      MetaEditor is a complete solution for running and testing projects built by Unreal Engine.
-      You can connect any web components to interact with the streaming server.
+        MetaEditor is a complete solution for running and testing projects built by Unreal Engine.
+        You can connect any web components to interact with the streaming server.
       </>
     ),
   },
@@ -53,7 +66,7 @@ const features = [
   },
 ];
 
-function Feature({imageUrl, title, description}) {
+function Feature({ imageUrl, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={clsx('col col--4', styles.feature)}>
@@ -68,9 +81,42 @@ function Feature({imageUrl, title, description}) {
   );
 }
 
+function QuotesSection() {
+  return (
+    <QuotesSectionDiv>
+      <div className={clsx(styles.section)}>
+        <div className="container">
+          <div className="row">
+            {Quotes.map((quote) => (
+              <div className="col" key={quote.name}>
+                <div className="avatar avatar--vertical margin-bottom--sm">
+                  <Image
+                    alt={quote.name}
+                    className="avatar__photo avatar__photo--xl"
+                    img={quote.thumbnail}
+                    style={{ overflow: 'hidden' }}
+                  />
+                  <div className="avatar__intro padding-top--sm">
+                    <div className="avatar__name">{quote.name}</div>
+                    <small className="avatar__subtitle">{quote.title}</small>
+                  </div>
+                </div>
+                <p className="text--center text--italic padding-horiz--md">
+                  {quote.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </QuotesSectionDiv>
+  );
+}
+
+
 export default function Home() {
   const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
+  const { siteConfig = {} } = context;
   const previewUrl = useBaseUrl('assets/preview.png');
   return (
     <Layout
@@ -84,7 +130,7 @@ export default function Home() {
 
           {/*<img className={styles.preview} src={previewUrl} alt={siteConfig.title} />*/}
 
-          <iframe className={styles.preview} src="https://www.youtube.com/embed/videoseries?list=PLvmabfuPusIu_0mo4oPdj5gnL9_L_qqxh&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe className={styles.preview} src="https://www.youtube.com/embed/videoseries?list=PLvmabfuPusIu_0mo4oPdj5gnL9_L_qqxh&rel=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
           <div className={styles.buttons}>
             <Link
@@ -112,7 +158,7 @@ export default function Home() {
           <section className={styles.features}>
             <div className="container">
               <div className="row">
-                {features.map(({title, imageUrl, description}) => (
+                {features.map(({ title, imageUrl, description }) => (
                   <Feature
                     key={title}
                     title={title}
@@ -124,6 +170,8 @@ export default function Home() {
             </div>
           </section>
         )}
+
+        <QuotesSection />
 
         <section className={styles.description}>
           <div className="container">
