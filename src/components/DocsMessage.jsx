@@ -4,7 +4,7 @@ import React from "react";
 import variables from '../../variables'
 
 
-const Highlight = ({children}) => (
+const Highlight = ({ children }) => (
   <div
     style={{
       backgroundColor: 'rgba(255,255,255, .1)',
@@ -16,7 +16,7 @@ const Highlight = ({children}) => (
       alignItems: 'center',
       fontSize: '1.2rem',
     }}>
-      {children}
+    {children}
   </div>
 );
 
@@ -31,11 +31,13 @@ function DocsMessage() {
           marginRight: 20,
         }}
       />
-      Tell us
-      &nbsp;
-      <a target="_blank" rel="noopener noreferrer" href={`${variables.repo.issues}/new`}>how to improve</a>
-      &nbsp;
-      MetaEditor
+      <span>
+        Tell us
+        &nbsp;
+        <a target="_blank" rel="noopener noreferrer" href="/feature-requests/">how to improve</a>
+        &nbsp;
+        MetaEditor
+      </span>
     </Highlight>
   );
 }

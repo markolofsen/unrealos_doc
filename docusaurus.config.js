@@ -136,7 +136,7 @@ module.exports = {
             },
             {
               label: 'Feature Requests',
-              href: 'feature-requests/',
+              href: '/feature-requests/',
             },
           ],
         },
