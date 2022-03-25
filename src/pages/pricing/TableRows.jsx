@@ -232,6 +232,12 @@ function getData() {
         enterprise: <SmartIcon variant="yes" />,
       },
       {
+        label: 'Widget for integrating MetaEditor into any website',
+        community: <SmartIcon variant="no" />,
+        business: <SmartIcon variant="yes" />,
+        enterprise: <SmartIcon variant="yes" />,
+      },
+      {
         type: 'row_group',
         label: 'Developer tools',
         items: [
@@ -303,9 +309,7 @@ function getData() {
       {
         label: (
           <>
-            <div>
-              Mechanism for testing commands in Standalone mode.
-            </div>
+            Mechanism for testing commands in Standalone mode.
             <small>
               No need to rebuild the project.
             </small>
@@ -316,7 +320,14 @@ function getData() {
         enterprise: 'Unlimited',
       },
       {
-        label: 'Support for standalone mode (debugging commands without the need to rebuild the project)',
+        label: (
+          <>
+            Support for standalone mode
+            <small>
+              Debugging commands without the need to rebuild the project
+            </small>
+          </>
+        ),
         community: <SmartIcon variant="no" />,
         business: <SmartIcon variant="yes" />,
         enterprise: <SmartIcon variant="yes" />,
@@ -344,59 +355,49 @@ function getData() {
       {
         label: (
           <>
-            <div>
-              Technical advisory.
-            </div>
+            Technical advisory.
             <small>
               Subject to fair use policy
             </small>
           </>
         ),
         community: <SmartIcon variant="no" />,
-        business: <SmartIcon variant="no" />,
-        enterprise: '?',
-      },
-      {
-        label: 'Support duration',
-        community: <SmartIcon variant="no" />,
-        business: '1 year',
-        enterprise: '1 year',
+        business: <SmartIcon variant="yes" />,
+        enterprise: <SmartIcon variant="yes" />,
       },
       {
         label: 'Guaranteed response time',
         community: <SmartIcon variant="no" />,
-        business: '1 year',
+        business: '4 business days',
         enterprise: (
           <>
-            <div>
-              2 business days
-            </div>
+            2 business days
             <small>
               1 business day (priority only)
             </small>
           </>
         ),
       },
-      {
-        label: 'Pre-screening',
-        community: <SmartIcon variant="no" />,
-        business: <SmartIcon variant="no" />,
-        enterprise: (
-          <>
-            <div>
-              4 hours
-            </div>
-            <small>
-              priority only
-            </small>
-          </>
-        ),
-      },
+      // {
+      //   label: 'Pre-screening',
+      //   community: <SmartIcon variant="no" />,
+      //   business: <SmartIcon variant="no" />,
+      //   enterprise: (
+      //     <>
+      //       <div>
+      //         4 hours
+      //       </div>
+      //       <small>
+      //         priority only
+      //       </small>
+      //     </>
+      //   ),
+      // },
       {
         label: 'Issue escalation',
         community: <SmartIcon variant="no" />,
-        business: <SmartIcon variant="no" />,
-        enterprise: 'Priority only',
+        business: <SmartIcon variant="yes" />,
+        enterprise: <SmartIcon variant="yes" priority={2} />,
       },
     ]
   }
