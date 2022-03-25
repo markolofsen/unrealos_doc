@@ -21,19 +21,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 // styles
 import styles from './styles.module.css';
-import { styled, media } from '@site/src/styles/snippets'
 
 // blocks
 import Description from '@site/docs/description.md'
 import Quotes from '@site/src/data/quotes';
 
-
-
-const QuotesSectionDiv = styled.div(theme => ({
-  backgroundColor: 'rgba(255,255,255, .03)',
-  padding: theme.spacing(10, 0),
-  marginBottom: theme.spacing(5),
-}))
 
 const features = [
   {
@@ -83,7 +75,11 @@ function Feature({ imageUrl, title, description }) {
 
 function QuotesSection() {
   return (
-    <QuotesSectionDiv>
+    <div style={{
+      backgroundColor: 'rgba(255,255,255, .03)',
+      padding: '3rem 0',
+      margin: '3rem 0 5rem',
+    }}>
       <div className={clsx(styles.section)}>
         <div className="container">
           <div className="row">
@@ -109,7 +105,7 @@ function QuotesSection() {
           </div>
         </div>
       </div>
-    </QuotesSectionDiv>
+    </div>
   );
 }
 
