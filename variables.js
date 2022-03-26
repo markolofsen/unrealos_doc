@@ -13,7 +13,7 @@ module.exports = {
   company: {
     name: 'UnrealOS',
     url: 'https://unrealos.com',
-    email: 'info@unrealos.com',
+    email: 'team@unrealos.com',
   },
   seo: {
     ogImage: '/img/og_default.jpg',
@@ -35,6 +35,6 @@ module.exports = {
   },
   npmItems: ['pixel-streaming', 'metaeditor'].map(slug => ({
     label: slug,
-    href: 'https://www.npmjs.com/package/'+slug,
+    href: 'https://www.npmjs.com/package/' + slug,
   })),
 }

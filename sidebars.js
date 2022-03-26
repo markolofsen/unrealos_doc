@@ -9,36 +9,56 @@
 
 module.exports = {
   someSidebar: {
-    'Main': [
+    'MetaEditor': [
       'description',
       // {
       //   "type": "link",
       //   "label": "Demo",
       //   "href": "https://ps.metaeditor.io"
       // },
-    ],
-    'MetaEditor': [
       'reactjs/installation',
       'reactjs/config',
       'reactjs/streaming',
       'reactjs/deployment',
-    ],
-    'Customzation': [
-      'reactjs/ui/material/icons',
-      'reactjs/ui/material/theme',
-    ],
-    'Node.js library': [
-      'nodejs/settings',
+      {
+        type: "category",
+        label: "Customization",
+        items: [
+          'reactjs/ui/customization',
+          // {
+          //   type: "category",
+          //   label: "Another deaper category",
+          //   items: [
+          //     "guides/creating-a-new-app",
+          //     "guides/building-and-releasing",
+          //   ]
+          // }
+        ]
+      },
+      {
+        type: "category",
+        label: "Methods",
+        items: [
+          'methods/commands',
+          // 'methods/callbacks',
+        ]
+      },
+      {
+        type: "category",
+        label: "PixelStreaming",
+        items: [
+          'nodejs/settings',
+        ]
+      },
     ],
     'Developer tools': [
       'dev/hotkeys',
       'dev/localhost',
     ],
-    // 'Cloud Streaming': [
-    //   'streaming/desc',
-    //   'streaming/spec',
-    //   'streaming/faq',
-    // ]
-
+    'Cloud Streaming': [
+      'streaming/desc',
+      'streaming/spec',
+      'streaming/faq',
+    ]
   },
 };

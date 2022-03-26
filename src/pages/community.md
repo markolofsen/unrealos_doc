@@ -34,6 +34,6 @@ import variables from '@site/variables.js';
 
 <ul>
   <li>
-    <a href={variables.contacts.url}>Contact with Us</a>
+    <a href={"mailto:"+variables.company.email}>{variables.company.email}</a>
   </li>
 </ul>
