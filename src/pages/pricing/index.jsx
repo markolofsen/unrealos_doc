@@ -109,7 +109,17 @@ export default function Pricing() {
     siteConfig: { organizationName, projectName },
   } = useDocusaurusContext();
 
+  const [mounted, setMounted] = React.useState(true) //hack for ssr jss of docusaurus
   const [menuIndex, setMenuIndex] = React.useState(0)
+
+  React.useEffect(() => {
+
+    setMounted(false)
+    setTimeout(() => setMounted(true), 300)
+
+  }, [])
+
+  if (!mounted) return <div />
 
   return (
     <Layout
