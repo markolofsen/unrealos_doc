@@ -7,9 +7,9 @@ import DocsMessage from "@site/src/components/DocsMessage.jsx"
 
 ## Procedure
 
-* Open `/src/player/context/useConnection/actions.js`
+* Open `/src/api/env.js`
 
-* Specify the URL (endpoint) of your API server to receive the response (with variable: `API_URL`)
+* Specify the URL (endpoint) of your API server to receive the response (with variable: `apiUrl`)
 
 
 
