@@ -24,8 +24,6 @@ module.exports = {
       {
         type: "category",
         label: "Customization",
-        collapsible: true,
-        collapsed: false,
         items: [
           // 'metaeditor/customization/mui/helper',
           {
@@ -66,6 +64,8 @@ module.exports = {
         ]
       },
     ],
+    // collapsible: true,
+    // collapsed: false,
     'Developer tools': [
       'dev/hotkeys',
       'dev/localhost',

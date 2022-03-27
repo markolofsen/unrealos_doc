@@ -11,8 +11,6 @@ sidebar_label: Streaming
 
 * Specify the URL (endpoint) of your API server to receive the response (with variable: `apiUrl`)
 
-
-
 ## To automatically get a free streaming server, you need to run your own API server.
 
 When MetaEditor starts, it contacts your API-server, which returns the data in the following format:

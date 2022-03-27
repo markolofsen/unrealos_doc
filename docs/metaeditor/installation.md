@@ -21,15 +21,15 @@ import variables from '@site/variables.js';
    yarn install
    ```
 
-3. Set up the configuration:
+3. Set up a streaming connection:
    
-   `/src/api/env.js`
+   [Connecting to a streaming server](./settings/streaming.md)
+
 
 4. Set up streaming:
    
-   `/src/player/hooks/useStream/index.js`
-   
-   Attention! Please note that streaming running on the local machine does not have an ssl certificate. Therefore, when connecting, specify the host `http://127.0.0.1`
+   > Attention! Please note that streaming running on the local machine does not have an ssl certificate. Therefore, when connecting, specify the host `http://127.0.0.1`
+
 
 5. Run the project:
    

@@ -26,8 +26,7 @@ return (
 import React from 'react';
 
 // styles
-import { styled, css } from 'styles/snippets'
-import { styled, darken, lighten, alpha } from 'styles/snippets'
+import { styled, css, darken, lighten, alpha, withStyles } from 'metaeditor/common/styles/'
 
 const RootDiv = styled.div(theme => ({
 }))
@@ -47,7 +46,8 @@ const Custom = styled.custom(Element, theme => ({
 ```javascript
 
 // styles
-import {styled} from 'styles/snippets'
+
+import { styled } from 'metaeditor/common/styles/'
 
 const RootDiv = styled.div(theme => ({
   borderRadius: css.makeRadius(0, 0, 'auto', 'auto'),
