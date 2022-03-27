@@ -5,11 +5,9 @@ sidebar_label: Settings
 
 import DocsMessage from "@site/src/components/DocsMessage.jsx"
 
-# Module for node.js
+# PixelStreaming for node.js
 
 Connects to running [STUN and TURN Servers](https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/PixelStreaming/Hosting/).
-
----
 
 ## Module installation
 

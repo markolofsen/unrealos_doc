@@ -1,6 +1,6 @@
 ---
-title: Customization
-sidebar_label: Customization
+title: Material (MUI)
+sidebar_label: Material
 ---
 
 import DocsMessage from "@site/src/components/DocsMessage.jsx"

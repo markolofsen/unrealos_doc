@@ -130,7 +130,7 @@ export default TableHeader
 
 
 const getTable = () => {
-    const startUrl = useBaseUrl('docs/reactjs/installation')
+    const startUrl = useBaseUrl('docs/metaeditor/installation')
     const buyUrl = useBaseUrl('community/')
 
     return [

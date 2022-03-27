@@ -7,8 +7,7 @@ import DocsMessage from "@site/src/components/DocsMessage.jsx"
 
 ### Supported Game Engines
 
-> Unreal Engine 4.23, 4.24, 4.26;
-> Unity 2018.4, 2019.1 or 2019.2, 2020.2
+> Unreal Engine 4.27, 5.0;
 
 ### Supported Browsers
 

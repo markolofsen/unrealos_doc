@@ -11,20 +11,21 @@ module.exports = {
   someSidebar: {
     'MetaEditor': [
       'description',
-      // {
-      //   "type": "link",
-      //   "label": "Demo",
-      //   "href": "https://ps.metaeditor.io"
-      // },
-      'reactjs/installation',
-      'reactjs/config',
-      'reactjs/streaming',
-      'reactjs/deployment',
+      'metaeditor/installation',
+      {
+        type: "category",
+        label: "Settings",
+        items: [
+          'metaeditor/settings/config',
+          'metaeditor/settings/streaming',
+          'metaeditor/settings/deployment',
+        ]
+      },
       {
         type: "category",
         label: "Customization",
         items: [
-          'reactjs/ui/customization',
+          'metaeditor/customization/material',
           // {
           //   type: "category",
           //   label: "Another deaper category",
@@ -39,15 +40,23 @@ module.exports = {
         type: "category",
         label: "Methods",
         items: [
-          'methods/commands',
-          // 'methods/callbacks',
+          'metaeditor/methods/commands',
+          // 'metaeditor/methods/callbacks',
+        ]
+      },
+      {
+        type: "category",
+        label: "Extensions",
+        items: [
+          'metaeditor/extensions/metasnippets',
         ]
       },
       {
         type: "category",
         label: "PixelStreaming",
         items: [
-          'nodejs/settings',
+          'pixel-streaming/demo',
+          'pixel-streaming/settings',
         ]
       },
     ],

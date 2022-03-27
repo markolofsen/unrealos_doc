@@ -8,17 +8,20 @@ import DocsMessage from "@site/src/components/DocsMessage.jsx"
 
 # PixelStreaming for ReactJS
 
-MetaEditor.io — helps integrate Unreal Engine v.5 in the browser. Allows you to send commands and get callbacks from the stream server with launched Unreal Engine.
-
 ![img](/assets/preview.png)
 
----
 
-The standard implementation of PixelStreaming greatly complicates the development of your own reactive web applications for Unreal Engine. Initially, PixelStreaming is a no-architecture javascript solution for interacting with reactive web frameworks. Adapting standard PixelStreaming for ReactJS is a very long and laborious process, which significantly increases development time, because. there are a lot of technical problems to solve related to the peculiarities of browsers, devices and reactive technologies (like ReactJS, Angular or Vue).
+### MetaEditor is a professional web application development solution based on ReactJS and PixelStreaming.
 
-MetaEditor is a professional web application development solution based on ReactJS and PixelStreaming.
+>  The standard implementation of PixelStreaming greatly complicates the development of your own reactive web applications for Unreal Engine. Initially, PixelStreaming is a no-architecture javascript solution for interacting with reactive web frameworks. Adapting standard PixelStreaming for ReactJS is a very long and laborious process, which significantly increases development time, because. there are a lot of technical problems to solve related to the peculiarities of browsers, devices and reactive technologies (like React.js)
 
-### **Advantages**
+
+
+> MetaEditor.io — helps integrate Unreal Engine v.5 in the browser. Allows you to send commands and get callbacks from the stream server with launched Unreal Engine.
+
+
+
+## Advantages
 
 MetaEditor solves most of the possible problems when developing web applications for streaming from Unreal Engine:
 
@@ -31,13 +34,15 @@ MetaEditor solves most of the possible problems when developing web applications
 - Video quality optimization, connection speed control
 - Notifications. For example, if the connection is lost or there is no activity
 
-**Flexibility**
+
+
+## Flexibility
 
 When developing MetaEditor, we created a universal architecture that makes it easy to deploy and customize your ReactJS application without the risk of breaking something.
 
 MetaEditor allows you to focus on developing the interface of your application, built on top of it, without delving into the complex technical details of Pixel Streaming technology.
 
-**Components**
+## Components
 
 We have created and adapted a set of ReactJS components that solve the basic tasks of your web application (taking into account the features of streaming video).
 
@@ -91,6 +96,5 @@ To control cloud servers in real time, you can use the MetaEditor app from the A
 - Publishing MetaEditor plugin in UE Marketplace
 - Improved documentation
 - Development of MetaEditor for Angular and Vue
-
 
 <DocsMessage />
