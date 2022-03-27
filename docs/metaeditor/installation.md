@@ -3,7 +3,7 @@ title: Installation instructions
 sidebar_label: Installation
 ---
 
-import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
 import variables from '@site/variables.js';
 
 1. Download the repository:
@@ -37,4 +37,4 @@ import variables from '@site/variables.js';
    yarn dev
    ```
 
-<DocsMessage />
+

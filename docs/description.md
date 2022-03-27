@@ -4,7 +4,7 @@ title: Description
 sidebar_label: Description
 slug: /
 ---
-import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
 
 # PixelStreaming for ReactJS
 
@@ -97,4 +97,4 @@ To control cloud servers in real time, you can use the MetaEditor app from the A
 - Improved documentation
 - Development of MetaEditor for Angular and Vue
 
-<DocsMessage />
+

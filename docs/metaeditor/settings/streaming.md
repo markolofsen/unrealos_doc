@@ -3,7 +3,7 @@ title: Connecting to a streaming server
 sidebar_label: Streaming
 ---
 
-import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
 
 ## Procedure
 
@@ -32,4 +32,4 @@ body: {
 }
 ```
 
-<DocsMessage />
+

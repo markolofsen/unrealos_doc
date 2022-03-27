@@ -3,7 +3,7 @@ title: Technical Specs
 sidebar_label: Technical Specs
 ---
 
-import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
 
 ### Supported Game Engines
 
@@ -66,4 +66,4 @@ import DocsMessage from "@site/src/components/DocsMessage.jsx"
 
 > Sydney (AWS regions)
 
-<DocsMessage />
+

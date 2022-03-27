@@ -1,47 +1,14 @@
 ---
-title: MetaSnippets
-sidebar_label: MetaSnippets
+title: Hooks
+sidebar_label: Hooks
 ---
 
-import DocsMessage from "@site/src/components/DocsMessage.jsx"
-
-## Installation
-
-```bash
-yarn add metasnippets
-```
-
----
-
-## Funcs
-
-### getDevice
-
-```javascript
-import {getDevice} from 'metasnippets/funcs/'
-
-const {BrowserView, MobileView, isBrowser, isMobile} = getDevice()
-```
-
----
-
-## Helpers
-
-```javascript
-import helpers from 'metasnippets/helpers/'
-
-const {format, custom, array} = helpers
-```
-
----
-
-## Hooks
 
 ### useContainerDimensions
 
 ```javascript
 import React from 'react'
-import {useContainerDimensions} from 'metasnippets/hooks/'
+import {useContainerDimensions} from 'metaeditor/common/hooks/'
 
 function MyComponent() {
   const componentRef = React.useRef(null);
@@ -61,7 +28,7 @@ function MyComponent() {
 ### useCountdown
 
 ```javascript
-import {useCountdown} from 'metasnippets/hooks/'
+import {useCountdown} from 'metaeditor/common/hooks/'
 
 function MyComponent() {
   const countdown = useCountdown({seconds: 60});
@@ -76,7 +43,7 @@ function MyComponent() {
 
 ```javascript
 import React from 'react'
-import {useStateEvents, useReducerEvents} from 'metasnippets/hooks/'
+import {useStateEvents, useReducerEvents} from 'metaeditor/common/hooks/'
 
 function MyComponent() {
   const [state, dispatch] = useReducerEvents(reducer, initialState)
@@ -99,7 +66,7 @@ function MyComponent() {
 ### useHotkeys
 
 ```javascript
-import {useHotkeys} from 'metasnippets/hooks/'
+import {useHotkeys} from 'metaeditor/common/hooks/'
 
 function MyComponent() {
   const [amount, setAmount] = useState(0)
@@ -126,7 +93,7 @@ function MyComponent() {
 ### useSound
 
 ```javascript
-import {useSound} from 'metasnippets/hooks/'
+import {useSound} from 'metaeditor/common/hooks/'
 
 function MyComponent() {
   const sound = useSound('http://.../sound.mp3');
@@ -147,7 +114,7 @@ function MyComponent() {
 ### useStorage
 
 ```javascript
-import {useStorage} from 'metasnippets/hooks/'
+import {useStorage} from 'metaeditor/common/hooks/'
 
 const STORAGE_KEY = 'DEMO_KEY'
 
@@ -188,7 +155,7 @@ function MyComponent() {
 ### useUnload
 
 ```javascript
-import {useUnload} from 'metasnippets/hooks/'
+import {useUnload} from 'metaeditor/common/hooks/'
 
 function MyComponent() {
 
@@ -208,7 +175,7 @@ function MyComponent() {
 ### useWindowSize
 
 ```javascript
-import {useWindowSize} from 'metasnippets/hooks/'
+import {useWindowSize} from 'metaeditor/common/hooks/'
 
 function MyComponent() {
     const windowSize = useWindowSize();
@@ -221,67 +188,4 @@ function MyComponent() {
 }
 ```
 
-## Libs
-
-### Request
-
-```javascript
-import {Request} from 'metasnippets/libs/'
-
-// Get 
-Request.GET(url='https://...').then(res => {
-  if(res.status === 200) {
-    console.log(res.body)
-  }
-}).catch(err => {
-  console.error(err)
-})
-
-// Post
-const body = {value: 123}
-Request.POST(url='https://...', body).then(res => {
-  if(res.status === 200) {
-    console.log(res.body)
-  }
-}).catch(err => {
-  console.error(err)
-})
-
-
-// Delete
-Request.DELETE(url='https://...').then(res => {
-  if(res.status === 200) {
-    console.log(res.body)
-  }
-}).catch(err => {
-  console.error(err)
-})
-```
-
-## Styles
-
-### custom
-
-```javascript
-// in progress
-```
-
-### media
-
-```javascript
-// in progress
-```
-
-### theme
-
-```javascript
-// in progress
-```
-
-### styled
-
-```javascript
-
-```
-
-<DocsMessage />
+### ADD MORE!!!

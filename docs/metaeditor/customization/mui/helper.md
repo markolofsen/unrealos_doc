@@ -1,9 +1,9 @@
 ---
-title: Material (MUI)
-sidebar_label: Material
+title: MUI helper
+sidebar_label: Helper
 ---
 
-import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
 
 
 ### Material Icons finder
@@ -102,4 +102,4 @@ const useStyles = makeStyles(theme => ({
 }))
 ```
 
-<DocsMessage />
+

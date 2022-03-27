@@ -4,7 +4,7 @@ title: Connection
 sidebar_label: Connection to localhost
 ---
 
-import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
 
 
 
@@ -25,4 +25,4 @@ import DocsMessage from "@site/src/components/DocsMessage.jsx"
 * Port: `80`
 
 
-<DocsMessage />
+

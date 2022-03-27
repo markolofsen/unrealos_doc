@@ -3,7 +3,7 @@ title: Deployment to GitHub pages
 sidebar_label: Deployment
 ---
 
-import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
 
 ## Complete the steps one by one
 
@@ -42,4 +42,4 @@ class Deploy {
 ```
 
 
-<DocsMessage />
+

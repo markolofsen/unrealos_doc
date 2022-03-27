@@ -3,7 +3,7 @@ title: Frequently Asked Questions
 sidebar_label: FAQ
 ---
 
-import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
 
 > Quickly find answers on how MetaEditor helps innovators and creators collaborate, publish, and engage with real-time 3D applications.
 >
@@ -76,4 +76,4 @@ Simply put, if server capacity is under capacity vs number of requests, it will 
 
 We can provide a report of cloud usage, including the number of server hours, number of user engagements, total duration of user engagements, or a combination of these depending on the pricing model being used.
 
-<DocsMessage />
+

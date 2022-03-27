@@ -24,17 +24,19 @@ module.exports = {
       {
         type: "category",
         label: "Customization",
+        collapsible: true,
+        collapsed: false,
         items: [
-          'metaeditor/customization/material',
-          // {
-          //   type: "category",
-          //   label: "Another deaper category",
-          //   items: [
-          //     "guides/creating-a-new-app",
-          //     "guides/building-and-releasing",
-          //   ]
-          // }
-        ]
+          // 'metaeditor/customization/mui/helper',
+          {
+            type: 'category',
+            label: 'MUI',
+            items: [
+              'metaeditor/customization/mui/theme',
+              'metaeditor/customization/mui/helper',
+            ],
+          },
+        ],
       },
       {
         type: "category",
@@ -46,9 +48,13 @@ module.exports = {
       },
       {
         type: "category",
-        label: "Extensions",
+        label: "Common extensions",
         items: [
-          'metaeditor/extensions/metasnippets',
+          'metaeditor/common/hooks',
+          'metaeditor/common/styles',
+          'metaeditor/common/funcs',
+          'metaeditor/common/helpers',
+          'metaeditor/common/libs',
         ]
       },
       {

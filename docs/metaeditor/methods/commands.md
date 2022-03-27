@@ -3,7 +3,7 @@ title: Commands
 sidebar_label: Commands
 ---
 
-import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
 
 
 
@@ -24,7 +24,7 @@ function Demo() {
   const player = usePlayer()
 
   const handleCommand = (type, value, verification_id = null) => event => {
-    player.cmd._emit(type, value, verification_id)
+    player.cmd.EMIT({type, value, verification_id})
   }
 
   return (
@@ -35,4 +35,4 @@ function Demo() {
 }
 ```
 
-<DocsMessage />
+

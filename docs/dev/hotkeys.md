@@ -4,7 +4,7 @@ title: Hot keys
 sidebar_label: Hot keys
 ---
 
-import DocsMessage from "@site/src/components/DocsMessage.jsx"
+
 
 *Hotkeys are available in production, don't forget to disable hotkeys if needed.*
 
@@ -15,4 +15,4 @@ import DocsMessage from "@site/src/components/DocsMessage.jsx"
 | `Ctrl+F` | Fullscreen mode                    |
 
 
-<DocsMessage />
+
