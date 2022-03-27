@@ -263,19 +263,19 @@ Request.DELETE(url='https://...').then(res => {
 ### custom
 
 ```javascript
-
+// in progress
 ```
 
 ### media
 
 ```javascript
-
+// in progress
 ```
 
 ### theme
 
 ```javascript
-
+// in progress
 ```
 
 ### styled
