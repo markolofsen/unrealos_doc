@@ -31,7 +31,7 @@ module.exports = {
     googleTag: 'G-MCJPYV0KFS',
   },
   presets: {
-    editUrl: 'https://github.com/markolofsen/unrealos_doc/edit/main/',
+    // editUrl: 'https://github.com/markolofsen/unrealos_doc/edit/main/',
   },
   npmItems: ['pixel-streaming', 'metaeditor'].map(slug => ({
     label: slug,
