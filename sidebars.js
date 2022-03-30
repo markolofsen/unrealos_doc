@@ -19,6 +19,7 @@ module.exports = {
           'metaeditor/settings/config',
           'metaeditor/settings/streaming',
           'metaeditor/settings/deployment',
+          'metaeditor/settings/upgrade',
         ]
       },
       {

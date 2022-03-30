@@ -3,6 +3,12 @@ title: Commands
 sidebar_label: Commands
 ---
 
+:::info
+
+This page shows an example of sending a command from MetaEditor to Unreal Engine.
+
+:::
+
 ## Example
 
 ```javascript
@@ -12,35 +18,34 @@ import { usePlayer } from 'metaeditor/context/'
 function Demo() {
   const player = usePlayer()
 
-  const handleCommand = (type, value) => event => {
+  const handleCommand = async (event) => {
 
-    player.cmd.emit({
-      type,
-      value,
+    await player.cmd.emit({
+      command: 'my_command_1',
+      value: { rotate: true },
       verification_id: undefined,
-      emulation: true,
+      fakeResponse: undefined,
+    }).then(res => {
+      console.log(res)
     })
 
   }
 
   return (
     <MetaEditor {...props}>
-      <Button onClick={handleCommand('my_command_1', { anyObject: [.1, 3.14] })}>
+      <Button onClick={handleCommand}>
         Send command to Unreal Engine
       </Button>
     </MetaEditor>
   )
 }
-
 ```
-
-
 
 :::warning
 
 Demo function must be a child of the MetaEditor component.
 
-```javas
+```javascript
 export default function App(props) {
     return (
       <MetaEditor {...props}>
@@ -52,8 +57,6 @@ export default function App(props) {
 
 :::
 
-
-
 ## Parameters
 
 | Keys              | Format   | Default value | Description                                                                                                                                                                                                                              |
@@ -62,9 +65,3 @@ export default function App(props) {
 | `value`           | `object` | `{}`          | An object with the data that Unreal Engine will receive as the contents of the command.                                                                                                                                                  |
 | `verification_id` | `string` | `undefined`   | This is the unique identifier for the command. With it, you can distinguish between two identical commands sent to the Unreal Engine.<br/><br/>If you specify `undefined"`, then MetaEditor will automatically assign a sequence number. |
 | `emulation`       | `string` | `false`       | Callback emulation for testing commands without waiting for a callback from Unreal Engine.                                                                                                                                               |
-
-
-
-
-
-
