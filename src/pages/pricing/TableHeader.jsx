@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 //docusaurus
 import Link from '@docusaurus/Link';

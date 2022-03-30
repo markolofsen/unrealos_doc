@@ -21,7 +21,7 @@ npm install pixel-streaming
 ## Usage
 
 ```javascript
-import React from 'react';
+import * as React from 'react';
 
 // libs
 import PixelStreaming, {DebugData} from 'pixel-streaming';

@@ -22,8 +22,12 @@ function Demo() {
 
     await player.cmd.emit({
       command: 'my_command_1',
-      value: { rotate: true },
-      verification_id: undefined,
+      request: {
+        // The request body should only contain a json object.
+        body: { rotate: true },
+      },
+
+      // If the callback emulation option is enabled, then the contents of fakeResponse will be returned as response.body
       fakeResponse: undefined,
     }).then(res => {
       console.log(res)
@@ -61,7 +65,7 @@ export default function App(props) {
 
 | Keys              | Format   | Default value | Description                                                                                                                                                                                                                              |
 | ----------------- | -------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`            | `string` |               | The unique command name that Unreal Engine will receive.<br/>Type: `slug` (lowercase, no spaces)                                                                                                                                         |
-| `value`           | `object` | `{}`          | An object with the data that Unreal Engine will receive as the contents of the command.                                                                                                                                                  |
+| `command`         | `string` |               | The unique command name that Unreal Engine will receive.<br/>Type: `slug` (lowercase, no spaces)                                                                                                                                         |
+| `request.body`    | `json`   | `{}`          | An object with the data that Unreal Engine will receive as the contents of the command.                                                                                                                                                  |
 | `verification_id` | `string` | `undefined`   | This is the unique identifier for the command. With it, you can distinguish between two identical commands sent to the Unreal Engine.<br/><br/>If you specify `undefined"`, then MetaEditor will automatically assign a sequence number. |
-| `emulation`       | `string` | `false`       | Callback emulation for testing commands without waiting for a callback from Unreal Engine.                                                                                                                                               |
+| `fakeResponse`    | `json`   | `false`       | Callback emulation for testing commands without waiting for a callback from Unreal Engine.                                                                                                                                               |

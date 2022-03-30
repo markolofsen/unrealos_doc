@@ -9,7 +9,7 @@ import DocsMessage from "@site/src/components/DocsMessage.jsx"
 ### Samples
 
 ```javascript
-import React from 'react';
+import * as React from 'react';
 
 // styles
 import { styled, css } from 'styles/snippets'

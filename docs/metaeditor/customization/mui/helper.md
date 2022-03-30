@@ -23,7 +23,7 @@ return (
 ### Samples
 
 ```javascript
-import React from 'react';
+import * as React from 'react';
 
 // styles
 import { styled, css, darken, lighten, alpha, withStyles } from 'metaeditor/common/styles/'

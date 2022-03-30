@@ -3,11 +3,10 @@ title: Hooks
 sidebar_label: Hooks
 ---
 
-
 ### useContainerDimensions
 
 ```javascript
-import React from 'react'
+import * as React from 'react'
 import {useContainerDimensions} from 'metaeditor/common/hooks/'
 
 function MyComponent() {
@@ -42,7 +41,7 @@ function MyComponent() {
 ### useStateEvents & useReducerEvents
 
 ```javascript
-import React from 'react'
+import * as React from 'react'
 import {useStateEvents, useReducerEvents} from 'metaeditor/common/hooks/'
 
 function MyComponent() {
@@ -87,6 +86,85 @@ function MyComponent() {
       {amount >= 0 ? 'from' : 'to'} my bank account.
     </div>
   )
+}
+```
+
+### useMedia
+
+```javascript
+import {useMedia} from 'metaeditor/common/hooks/'
+
+function MyComponent() {
+    const media = useMedia();
+    const isMobile = media.down.sm
+
+    console.warn(media)
+
+    // Response:
+    // "up":{"xs":true,"sm":true,"md":true,"lg":false,"xl":false},
+    // "down":{"xs":false,"sm":false,"md":true,"lg":true,"xl":true},
+
+    return (
+        <div>
+
+            {media.up.sm && (
+                <div>Over sm</div>
+            )}
+            {media.down.sm && (
+                <div>Less then sm</div>
+            )}
+
+            <pre>
+                {JSON.strinigy(media, null, 4)}
+            </pre>
+        </div>
+    )
+}
+```
+
+### useNotify
+
+```javascript
+import {useNotify} from 'metaeditor/common/hooks/'
+
+function MyComponent() {
+  const notify = useNotify()
+
+  const sendNotification = (content) => {
+    notify.info(content, {key: undefined})
+  }
+
+  return (
+    <div>
+
+      <button onClick={() => {
+
+        sendNotification((
+          <div>
+            Some html content
+          </div>
+        ))
+
+      }}>Normal</button>
+
+    </div>
+  )
+}
+```
+
+### useParseUrl
+
+```javascript
+import {useParseUrl} from 'metaeditor/common/hooks/'
+
+function MyComponent() {
+  const parseUrl = useParseUrl()
+
+  React.useEffect(() => {
+      if (parseUrl.active && parseUrl.query?.mode === 'dev') {
+        alert('Good!')
+      }
+    }, [parseUrl.active])
 }
 ```
 
@@ -187,5 +265,3 @@ function MyComponent() {
     );
 }
 ```
-
-### ADD MORE!!!
