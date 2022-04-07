@@ -189,7 +189,7 @@ module.exports = {
             },
             {
               label: 'Data Policy',
-              href: '/legal/data-policy',
+              href: '/legal/policy',
             },
             {
               label: 'Cookie Policy',

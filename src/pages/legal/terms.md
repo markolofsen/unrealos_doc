@@ -71,7 +71,7 @@ The preceding provision regarding applicable law and venue does not apply if you
 
 #### 5. Privacy
 
-Under data protection legislation, we are required to provide you with certain information about who we are, how we process your personal data and for what purposes and your rights in relation to your personal data and how to exercise them. This information is provided in [Privacy Policy](/legal/privacy) and it is important that you read that information. Please also review our [Cookies Policy](/legal/cookies), which tells you which cookies we use on the Website and how to manage them.
+Under data protection legislation, we are required to provide you with certain information about who we are, how we process your personal data and for what purposes and your rights in relation to your personal data and how to exercise them. This information is provided in [Privacy Policy](/legal/privacy) and it is important that you read that information. Please also review our [Cookies Policy](/legal/cookie-policy), which tells you which cookies we use on the Website and how to manage them.
 
 #### 6. Other important terms
 

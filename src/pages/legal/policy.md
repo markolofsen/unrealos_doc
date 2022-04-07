@@ -46,7 +46,7 @@ Cookies are small pieces of text used to store information on web browsers. Cook
 
 We use cookies served by Google Analytics to collect limited data directly from end-user browsers to enable us to better understand your use of the Services, including making use of the demographics and interests reports services of Google Analytics. Further information on how Google collects and uses this data can be found at [www.google.com/policies/privacy/partners/](http://www.google.com/policies/privacy/partners/). You can opt-out of all Google supported analytics within the Services by going to the following webpage: [Google Analytics Opt-out Browser Add-on Download Page](https://tools.google.com/dlpage/gaoptout).
 
-Learn more about how we use cookies in by reading our [Cookies Policy](/legal/cookies-policy).
+Learn more about how we use cookies in by reading our [Cookies Policy](/legal/cookie-policy).
 
 #### How do we use this information?
 
