@@ -131,18 +131,22 @@ module.exports = {
               to: 'docs/',
             },
             {
-              label: 'Issues',
-              href: variables.repo.issues,
+              label: 'Careers',
+              to: 'careers',
             },
             {
-              label: 'Feature Requests',
-              href: '/feature-requests/',
+              label: 'Pricing',
+              to: 'pricing',
             },
           ],
         },
         {
           title: 'Community',
           items: [
+            {
+              label: 'Community',
+              to: 'community',
+            },
             {
               label: 'Stack Overflow',
               href: variables.contacts.stackoverflowUrl,
@@ -158,52 +162,41 @@ module.exports = {
           ],
         },
         {
-          title: 'More',
+          title: 'For Developers',
           items: [
-            // {
-            //   label: 'Blog',
-            //   to: 'blog',
-            // },
             {
-              label: 'Careers',
-              to: 'careers',
+              label: 'Issues',
+              href: variables.repo.issues,
             },
             {
-              label: 'Community',
-              to: 'community',
+              label: 'Feature Requests',
+              href: '/feature-requests/',
             },
-            {
-              label: 'Pricing',
-              to: 'pricing',
-            },
+            ...variables.npmItems,
           ],
         },
         {
-          title: 'NPM',
-          items: variables.npmItems,
+          title: 'Legal',
+          // Please do not remove the privacy and terms, it's a legal requirement.
+          items: [
+            {
+              label: 'Privacy',
+              href: '/legal/privacy',
+            },
+            {
+              label: 'Terms',
+              href: '/legal/terms',
+            },
+            {
+              label: 'Data Policy',
+              href: '/legal/data-policy',
+            },
+            {
+              label: 'Cookie Policy',
+              href: '/legal/cookie-policy',
+            },
+          ],
         },
-        // {
-        //   title: 'Legal',
-        //   // Please do not remove the privacy and terms, it's a legal requirement.
-        //   items: [
-        //     {
-        //       label: 'Privacy',
-        //       href: 'https://opensource.facebook.com/legal/privacy/',
-        //     },
-        //     {
-        //       label: 'Terms',
-        //       href: 'https://opensource.facebook.com/legal/terms/',
-        //     },
-        //     {
-        //       label: 'Data Policy',
-        //       href: 'https://opensource.facebook.com/legal/data-policy/',
-        //     },
-        //     {
-        //       label: 'Cookie Policy',
-        //       href: 'https://opensource.facebook.com/legal/cookie-policy/',
-        //     },
-        //   ],
-        // },
       ],
       logo: {
         alt: variables.company.name,
