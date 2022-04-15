@@ -36,17 +36,15 @@ module.exports = {
     image: variables.seo.ogImage,
     // metadata: [{name: 'twitter:card', content: 'summary'}],
 
-    // announcementBar: {
-    //   id: 'support_us',
-    //   content: `
-    //     <a href="/careers" rel="noopener noreferrer" style="display: block; text-decoration: auto;">
-    //       <b>C++ programmer needed!</b>
-    //     </a>
-    //   `,
-    //   backgroundColor: 'var(--ifm-color-primary)',
-    //   textColor: '#fff',
-    //   isCloseable: true,
-    // },
+    announcementBar: {
+      id: 'pitch_deck',
+      content: `
+      Check out <a href="https://unrealos.com/static/pitchdeck/MetaEditor.pdf" target="_blank" rel="noopener noreferrer">Pitch Deck for investors</a>
+      `,
+      // backgroundColor: 'var(--ifm-color-primary)',
+      // textColor: '#fff',
+      isCloseable: true,
+    },
 
     colorMode: {
       defaultMode: 'dark',
@@ -154,6 +152,10 @@ module.exports = {
             {
               label: 'Twitter',
               href: variables.contacts.twitterUrl,
+            },
+            {
+              label: 'LinkedIn',
+              href: variables.contacts.linkedIn,
             },
             {
               label: 'Discord',

@@ -25,7 +25,8 @@ module.exports = {
     url: 'https://unrealos.com/contacts/',
     discordUrl: 'https://discordapp.com/invite/eGHKuQ3BHM',
     stackoverflowUrl: `https://stackoverflow.com/questions/tagged/${namespace}`,
-    twitterUrl: `https://twitter.com/${namespace}`,
+    twitterUrl: `https://twitter.com/metaunreal`,
+    linkedIn: 'https://www.linkedin.com/company/unrealos/',
   },
   config: {
     googleTag: 'G-MCJPYV0KFS',

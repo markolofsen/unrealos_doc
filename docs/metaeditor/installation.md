@@ -14,6 +14,14 @@ import variables from '@site/variables.js';
     </code>
    </pre>
 
+   > Or you can use a development branch where the MetaEditor is not from the npm registry
+
+   <pre>
+    <code>
+      git clone -b dev {variables.repo.git}
+    </code>
+   </pre>
+
 2. Open root directory and set up the environment:
    
    ```bash
@@ -23,7 +31,10 @@ import variables from '@site/variables.js';
 
 3. Set up a streaming connection:
    
-   [Connecting to a streaming server](./settings/streaming.md)
+   * [Connecting to localhost](../dev/localhost.md)
+
+   * [Connecting to a streaming server](./settings/streaming.md)
+
 
 
 4. Set up streaming:
