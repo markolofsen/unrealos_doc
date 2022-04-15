@@ -74,13 +74,13 @@ module.exports = {
           label: 'Docs',
         },
         {
-          to: 'pricing',
-          label: 'Pricing',
+          to: 'community',
+          label: 'Community',
           position: 'left',
         },
         {
-          to: 'community',
-          label: 'Community',
+          href: 'https://portal.metaeditor.io/pricing/',
+          label: 'Pricing',
           position: 'left',
         },
         {
@@ -136,7 +136,7 @@ module.exports = {
             },
             {
               label: 'Pricing',
-              to: 'pricing',
+              href: 'https://portal.metaeditor.io/pricing/',
             },
           ],
         },
