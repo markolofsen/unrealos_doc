@@ -84,7 +84,7 @@ const theme = createTheme({
         body: {
           padding: 0,
           margin: 0,
-          fontFamily: ['Montserrat', 'Helvetica', 'Arial', 'sans-serif'].join(', '),
+          fontFamily: ['Nunito Sans', 'Helvetica', 'Arial', 'sans-serif'].join(', '),
           WebkitFontSmoothing: 'antialiased',
           lineHeight: 'unset',
         },

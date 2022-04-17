@@ -15,12 +15,13 @@ const systemFont = [
 ];
 
 const heading: TypographyStyleOptions = {
-  fontFamily: ['"Montserrat"', ...systemFont].join(','),
-  fontWeight: 600,
+  fontFamily: ['Nunito Sans', ...systemFont].join(','),
+  fontWeight: 700,
 };
 
 export const typography: ThemeOptions['typography'] = {
-  fontFamily: ['"Montserrat"', ...systemFont].join(','),
+  fontFamily: ['Nunito Sans', ...systemFont].join(','),
+  fontWeightBold: 800,
   h1: {
     ...heading,
     fontSize: 40,

@@ -13,8 +13,18 @@
  * work well for content-centric websites.
  */
 
+
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  font-weight: 600;
+  font-style: normal;
+}
+
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-font-family-base: "Nunito Sans";
   --ifm-color-primary: #2D9CDB;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
