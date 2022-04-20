@@ -17,7 +17,6 @@ module.exports = {
         label: "Settings",
         items: [
           'metaeditor/settings/config',
-          'metaeditor/settings/streaming',
           'metaeditor/settings/deployment',
           'metaeditor/settings/upgrade',
         ]

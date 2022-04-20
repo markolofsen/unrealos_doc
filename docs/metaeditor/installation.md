@@ -33,9 +33,6 @@ import variables from '@site/variables.js';
    
    * [Connecting to localhost](../dev/localhost.md)
 
-   * [Connecting to a streaming server](./settings/streaming.md)
-
-
 
 4. Set up streaming:
    
