@@ -6,11 +6,11 @@ sidebar_label: Libs
 ### Request
 
 ```javascript
-import {Request} from 'metaeditor/common/libs/'
+import {Request} from 'metalib/common/libs/'
 
 // Get 
 Request.GET(url='https://...').then(res => {
-  if(res.status === 200) {
+  if(res.ok || res.status === 200) {
     console.log(res.body)
   }
 }).catch(err => {
@@ -20,7 +20,7 @@ Request.GET(url='https://...').then(res => {
 // Post
 const body = {value: 123}
 Request.POST(url='https://...', body).then(res => {
-  if(res.status === 200) {
+  if(res.ok || res.status === 200) {
     console.log(res.body)
   }
 }).catch(err => {
@@ -30,7 +30,7 @@ Request.POST(url='https://...', body).then(res => {
 
 // Delete
 Request.DELETE(url='https://...').then(res => {
-  if(res.status === 200) {
+  if(res.ok || res.status === 200) {
     console.log(res.body)
   }
 }).catch(err => {

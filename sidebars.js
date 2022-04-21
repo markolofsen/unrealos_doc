@@ -23,36 +23,10 @@ module.exports = {
       },
       {
         type: "category",
-        label: "Customization",
-        items: [
-          // 'metaeditor/customization/mui/helper',
-          {
-            type: 'category',
-            label: 'MUI',
-            items: [
-              'metaeditor/customization/mui/theme',
-              'metaeditor/customization/mui/helper',
-            ],
-          },
-        ],
-      },
-      {
-        type: "category",
         label: "Methods",
         items: [
           'metaeditor/methods/commands',
-          // 'metaeditor/methods/callbacks',
-        ]
-      },
-      {
-        type: "category",
-        label: "Common extensions",
-        items: [
-          'metaeditor/common/hooks',
-          'metaeditor/common/styles',
-          'metaeditor/common/funcs',
-          'metaeditor/common/helpers',
-          'metaeditor/common/libs',
+          'metaeditor/methods/callbacks',
         ]
       },
       {
@@ -63,6 +37,28 @@ module.exports = {
           'pixel-streaming/settings',
         ]
       },
+    ],
+    'Customization': [
+      {
+        type: "category",
+        label: "Metalib",
+        items: [
+          'custom/metalib/installation',
+          'custom/metalib/hooks',
+          'custom/metalib/styles',
+          'custom/metalib/funcs',
+          'custom/metalib/helpers',
+          'custom/metalib/libs',
+          {
+            type: "category",
+            label: "Components",
+            items: [
+              'custom/metalib/components/formik',
+            ]
+          },
+        ]
+      },
+      'custom/mui/helper',
     ],
     'Uneal Engine': [
       {

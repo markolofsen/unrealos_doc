@@ -7,7 +7,7 @@ sidebar_label: Hooks
 
 ```javascript
 import * as React from 'react'
-import {useContainerDimensions} from 'metaeditor/common/hooks/'
+import {useContainerDimensions} from 'metalib/common/hooks/'
 
 function MyComponent() {
   const componentRef = React.useRef(null);
@@ -27,7 +27,7 @@ function MyComponent() {
 ### useCountdown
 
 ```javascript
-import {useCountdown} from 'metaeditor/common/hooks/'
+import {useCountdown} from 'metalib/common/hooks/'
 
 function MyComponent() {
   const countdown = useCountdown({seconds: 60});
@@ -42,7 +42,7 @@ function MyComponent() {
 
 ```javascript
 import * as React from 'react'
-import {useStateEvents, useReducerEvents} from 'metaeditor/common/hooks/'
+import {useStateEvents, useReducerEvents} from 'metalib/common/hooks/'
 
 function MyComponent() {
   const [state, dispatch] = useReducerEvents(reducer, initialState)
@@ -65,7 +65,7 @@ function MyComponent() {
 ### useHotkeys
 
 ```javascript
-import {useHotkeys} from 'metaeditor/common/hooks/'
+import {useHotkeys} from 'metalib/common/hooks/'
 
 function MyComponent() {
   const [amount, setAmount] = useState(0)
@@ -92,7 +92,7 @@ function MyComponent() {
 ### useMedia
 
 ```javascript
-import {useMedia} from 'metaeditor/common/hooks/'
+import {useMedia} from 'metalib/common/hooks/'
 
 function MyComponent() {
     const media = useMedia();
@@ -125,7 +125,7 @@ function MyComponent() {
 ### useNotify
 
 ```javascript
-import {useNotify} from 'metaeditor/common/hooks/'
+import {useNotify} from 'metalib/common/hooks/'
 
 function MyComponent() {
   const notify = useNotify()
@@ -155,7 +155,7 @@ function MyComponent() {
 ### useParseUrl
 
 ```javascript
-import {useParseUrl} from 'metaeditor/common/hooks/'
+import {useParseUrl} from 'metalib/common/hooks/'
 
 function MyComponent() {
   const parseUrl = useParseUrl()
@@ -171,7 +171,7 @@ function MyComponent() {
 ### useSound
 
 ```javascript
-import {useSound} from 'metaeditor/common/hooks/'
+import {useSound} from 'metalib/common/hooks/'
 
 function MyComponent() {
   const sound = useSound('http://.../sound.mp3');
@@ -192,7 +192,7 @@ function MyComponent() {
 ### useStorage
 
 ```javascript
-import {useStorage} from 'metaeditor/common/hooks/'
+import {useStorage} from 'metalib/common/hooks/'
 
 const STORAGE_KEY = 'DEMO_KEY'
 
@@ -233,7 +233,7 @@ function MyComponent() {
 ### useUnload
 
 ```javascript
-import {useUnload} from 'metaeditor/common/hooks/'
+import {useUnload} from 'metalib/common/hooks/'
 
 function MyComponent() {
 
@@ -253,7 +253,7 @@ function MyComponent() {
 ### useWindowSize
 
 ```javascript
-import {useWindowSize} from 'metaeditor/common/hooks/'
+import {useWindowSize} from 'metalib/common/hooks/'
 
 function MyComponent() {
     const windowSize = useWindowSize();
