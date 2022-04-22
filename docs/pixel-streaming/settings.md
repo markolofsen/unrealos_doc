@@ -5,9 +5,11 @@ sidebar_label: Settings
 
 # PixelStreaming settings
 
-> Connects to running [STUN and TURN Servers](https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/PixelStreaming/Hosting/).
+> [Hosting and Networking Guide for Pixel Streaming in Unreal Engine](https://docs.unrealengine.com/5.0/en-US/hosting-and-networking-guide-for-pixel-streaming-in-unreal-engine/)
 
-## Module installation
+
+
+## Installation
 
 ```bash
 yarn add pixel-streaming
@@ -51,11 +53,23 @@ export default function Player(props) {
       onProgress={(payload) => {
         // console.warn('progress', payload);
       }}
-      autoConnect={true}
-      quality={1}
       isDev={true}
-      host="http://127.0.0.1"
-      port={80}
+
+      settings={{
+          volume: 1,
+          quality: 1,
+          connectOnStart: false,
+
+          host: 'http://127.0.0.1',
+          port: 80,
+
+          pixelStreaming: {
+            warnTimeout: 120,
+            closeTimeout: 10,
+            lockMouse: false,
+            fakeMouseWithTouches: false,
+          }
+        }}
     >
       {(payload) => <div style={{ padding: 30 }}>{props.children}</div>}
     </PixelStreaming>
@@ -65,19 +79,20 @@ export default function Player(props) {
 
 ## Props
 
-| Prop        | Description                                                                                                                                                                                                                                                                                                                 | Type       |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| autoConnect | Connect to stream automatically. <br/>Default: `true`                                                                                                                                                                                                                                                                       | `bool`     |
-| host        | String host to url with signal server.<br/>If host starts wih `https` then it will be used `wss` <br/>If starts with `http` then will be used `ws`<br/>Example: `https://uuid1234567890.streamdomain.com`                                                                                                                   | `string`   |
-| port        | Port of signal server.<br/>Default: `80`                                                                                                                                                                                                                                                                                    | `int`      |
-| children    | The function receives parameters and renders the nested component <br/>Example: `{(payload) => (...)}` <br/><br/>**Incoming parameters:** <br/>`state` — [Object with state data](#ps-state)<br/>`initConnection()` — If `autoConnect={false}`, then use the `initConnection()` function to manually connect to the stream. | `function` |
-| onLoad      | When the stream started                                                                                                                                                                                                                                                                                                     | `function` |
-| onConnect   | Called when the stream is running                                                                                                                                                                                                                                                                                           |            |
-| onRestart   | Called when the stream is restarted                                                                                                                                                                                                                                                                                         | `function` |
-| onError     | Called on errors in the webrtc connection                                                                                                                                                                                                                                                                                   |            |
-| onClose     | Called if the webrtc connection is closed                                                                                                                                                                                                                                                                                   |            |
-| onCallback  | Called when the stream server sends callbacks                                                                                                                                                                                                                                                                               |            |
-| onProgress  | Return progress in percentage based on `secondsToStart`                                                                                                                                                                                                                                                                     | `function` |
+| Prop                    | Description                                                                                                                                                                                                                                                                                                                 | Type       |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| settings.pixelStreaming | Pixel Streaming Configuration                                                                                                                                                                                                                                                                                               | `object`   |
+| settings.connectOnStart | Connect to stream automatically. <br/>Default: `true`                                                                                                                                                                                                                                                                       | `bool`     |
+| settings.host           | String host to url with signal server.<br/>If host starts wih `https` then it will be used `wss` <br/>If starts with `http` then will be used `ws`<br/>Example: `https://uuid1234567890.streamdomain.com`                                                                                                                   | `string`   |
+| settings.port           | Port of signal server.<br/>Default: `80`                                                                                                                                                                                                                                                                                    | `int`      |
+| children                | The function receives parameters and renders the nested component <br/>Example: `{(payload) => (...)}` <br/><br/>**Incoming parameters:** <br/>`state` — [Object with state data](#ps-state)<br/>`initConnection()` — If `autoConnect={false}`, then use the `initConnection()` function to manually connect to the stream. | `function` |
+| onLoad                  | When the stream started                                                                                                                                                                                                                                                                                                     | `function` |
+| onConnect               | Called when the stream is running                                                                                                                                                                                                                                                                                           |            |
+| onRestart               | Called when the stream is restarted                                                                                                                                                                                                                                                                                         | `function` |
+| onError                 | Called on errors in the webrtc connection                                                                                                                                                                                                                                                                                   |            |
+| onClose                 | Called if the webrtc connection is closed                                                                                                                                                                                                                                                                                   |            |
+| onCallback              | Called when the stream server sends callbacks                                                                                                                                                                                                                                                                               |            |
+| onProgress              | Return progress in percentage based on `secondsToStart`                                                                                                                                                                                                                                                                     | `function` |
 
 <h2 id="ps-state">Reference object data</h2>
 
@@ -112,7 +127,6 @@ refPixelStreaming.current.emit({
    }   
  },
 })
-
 ```
 
 ## Event for handling callbacks from Unreal Engine
@@ -120,8 +134,6 @@ refPixelStreaming.current.emit({
 > To get callbacks, you can use the built-in method: 
 > 
 > `<PixelStreaming onCallback={payload => console.log(payload) } />`}
-
-
 
 ```javascript
 const eventKey = 'metaeditor_callback'
@@ -151,8 +163,6 @@ document.addEventListener(eventKey, event => {
 }
 */
 ```
-
-
 
 ## Attention!
 
