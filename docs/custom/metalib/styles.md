@@ -40,7 +40,7 @@ const Custom = styled.custom(Box, theme => ({
 }))
 ```
 
-### ### Styled-jss
+### Styled-jss
 
 ```javascript
 // styles

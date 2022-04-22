@@ -12,35 +12,57 @@ This page shows how to get a callback from Unreal Engine in MetaEditor.
 ## Example
 
 ```javascript
+import * as React from 'react';
+
+// context
+import { usePlayer } from 'metaeditor/context/';
+
+// material
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { usePlayer } from 'metaeditor/context/'
 
-function Demo() {
+
+export default function Demo() {
   const player = usePlayer()
+  const [disabled, setDisabled] = React.useState(false)
+  const callbackUserSound = player.cls.callbacks.getLast('click_on_door')
 
-  const handleCommand = async (event) => {
+  React.useEffect(() => {
+    if (callbackUserSound) {
+      alert('Independent callback')
+    }
+  }, [callbackUserSound])
 
+  const testCommand = async () => {
+    setDisabled(true)
     await player.cmd.emit({
-      command: 'my_command_1',
+      command: 'change_color',
       request: {
         // The request body should only contain a json object.
-        body: { rotate: true },
+        body: { volume: 1 },
       },
 
       // If the callback emulation option is enabled, then the contents of fakeResponse will be returned as response.body
       fakeResponse: undefined,
     }).then(res => {
-      console.log(res)
+      if (res) {
+        alert('Callback received!')
+        console.log(res)
+      }
     })
+    setDisabled(false)
+  }
 
+  if (!player.cls.streamIsActive) {
+    return (<div />)
   }
 
   return (
-    <MetaEditor {...props}>
-      <Button onClick={handleCommand}>
-        Send command to Unreal Engine
+    <Box sx={{ textAlign: 'center' }}>
+      <Button variant="outlined" color="inherit" disabled={disabled} onClick={testCommand}>
+        Test command
       </Button>
-    </MetaEditor>
+    </Box>
   )
 }
 ```
@@ -60,12 +82,3 @@ export default function App(props) {
 ```
 
 :::
-
-## Parameters
-
-| Keys              | Format   | Default value | Description                                                                                                                                                                                                                              |
-| ----------------- | -------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `command`         | `string` |               | The unique command name that Unreal Engine will receive.<br/>Type: `slug` (lowercase, no spaces)                                                                                                                                         |
-| `request.body`    | `json`   | `{}`          | An object with the data that Unreal Engine will receive as the contents of the command.                                                                                                                                                  |
-| `verification_id` | `string` | `undefined`   | This is the unique identifier for the command. With it, you can distinguish between two identical commands sent to the Unreal Engine.<br/><br/>If you specify `undefined"`, then MetaEditor will automatically assign a sequence number. |
-| `fakeResponse`    | `json`   | `false`       | Callback emulation for testing commands without waiting for a callback from Unreal Engine.                                                                                                                                               |
