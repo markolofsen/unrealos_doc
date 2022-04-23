@@ -82,7 +82,7 @@ module.exports = {
           position: 'left',
         },
         {
-          href: 'https://portal.metaeditor.io',
+          href: 'https://ps.metaeditor.io',
           label: 'Demos',
           position: 'left',
         },
