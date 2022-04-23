@@ -20,7 +20,7 @@ function Demo() {
 
   const handleCommand = async (event) => {
 
-    await player.cmd.emit({
+    await player.cls.emitAsync({
       command: 'my_command_1',
       request: {
         // The request body should only contain a json object.

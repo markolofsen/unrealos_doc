@@ -7,8 +7,6 @@ sidebar_label: Settings
 
 > [Hosting and Networking Guide for Pixel Streaming in Unreal Engine](https://docs.unrealengine.com/5.0/en-US/hosting-and-networking-guide-for-pixel-streaming-in-unreal-engine/)
 
-
-
 ## Installation
 
 ```bash
@@ -43,12 +41,6 @@ export default function Player(props) {
       }}
       onClose={(payload) => {
         // console.error('closed', payload);
-      }}
-      onCommand={(payload) => {
-        // console.warn('command', payload);
-      }}
-      onCallback={(payload) => {
-        // console.warn('callback', payload);
       }}
       onProgress={(payload) => {
         // console.warn('progress', payload);
@@ -91,7 +83,6 @@ export default function Player(props) {
 | onRestart               | Called when the stream is restarted                                                                                                                                                                                                                                                                                         | `function` |
 | onError                 | Called on errors in the webrtc connection                                                                                                                                                                                                                                                                                   |            |
 | onClose                 | Called if the webrtc connection is closed                                                                                                                                                                                                                                                                                   |            |
-| onCallback              | Called when the stream server sends callbacks                                                                                                                                                                                                                                                                               |            |
 | onProgress              | Return progress in percentage based on `secondsToStart`                                                                                                                                                                                                                                                                     | `function` |
 
 <h2 id="ps-state">Reference object data</h2>
@@ -118,7 +109,7 @@ export default function Player(props) {
 ## Send command to stream server
 
 ```javascript
-refPixelStreaming.current.emit({
+refPixelStreaming.current.emitAsync({
  verification_id: undefined, //server response with execute command by verification id
  command: 'user_sound', //key of command
  request: {
@@ -131,15 +122,14 @@ refPixelStreaming.current.emit({
 
 ## Event for handling callbacks from Unreal Engine
 
-> To get callbacks, you can use the built-in method: 
-> 
-> `<PixelStreaming onCallback={payload => console.log(payload) } />`}
-
 ```javascript
-const eventKey = 'metaeditor_callback'
-document.addEventListener(eventKey, event => {
-    response = event.detail
-    console.log(response)
+refPixelStreaming.current.useTrigger({
+  onCommand: ({detail}) => {
+    alert(JSON.stringify(detail))
+  },
+  onCallback: ({detail}) => {
+    alert(JSON.stringify(detail))
+  },
 })
 
 /*

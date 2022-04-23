@@ -9,7 +9,36 @@ This page shows how to get a callback from Unreal Engine in MetaEditor.
 
 :::
 
-## Example
+## Get command & callback event
+
+```javascript
+import * as React from 'react';
+
+// context
+import { usePlayer } from "metaeditor/context/";
+
+export default function Demo() {
+  const player = usePlayer()
+
+  const onCommand = ({ detail }) => {
+    if (detail.command === 'test_command') {
+      alert('Command\n' + JSON.stringify(detail))
+    }
+  }
+
+  const onCallback = ({ detail }) => {
+    if (detail.command === 'test_command') {
+      alert('Callback\n' + JSON.stringify(detail))
+    }
+  }
+
+  player.cls.useTrigger({ onCommand, onCallback })
+
+  return (...)
+}
+```
+
+## Get async callback
 
 ```javascript
 import * as React from 'react';
@@ -21,21 +50,13 @@ import { usePlayer } from 'metaeditor/context/';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
-
 export default function Demo() {
   const player = usePlayer()
   const [disabled, setDisabled] = React.useState(false)
-  const callbackUserSound = player.cls.callbacks.getLast('click_on_door')
-
-  React.useEffect(() => {
-    if (callbackUserSound) {
-      alert('Independent callback')
-    }
-  }, [callbackUserSound])
 
   const testCommand = async () => {
     setDisabled(true)
-    await player.cmd.emit({
+    await player.cls.emitAsync({
       command: 'change_color',
       request: {
         // The request body should only contain a json object.
@@ -53,7 +74,7 @@ export default function Demo() {
     setDisabled(false)
   }
 
-  if (!player.cls.streamIsActive) {
+  if (!player.state.active) {
     return (<div />)
   }
 

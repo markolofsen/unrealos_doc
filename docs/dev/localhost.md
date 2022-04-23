@@ -10,13 +10,9 @@ You can connect to your local streaming server via the web version:
 
 > http://ps-dev.metaeditor.io
 
-
-
 If you launched MetaEditor on localhost, then to connect to local streaming use:
 
-> http://127.0.0.1/?localhost=true
-
-
+> http://127.0.0.1/localhost/
 
 ### Default connection data:
 

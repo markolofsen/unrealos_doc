@@ -12,5 +12,3 @@ sidebar_label: Upgrade
 3. Ready! Your version of MetaEditor has been updated!
 
 ##### Thanks!
-
-
