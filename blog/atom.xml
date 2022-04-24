@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://metaeditor.io/blog</id>
-    <title>MetaEditor — Pixel Streaming for Unreal Engine (ReactJS) Blog</title>
+    <title>React.js Pixel Streaming for Unreal Engine Blog</title>
     <updated>2022-03-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://metaeditor.io/blog"/>
-    <subtitle>MetaEditor — Pixel Streaming for Unreal Engine (ReactJS) Blog</subtitle>
+    <subtitle>React.js Pixel Streaming for Unreal Engine Blog</subtitle>
     <icon>https://metaeditor.io/img/favicon.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome!]]></title>
