@@ -43,10 +43,10 @@ export default function Intro() {
               Open door
             </li>
             <li>
-              Open door
+              Change color
             </li>
             <li>
-              Open door
+              Record video
             </li>
           </ul>
         </li>
@@ -71,13 +71,22 @@ export default function Intro() {
     )
   }
 
+  const renderLine = (direction = 'up') => {
+
+    return (
+      <div className={styles.cardLine} data-direction={direction}>
+        <span /><span />
+      </div>
+    )
+  }
+
   return (
     <div className={styles.root}>
       <ul data-list="root">
         <li data-li="content">
 
           <div className={styles.listContent} id="sticky-root">
-            <StickyBox top={30} bottomBoundary="#sticky-root">
+            <StickyBox top={80} bottomBoundary="#sticky-root">
               <ul >
                 <li>
                   <h6>Open Source</h6>
@@ -113,8 +122,9 @@ export default function Intro() {
           <div className={styles.preview}>
             {renderLaptop()}
 
-            <ul className={styles.previewBlock}>
+            <ul className={styles.cardBlock}>
               <li>
+                {renderLine('down')}
                 <h5>
                   Sending a commands
                 </h5>
@@ -123,6 +133,7 @@ export default function Intro() {
                 </div>
               </li>
               <li>
+                {renderLine('up')}
                 <h5>
                   Getting callbacks
                 </h5>
@@ -132,8 +143,9 @@ export default function Intro() {
               </li>
             </ul>
 
-            <ul className={styles.previewBlock}>
+            <ul className={styles.cardBlock}>
               <li>
+                {renderLine('down')}
                 <h5>
                   MetaEditor Platform
                 </h5>
@@ -142,6 +154,7 @@ export default function Intro() {
                 </div>
               </li>
               <li>
+                {renderLine('up')}
                 <h5>
                   Unreal Engine
                 </h5>

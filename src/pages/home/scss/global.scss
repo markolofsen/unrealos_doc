@@ -5,7 +5,16 @@ ul {
 }
 
 h1 {
-  @include typography(4)
+
+  @include media-max($md) {
+    @include typography(2);
+    font-weight: $font-weight-bold;
+  }
+
+  @include media-min($md) {
+    @include typography(3.8);
+    font-weight: $font-weight-bold;
+  }
 }
 
 h2 {
