@@ -1,0 +1,71 @@
+// mixins
+
+@mixin margin($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  padding-top: $top * $space;
+  padding-right: $right * $space;
+  padding-bottom: $bottom * $space;
+  padding-left: $left * $space;
+}
+
+@mixin padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  padding-top: $top * $space;
+  padding-right: $right * $space;
+  padding-bottom: $bottom * $space;
+  padding-left: $left * $space;
+}
+
+@mixin shadow($size) {
+  box-shadow: $size+px $size+px $size+px rgba(0, 0, 0, .2);
+
+  @if $size==0 {
+    box-shadow: none;
+  }
+
+}
+
+@mixin fontSize($s) {
+  $mobileSize: $s * 2.8;
+
+  @if $mobileSize < 1 {
+    $mobileSize: 1
+  }
+
+  font-size: $s+rem;
+
+}
+
+@mixin typography($s) {
+  $fontWeight: $s * (100 * 2.3);
+
+  @if $fontWeight < 500 {
+    $fontWeight: 700
+  }
+
+  font-weight: $fontWeight;
+  padding: 0;
+  margin: 0;
+
+  @include fontSize($s);
+  @include margin(0, 0, 1, 0);
+}
+
+@mixin button() {
+  @include padding(3, 5, 3, 5);
+  @include fontSize(1.1);
+  @include shadow(2);
+  border-radius: $border-radius;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .03rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+
+  &:hover {
+    @include shadow(0);
+    text-decoration: none;
+    color: #fff;
+    opacity: .8;
+  }
+}

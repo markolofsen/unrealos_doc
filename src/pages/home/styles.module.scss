@@ -1,0 +1,194 @@
+@import './scss/config.scss';
+@import './scss/mixins.scss';
+@import './scss/global.scss';
+
+.root {
+
+  [data-list="root"] {
+    background-color: $bg-default;
+    display: flex;
+    min-height: 80vh;
+
+    >li[data-li="content"] {
+      width: 50%;
+      min-width: 600px;
+      margin-left: $space * 5;
+      @include padding(10, 10, 10, 0);
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    >li[data-li="preview"] {
+      overflow: hidden;
+      max-width: 50%;
+      flex-grow: 1;
+      padding: 0;
+      @include padding(0, 0, 5, 0);
+    }
+
+  }
+}
+
+.listContent {
+  width: 100%;
+  max-width: 600px;
+
+  >[data-li="actions"] {
+    @include padding(4, 0, 0);
+    display: flex;
+    gap: 20px;
+  }
+
+  h1 {
+    >span {
+      display: block;
+      color: $primary-light;
+    }
+  }
+}
+
+
+.buttonPrimary {
+  @include button();
+  background-color: $primary-light;
+}
+
+.buttonSecondary {
+  @include button();
+  background-color: $bg-dark;
+}
+
+.lapTopList {
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  >li[data-li="bar"] {
+    background-color: #424343;
+    padding: 10px 10px;
+    display: flex;
+
+    >span {
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      border-radius: 100%;
+      margin-right: 5px;
+      line-height: 0;
+
+      &:nth-child(1) {
+        background-color: #ED6A5E;
+      }
+
+      &:nth-child(2) {
+        background-color: #F6BE4F;
+      }
+
+      &:nth-child(3) {
+        background-color: #62C554;
+      }
+    }
+  }
+
+  >li[data-li="content"] {
+    min-height: 500px;
+    // background-color: $bg-default;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    >[data-el="bg"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: .5;
+      background-position: center center;
+      background-size: cover;
+      // border: solid 1px rgba(0, 0, 0, .3);
+    }
+  }
+}
+
+.lapTopContent {
+  z-index: 1;
+  width: 100%;
+  @include padding(0, 5, 0, 5);
+  display: flex;
+  align-items: center;
+
+  >[data-li="content"] {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+
+    >img {
+      width: 90px;
+      margin-right: $space * 3;
+    }
+
+    >h4 {
+      @include typography(1.7)
+    }
+
+    // @include typography(2);
+    // line-height: 135%;
+  }
+
+  >[data-li="menu"] {
+    border: solid 1px $divider;
+    width: 300px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, .7);
+    padding: $space * 3;
+    border-radius: $border-radius;
+    text-align: center;
+
+    >ul {
+      margin-top: $space*2;
+      display: flex;
+      flex-direction: column;
+      row-gap: $space;
+
+      >li {
+        border: solid 1px $divider;
+        border-radius: $border-radius;
+
+        @include button();
+        @include padding(1, 3, 1, 3);
+      }
+    }
+  }
+}
+
+.preview {
+  min-width: 800px;
+  @include padding(5, 5, 5, 5);
+  display: flex;
+  flex-direction: column;
+  gap: $space * 3;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: $border-radius;
+  background-color: $bg-dark;
+}
+
+.previewBlock {
+  background-color: $bg-default;
+  border-radius: $border-radius;
+  display: flex;
+
+  >li {
+    width: 50%;
+    padding: $space * 4;
+    // @include padding(2, 4, 2, 4);
+
+    &:nth-child(1) {
+      border-right: solid 1px rgba(255, 255, 255, .05);
+    }
+  }
+}

@@ -32,9 +32,11 @@
     "@mui/styles": "^5.5.1",
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",
+    "docusaurus-plugin-sass": "^0.2.2",
     "file-loader": "^6.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "sass": "^1.50.1",
     "styled-jss": "^2.2.3",
     "url-loader": "^4.1.1"
   },

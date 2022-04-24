@@ -23,8 +23,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 // blocks
+import Intro from './home/Intro';
+
 import Description from '@site/docs/description.md'
 import Quotes from '@site/src/data/quotes';
+
 
 
 const features = [
@@ -118,6 +121,8 @@ export default function Home() {
     <Layout
       title={siteConfig.title}
       description={siteConfig.tagline}>
+
+      <Intro />
 
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">

@@ -7,7 +7,7 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
 // styles
-import { styled, media } from '@site/src/styles/snippets'
+import { styled, media } from '@site/src/styles/jss'
 
 
 

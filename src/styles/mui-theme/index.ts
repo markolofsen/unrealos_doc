@@ -2,7 +2,7 @@ import { createTheme, responsiveFontSizes } from '@mui/material';
 import { typography } from './typography';
 
 // snippets
-import { media } from '../snippets'
+import { media } from '../jss'
 
 
 /* Material-UI Theme Creator

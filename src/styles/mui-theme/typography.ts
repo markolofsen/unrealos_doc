@@ -1,5 +1,6 @@
 import { ThemeOptions } from '@mui/material';
 import { TypographyStyleOptions } from '@mui/material/styles/createTypography';
+import { theme } from '../jss';
 
 const systemFont = [
   '-apple-system',
@@ -17,6 +18,8 @@ const systemFont = [
 const heading: TypographyStyleOptions = {
   fontFamily: ['Nunito Sans', ...systemFont].join(','),
   fontWeight: 700,
+  padding: 0,
+  margin: theme.spacing(.5, 0),
 };
 
 export const typography: ThemeOptions['typography'] = {

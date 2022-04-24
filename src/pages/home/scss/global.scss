@@ -1,0 +1,29 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  @include typography(4)
+}
+
+h2 {
+  @include typography(3)
+}
+
+h3 {
+  @include typography(2.3)
+}
+
+h4 {
+  @include typography(2)
+}
+
+h5 {
+  @include typography(1.1)
+}
+
+h6 {
+  @include typography(.9)
+}
