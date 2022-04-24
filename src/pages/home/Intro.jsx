@@ -8,6 +8,10 @@ import styles from './styles.module.scss';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+// components
+import StickyBox from '../../components/StickyBox/'
+
+
 export default function Intro() {
 
   const demoUrl = 'https://ps.metaeditor.io/'
@@ -72,30 +76,35 @@ export default function Intro() {
       <ul data-list="root">
         <li data-li="content">
 
-          <ul className={styles.listContent}>
-            <li>
-              <h6>Open Source</h6>
-              <h1>
-                React.js
-                <span>Pixel Streaming</span>
-                for Unreal Engine
-              </h1>
-              <h5 className="body1">
-                MetaEditor offers a complete set of tools for professionally developing and running applications from Unreal Engine in browsers.
-              </h5>
-            </li>
-            <li data-li="actions">
-              <a href={demoUrl} target="_blank" className={styles.buttonPrimary}>
-                Online Demo
-              </a>
+          <div className={styles.listContent} id="sticky-root">
+            <StickyBox top={30} bottomBoundary="#sticky-root">
+              <ul >
+                <li>
+                  <h6>Open Source</h6>
+                  <h1>
+                    React.js
+                    <span>Pixel Streaming</span>
+                    for Unreal Engine
+                  </h1>
+                  <h5 className="body1">
+                    MetaEditor offers a complete set of tools for professionally developing and running applications from Unreal Engine in browsers.
+                  </h5>
+                </li>
+                <li data-li="actions">
+                  <a href={demoUrl} target="_blank" className={styles.buttonPrimary}>
+                    Online Demo
+                  </a>
 
-              <Link
-                className={styles.buttonSecondary}
-                to={useBaseUrl(installUrl)}>
-                Get started
-              </Link>
-            </li>
-          </ul>
+                  <Link
+                    className={styles.buttonSecondary}
+                    to={useBaseUrl(installUrl)}>
+                    Get started
+                  </Link>
+                </li>
+              </ul>
+            </StickyBox>
+          </div>
+
 
         </li>
 
@@ -137,7 +146,7 @@ export default function Intro() {
                   Unreal Engine
                 </h5>
                 <div>
-                  Installed MetaPlugin to work with Pixel Streaming. Listens for commands and sends callbacks.
+                  Install MetaPlugin to work with Pixel Streaming to listen for commands and send callbacks.
                 </div>
               </li>
             </ul>
@@ -145,6 +154,6 @@ export default function Intro() {
 
         </li>
       </ul>
-    </div>
+    </div >
   )
 }

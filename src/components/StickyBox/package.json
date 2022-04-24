@@ -1,0 +1,9 @@
+{
+  "name": "@components/StickyBox",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "react-stickynode": "latest",
+    "react-device-detect": "latest"
+  }
+}

@@ -14,9 +14,10 @@
       min-width: 600px;
       margin-left: $space * 5;
       @include padding(10, 10, 10, 0);
+      padding-top: $space * 20;
       display: flex;
       justify-content: flex-end;
-      align-items: center;
+      // align-items: center;
     }
 
     >li[data-li="preview"] {
@@ -32,9 +33,10 @@
 
 .listContent {
   width: 100%;
+  min-width: 600px;
   max-width: 600px;
 
-  >[data-li="actions"] {
+  [data-li="actions"] {
     @include padding(4, 0, 0);
     display: flex;
     gap: 20px;
