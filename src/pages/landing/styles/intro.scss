@@ -1,8 +1,3 @@
-@import './scss/config.scss';
-@import './scss/mixins.scss';
-@import './scss/global.scss';
-
-
 @keyframes border-dance-up {
   0% {
     background-position: 0 0, 100% 100%, 0 100%;
@@ -25,41 +20,35 @@
 
 
 
-.root {
+.intro {
+  background-color: $bg-default;
   border-top: 1px solid $divider;
 
-  [data-list="root"] {
-    background-color: $bg-default;
+  @include media-min($lg) {
+    display: flex;
+    min-height: 80vh;
 
-    @include media-min($lg) {
+    >li[data-li="content"] {
+      flex-grow: 1;
+      padding-bottom: $space * 10;
+      padding-top: $space * 20;
       display: flex;
-      min-height: 80vh;
-
-      >li[data-li="content"] {
-        flex-grow: 1;
-        padding-bottom: $space * 10;
-        padding-top: $space * 20;
-        display: flex;
-        justify-content: flex-end;
-      }
-
-      >li[data-li="preview"] {
-        overflow: hidden;
-        max-width: 50%;
-        flex-grow: 1;
-        padding: 0;
-        @include padding(0, 0, 5, 0);
-      }
+      justify-content: flex-end;
     }
 
-    @include media-max($lg) {
-      >li[data-li="content"] {
-        padding: $space * 3;
-      }
+    >li[data-li="preview"] {
+      overflow: hidden;
+      max-width: 50%;
+      flex-grow: 1;
+      padding: 0;
+      @include padding(0, 0, 5, 0);
     }
+  }
 
-
-
+  @include media-max($lg) {
+    >li[data-li="content"] {
+      padding: $space * 3;
+    }
   }
 }
 
@@ -261,23 +250,42 @@
       min-height: 400px;
     }
 
-    >[data-el="bg"] {
+    >[data-bg] {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       opacity: .5;
-      background-position: center center;
-      background-size: cover;
-      // border: solid 1px rgba(0, 0, 0, .3);
     }
+
+    >[data-bg="video"] {
+      object-fit: cover;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-self: center;
+
+      @include media-max($sm) {
+        display: none;
+      }
+
+      >video {
+        width: 100%;
+      }
+    }
+
+    // >[data-bg="image"] {
+    //   background-position: center center;
+    //   background-size: cover;
+    // }
   }
 }
 
 .lapTopContent {
   z-index: 1;
   width: 100%;
+  cursor: default;
 
   display: flex;
 
@@ -327,31 +335,34 @@
     border-radius: $border-radius;
     text-align: center;
 
+
     @include media-min($md) {
-      width: 300px;
+      max-width: 270px;
     }
 
     >ul {
       margin-top: $space*2;
       display: flex;
-      flex-direction: column;
-      row-gap: $space;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: $space * 2.4;
 
       >li {
+        flex: 1 1 100px;
+        max-width: 100px;
+        height: 100px;
         border: solid 1px $divider;
         border-radius: $border-radius;
         text-transform: uppercase;
         color: rgba(255, 255, 255, .5);
 
-        @include media-max($md) {
-          @include typography(1);
-          @include padding(1.1, 2, 1.1, 2);
-        }
+        font-size: 12px;
+        padding: $space * 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        @include media-min($md) {
-          @include typography(1);
-          @include padding(1.5, 3, 1.5, 3);
-        }
       }
     }
   }

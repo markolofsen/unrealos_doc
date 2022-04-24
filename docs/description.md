@@ -13,7 +13,7 @@ slug: /
 
 ### MetaEditor is a professional web application development solution based on ReactJS and PixelStreaming.
 
->  The standard implementation of PixelStreaming greatly complicates the development of your own reactive web applications for Unreal Engine. Initially, PixelStreaming is a no-architecture javascript solution for interacting with reactive web frameworks. Adapting standard PixelStreaming for ReactJS is a very long and laborious process, which significantly increases development time, because. there are a lot of technical problems to solve related to the peculiarities of browsers, devices and reactive technologies (like React.js)
+>  The standard implementation of PixelStreaming greatly complicates the development of your own reactive web applications for Unreal Engine. Initially, PixelStreaming is a no-architecture javascript solution for interacting with reactive web frameworks. Adapting standard React.js for Pixel Streaming is a very long and laborious process, which significantly increases development time, because. there are a lot of technical problems to solve related to the peculiarities of browsers, devices and reactive technologies (like React.js)
 
 
 

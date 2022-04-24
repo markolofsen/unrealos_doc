@@ -88,8 +88,8 @@ $xl: "1280px";
   text-align: center;
 
   @include media-max($md) {
-    @include padding(2, 3, 2, 3);
-    @include fontSize(.8);
+    @include padding(1.5, 2.5, 1.5, 2.5);
+    @include fontSize(.7);
   }
 
   @include media-min($md) {

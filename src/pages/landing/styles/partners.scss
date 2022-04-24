@@ -1,0 +1,38 @@
+.root {
+  @include padding(10, 0, 15, 0);
+}
+
+.header {
+  opacity: .5;
+  text-align: center;
+  margin-bottom: $space * 3;
+}
+
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+
+  gap: $space * 2;
+
+  @include media-max($md) {
+    gap: $space * 1;
+  }
+
+  >img {
+    @include margin(1, 2, 1, 2);
+    width: 100%;
+
+    @include media-max($md) {
+      max-width: 120px;
+      max-height: 40px;
+    }
+
+    @include media-min($md) {
+      max-width: 140px;
+      max-height: 50px;
+    }
+  }
+}

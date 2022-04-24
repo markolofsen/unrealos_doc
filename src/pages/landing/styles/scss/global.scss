@@ -36,3 +36,9 @@ h5 {
 h6 {
   @include typography(.9)
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  @include padding(0, 2, 0, 2)
+}

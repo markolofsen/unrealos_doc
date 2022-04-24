@@ -23,7 +23,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 // blocks
-import Intro from './home/Intro';
+import Landing from './landing/';
 
 import Description from '@site/docs/description.md'
 import Quotes from '@site/src/data/quotes';
@@ -122,7 +122,7 @@ export default function Home() {
       title={siteConfig.title}
       description={siteConfig.tagline}>
 
-      <Intro />
+      <Landing />
 
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
