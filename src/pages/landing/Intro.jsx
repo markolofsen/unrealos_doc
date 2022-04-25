@@ -7,12 +7,15 @@ import styles from './styles.module.scss';
 // docusaurus
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 // components
 import StickyBox from '../../components/StickyBox/'
 
 
 export default function Intro() {
+  const context = useDocusaurusContext();
+  const { siteConfig = {} } = context;
 
   const demoUrl = 'https://ps.metaeditor.io/'
   const installUrl = '/docs/metaeditor/installation'
@@ -88,7 +91,7 @@ export default function Intro() {
   }
 
   return (
-    <ul className={styles.intro}>
+    <ul className={styles.introRoot}>
       <li data-li="content">
 
         <div className={styles.listContent} id="sticky-root">
@@ -102,7 +105,7 @@ export default function Intro() {
                   for Unreal Engine
                 </h1>
                 <h5 className="body1">
-                  MetaEditor offers a complete set of tools for professionally developing and running Unreal Engine Applications in browsers.
+                  {siteConfig.tagline}
                 </h5>
               </li>
               <li data-li="actions">

@@ -1,14 +1,15 @@
-.root {
+.partnersRoot {
   @include padding(10, 0, 15, 0);
+  border-top: 1px solid $divider;
 }
 
-.header {
+.partnersHeader {
   opacity: .5;
   text-align: center;
   margin-bottom: $space * 3;
 }
 
-.partners {
+.partnersList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

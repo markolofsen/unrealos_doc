@@ -20,13 +20,12 @@
 
 
 
-.intro {
+.introRoot {
   background-color: $bg-default;
   border-top: 1px solid $divider;
 
   @include media-min($lg) {
     display: flex;
-    min-height: 80vh;
 
     >li[data-li="content"] {
       flex-grow: 1;

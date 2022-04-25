@@ -116,7 +116,8 @@ function QuotesSection() {
 export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
-  const previewUrl = useBaseUrl('assets/preview.png');
+  // const previewUrl = useBaseUrl('assets/preview.png');
+
   return (
     <Layout
       title={siteConfig.title}
@@ -124,12 +125,10 @@ export default function Home() {
 
       <Landing />
 
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      {/* <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
-
-          {/*<img className={styles.preview} src={previewUrl} alt={siteConfig.title} />*/}
 
           <iframe className={styles.preview} src="https://www.youtube.com/embed/videoseries?list=PLvmabfuPusIu_0mo4oPdj5gnL9_L_qqxh&rel=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
@@ -152,7 +151,8 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </header>
+      </header> */}
+
       <main>
 
         {features && features.length > 0 && (

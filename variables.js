@@ -17,9 +17,8 @@ module.exports = {
   },
   seo: {
     ogImage: '/img/og_default.jpg',
-    title: 'MetaEditor — Pixel Streaming for Unreal Engine (ReactJS)',
-    description: `MetaEditor streamlines PixelStreaming development to allow businesses to easily deploy and customize their ReactJS application for Unreal Engine.`,
-    // description: 'MetaEditor — helps integrate Unreal Engine v.5 in the browser. Allows you to send commands and get callbacks from the stream server with launched Unreal Engine.',
+    title: 'React.js Pixel Streaming for Unreal Engine',
+    description: `MetaEditor offers a complete set of tools for professionally developing and running Unreal Engine Applications in browsers.`,
   },
   contacts: {
     url: 'https://unrealos.com/contacts/',

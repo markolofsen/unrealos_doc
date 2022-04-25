@@ -45,8 +45,6 @@ export default function Player(props) {
       onProgress={(payload) => {
         // console.warn('progress', payload);
       }}
-      isDev={true}
-
       settings={{
           volume: 1,
           quality: 1,
@@ -62,6 +60,12 @@ export default function Player(props) {
             fakeMouseWithTouches: false,
           }
         }}
+        metaSettings={{
+          isDev: true,
+          showDevTools: true,
+          notifyCommands: true,
+          notifyCallbacks: true,
+        }}
     >
       {(payload) => <div style={{ padding: 30 }}>{props.children}</div>}
     </PixelStreaming>
@@ -73,6 +77,7 @@ export default function Player(props) {
 
 | Prop                    | Description                                                                                                                                                                                                                                                                                                                 | Type       |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| metaSettings            | Settings for MetaEditor                                                                                                                                                                                                                                                                                                     | `object`   |
 | settings.pixelStreaming | Pixel Streaming Configuration                                                                                                                                                                                                                                                                                               | `object`   |
 | settings.connectOnStart | Connect to stream automatically. <br/>Default: `true`                                                                                                                                                                                                                                                                       | `bool`     |
 | settings.host           | String host to url with signal server.<br/>If host starts wih `https` then it will be used `wss` <br/>If starts with `http` then will be used `ws`<br/>Example: `https://uuid1234567890.streamdomain.com`                                                                                                                   | `string`   |
@@ -124,11 +129,11 @@ refPixelStreaming.current.emitAsync({
 
 ```javascript
 refPixelStreaming.current.useTrigger({
-  onCommand: ({detail}) => {
-    alert(JSON.stringify(detail))
+  onCommand: (payload) => {
+    alert(JSON.stringify(payload))
   },
-  onCallback: ({detail}) => {
-    alert(JSON.stringify(detail))
+  onCallback: (payload) => {
+    alert(JSON.stringify(payload))
   },
 })
 

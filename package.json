@@ -28,14 +28,6 @@
     "@docusaurus/plugin-google-gtag": "^2.0.0-beta.17",
     "@docusaurus/plugin-ideal-image": "^2.0.0-beta.17",
     "@docusaurus/preset-classic": "2.0.0-beta.17",
-    "@emotion/react": "^11.8.2",
-    "@emotion/server": "^11.4.0",
-    "@emotion/styled": "^11.8.1",
-    "@mdx-js/react": "^1.6.21",
-    "@mui/icons-material": "^5.5.1",
-    "@mui/lab": "^5.0.0-alpha.74",
-    "@mui/material": "^5.5.2",
-    "@mui/styles": "^5.5.1",
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",
     "docusaurus-plugin-sass": "^0.2.2",
@@ -43,7 +35,6 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "sass": "^1.50.1",
-    "styled-jss": "^2.2.3",
     "url-loader": "^4.1.1"
   },
   "devDependencies": {

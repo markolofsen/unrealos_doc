@@ -10,9 +10,11 @@ import styles from './styles.module.scss';
 export default function Landing() {
 
   return (
-    <div className={styles.index}>
+    <div className={styles.indexRoot}>
       <Intro />
-      <Partners />
+      <div className={styles.container}>
+        <Partners />
+      </div>
     </div>
   )
 }

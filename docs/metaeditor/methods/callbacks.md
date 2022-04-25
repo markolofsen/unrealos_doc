@@ -20,14 +20,14 @@ import { usePlayer } from "metaeditor/context/";
 export default function Demo() {
   const player = usePlayer()
 
-  const onCommand = ({ detail }) => {
-    if (detail.command === 'test_command') {
-      alert('Command\n' + JSON.stringify(detail))
+  const onCommand = (payload) => {
+    if (payload.command === 'test_command') {
+      alert('Command\n' + JSON.stringify(payload))
     }
   }
 
-  const onCallback = ({ detail }) => {
-    if (detail.command === 'test_command') {
+  const onCallback = (payload) => {
+    if (payload.command === 'test_command') {
       alert('Callback\n' + JSON.stringify(detail))
     }
   }

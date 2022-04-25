@@ -14,32 +14,30 @@ export default function Intro() {
   const getLogo = name => useBaseUrl(`assets/home/logotypes/${name}.svg`);
 
   const list = [
-    'android',
-    'aws',
-    'chrome',
-    'google',
-    'ios',
-    'maya',
-    'microsoft',
-    'node',
-    'nvidia',
-    'oculus',
-    'perforce',
-    'react',
     'ue',
-    'vray'
+    'nvidia',
+
+    'aws',
+    'google',
+    'microsoft',
+
+    'node',
+    'react',
+
+    'ios',
+    'android',
+    'chrome',
   ]
+
   return (
-    <div className={styles.container}>
-      <div className={styles.root}>
-        <h6 className={styles.header}>
-          Partners & Technologies
-        </h6>
-        <div className={styles.partners}>
-          {list.map((name, index) => (
-            <img key={index} src={getLogo(name)} />
-          ))}
-        </div>
+    <div className={styles.partnersRoot}>
+      <h6 className={styles.partnersHeader}>
+        Partners & Technologies
+      </h6>
+      <div className={styles.partnersList}>
+        {list.map((name, index) => (
+          <img key={index} src={getLogo(name)} />
+        ))}
       </div>
     </div>
   )

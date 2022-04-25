@@ -6,17 +6,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
-// styles
-import { styled, media } from '@site/src/styles/jss'
 
 
-
-
-const CannyDiv = styled.div(theme => ({
-  background: 'var(--ifm-color-primary-lightest)',
-  borderRadius: 10,
-  padding: '2rem',
-}))
 
 const BoardToken = 'a81502ba-2241-d615-c4e5-9c9fe182798d';
 
@@ -33,7 +24,11 @@ const Feedback = () => {
   }, []);
 
   return (
-    <CannyDiv data-canny />
+    <div data-canny style={{
+      background: 'var(--ifm-color-primary-lightest)',
+      borderRadius: 10,
+      padding: '2rem',
+    }} />
   );
 }
 
