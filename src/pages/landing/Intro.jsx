@@ -134,18 +134,18 @@ export default function Intro() {
           <ul className={styles.cardBlock}>
             <li>
               {renderLine('down')}
-              <h5>
+              <h6>
                 Sending a commands
-              </h5>
+              </h6>
               <div>
                 User sends commands to Unreal Engine. For example, when someone clicks on a menu item on a website.
               </div>
             </li>
             <li>
               {renderLine('up')}
-              <h5>
+              <h6>
                 Getting callbacks
-              </h5>
+              </h6>
               <div>
                 Your site receives callbacks from Unreal Engine to change the web interface.
               </div>
@@ -155,18 +155,18 @@ export default function Intro() {
           <ul className={styles.cardBlock}>
             <li>
               {renderLine('down')}
-              <h5>
+              <h6>
                 MetaEditor Platform
-              </h5>
+              </h6>
               <div>
                 Upload your Unreal Engine project to our portal and the system will automatically scale streaming servers for your users.
               </div>
             </li>
             <li>
               {renderLine('up')}
-              <h5>
+              <h6>
                 Unreal Engine
-              </h5>
+              </h6>
               <div>
                 Install MetaPlugin to work with Pixel Streaming to listen for commands and send callbacks.
               </div>

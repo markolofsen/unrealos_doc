@@ -31,9 +31,9 @@ export default function Intro() {
 
   return (
     <div className={styles.partnersRoot}>
-      <h6 className={styles.partnersHeader}>
+      <div className={styles.partnersHeader}>
         Partners & Technologies
-      </h6>
+      </div>
       <div className={styles.partnersList}>
         {list.map((name, index) => (
           <img key={index} src={getLogo(name)} />
