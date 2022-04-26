@@ -39,9 +39,9 @@ export default function Intro() {
           </h4>
         </li>
         <li data-li="menu">
-          <div>
-            Web interface for 3D streaming
-          </div>
+          <h6>
+            Web interface for interacting with 3D streaming
+          </h6>
           <ul>
             <li>
               Open door

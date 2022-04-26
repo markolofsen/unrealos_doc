@@ -40,15 +40,6 @@ const Custom = styled.custom(Box, theme => ({
 }))
 ```
 
-### Styled-jss
-
-```javascript
-// styles
-import { custom, media, theme, styled } from 'metalib/styles/jss'
-
-// Some stuff
-```
-
 ### Transitions
 
 [Transitions - Material UI](https://mui.com/material-ui/customization/transitions/)

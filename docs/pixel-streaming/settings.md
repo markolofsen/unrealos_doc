@@ -19,57 +19,64 @@ yarn add pixel-streaming
 import React from "react";
 
 // libs
-import PixelStreaming from "pixel-streaming";
+import PixelStreaming, { usePS, DebugData } from 'pixel-streaming'
 
 export default function Player(props) {
-  const refPixelStreaming = React.useRef(null);
+    const refPixelStreaming = React.useRef(null);
 
-  return (
-    <PixelStreaming
-      ref={refPixelStreaming}
-      onLoad={(payload) => {
-        // console.warn('loaded', payload);
-      }}
-      onConnect={() => {
-        // console.warn('connected');
-      }}
-      onRestart={() => {
-        // console.warn('onRestart');
-      }}
-      onError={(payload) => {
-        // console.error('error', payload);
-      }}
-      onClose={(payload) => {
-        // console.error('closed', payload);
-      }}
-      onProgress={(payload) => {
-        // console.warn('progress', payload);
-      }}
-      settings={{
-          volume: 1,
-          quality: 1,
-          connectOnStart: false,
+    const handleConnection = () => {
+        refPixelStreaming.current.connector.initConnection()
+    }
 
-          host: 'http://127.0.0.1',
-          port: 80,
+    return (
+        <div>
+            <button onClick={handleConnection}>Connect</button>
+            <PixelStreaming
+                ref={refPixelStreaming}
+                onLoad={(payload) => {
+                    // console.warn('loaded', payload);
+                }}
+                onConnect={() => {
+                    // console.warn('connected');
+                }}
+                onRestart={() => {
+                    // console.warn('onRestart');
+                }}
+                onError={(payload) => {
+                    // console.error('error', payload);
+                }}
+                onClose={(payload) => {
+                    // console.error('closed', payload);
+                }}
+                onProgress={(payload) => {
+                    // console.warn('progress', payload);
+                }}
+                settings={{
+                    volume: 1,
+                    quality: 1,
+                    connectOnStart: false,
 
-          pixelStreaming: {
-            warnTimeout: 120,
-            closeTimeout: 10,
-            lockMouse: false,
-            fakeMouseWithTouches: false,
-          }
-        }}
-        metaSettings={{
-          isDev: true,
-          showDevTools: true,
-          notifyCommands: true,
-          notifyCallbacks: true,
-        }}
-    >
-      {(payload) => <div style={{ padding: 30 }}>{props.children}</div>}
-    </PixelStreaming>
-  );
+                    host: 'http://127.0.0.1',
+                    port: 80,
+
+                    pixelStreaming: {
+                        warnTimeout: 120,
+                        closeTimeout: 10,
+                        lockMouse: false,
+                        fakeMouseWithTouches: false,
+                    }
+                }}
+                metaSettings={{
+                    isDev: true,
+                    showDevTools: true,
+                    notifyCommands: true,
+                    notifyCallbacks: true,
+                }}
+            >
+                {(payload) => <div style={{ padding: 30 }}>{props.children}</div>}
+            </PixelStreaming>
+        </div>
+    );
 }
 ```
 
@@ -110,6 +117,24 @@ export default function Player(props) {
 | stream_config         | `false`                 |             |
 | users_count           | `0`                     |             |
 | window_size           | `{width: 0, height: 0}` |             |
+
+## Context
+
+```javascript
+import PixelStreaming, { usePS, DebugData } from 'pixel-streaming'
+
+function App() {
+
+    // Do not initialize this hook more than once!
+    const PS = usePS()
+
+    const handleConnection = () => {
+        PS.connector.initConnection()
+    }
+    
+    return (...)
+}
+```
 
 ## Send command to stream server
 
