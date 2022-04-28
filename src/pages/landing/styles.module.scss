@@ -1,9 +1,14 @@
 @import './styles/scss/config.scss';
 @import './styles/scss/mixins.scss';
-@import './styles/scss/global.scss';
 
-// custom
-@import './styles/index.scss';
-@import './styles/intro.scss';
-@import './styles/partners.scss';
-@import './styles/products.scss';
+.indexRoot {
+  background-color: $bg-default;
+
+  @import './styles/scss/global.scss';
+
+
+  @import './styles/intro.scss';
+  @import './styles/partners.scss';
+  @import './styles/products.scss';
+  @import './styles/votes.scss';
+}

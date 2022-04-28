@@ -23,10 +23,13 @@ import PixelStreaming, { usePS, DebugData } from 'pixel-streaming'
 
 export default function Player(props) {
     const refPixelStreaming = React.useRef(null);
-
-    const handleConnection = () => {
-        refPixelStreaming.current.connector.initConnection()
-    }
+    
+    React.useEffect(() => {
+        refPixelStreaming.current.cls.initConnection({
+            host: 'http://127.0.0.1',
+            port: 80,
+        })
+    }, [])
 
     return (
         <div>
@@ -54,11 +57,6 @@ export default function Player(props) {
                 settings={{
                     volume: 1,
                     quality: 1,
-                    connectOnStart: false,
-
-                    host: 'http://127.0.0.1',
-                    port: 80,
-
                     pixelStreaming: {
                         warnTimeout: 120,
                         closeTimeout: 10,

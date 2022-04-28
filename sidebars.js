@@ -35,6 +35,7 @@ module.exports = {
         items: [
           'pixel-streaming/demo',
           'pixel-streaming/settings',
+          'pixel-streaming/samples',
         ]
       },
     ],

@@ -1,0 +1,17 @@
+.votesRoot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include padding(4, 0, 4, 0);
+  background-color: rgba(0, 0, 0, .1);
+  border-bottom: solid 1px $divider;
+  gap: $space * 2;
+
+  img {
+    height: 40px;
+
+    @include media-max($md) {
+      height: 25px;
+    }
+  }
+}
