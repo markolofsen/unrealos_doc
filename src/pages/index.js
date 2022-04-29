@@ -36,8 +36,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        MetaEditor is a complete solution for running and testing projects built by Unreal Engine.
-        You can connect any web components to interact with the streaming server.
+        The MetaEditor is a complete solution for running and testing projects built by the Unreal Engine. You can attach any web components to interact with the streaming server.
       </>
     ),
   },
@@ -46,7 +45,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        MetaEditor allows you to focus on the development of Unreal Engine, and we will take care of all the work of integrating into the browser.
+        The MetaEditor allows you to concentrate your attention on the development of the Unreal Engine, and we will take over all the work integrating into the browser.
       </>
     ),
   },
@@ -55,7 +54,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        A complete solution for launching your own project based on ReactJS and Pixel Streaming. MetaEditor allows you to customize the interaction between the browser and the Unreal Engine project.
+        A complete solution for launching your own project based on the ReactJS and the Pixel Streaming. The MetaEditor allows you to customize the interaction between the browser and the Unreal Engine project.
       </>
     ),
   },

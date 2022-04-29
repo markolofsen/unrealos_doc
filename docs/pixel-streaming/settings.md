@@ -44,6 +44,9 @@ export default function Player(props) {
             <button onClick={handleConnection}>Connect</button>
             <PixelStreaming
                 ref={refPixelStreaming}
+                onReady={(payload) => {
+                  // console.warn('ready', payload);
+                }}
                 onLoad={(payload) => {
                     // console.warn('loaded', payload);
                 }}

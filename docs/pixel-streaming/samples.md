@@ -70,7 +70,7 @@ function Content() {
     const width = window.innerWidth
     const height = window.innerHeight
 
-    const emitConsole = PS.cls.client.emitConsole
+    const emitConsole = (payload) => PS.cls.emitConsole(payload)
     emitConsole(`PixelStreaming.Capturer.UseBackBufferSize 0`)
     emitConsole(`PixelStreaming.Capturer.CaptureSize ${width}x${height}`)
     emitConsole(`r.SetRes ${width}x${height}f`)

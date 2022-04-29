@@ -18,7 +18,7 @@ module.exports = {
   seo: {
     ogImage: '/img/og_default.jpg',
     title: 'React.js Pixel Streaming for Unreal Engine',
-    description: `MetaEditor offers a complete set of tools for professionally developing and running Unreal Engine Applications in browsers.`,
+    description: `The Open Source MetaEditor offers a complete set of tools for professional developing and running the Unreal Engine’s Applications in browsers.`,
   },
   contacts: {
     url: 'https://unrealos.com/contacts/',

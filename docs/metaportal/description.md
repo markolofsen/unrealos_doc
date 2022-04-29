@@ -9,7 +9,7 @@ sidebar_label: Description
 
 ## Options:
 
-* Downloading new versions of your Unreal Engine projects.
+* Uploading new versions of your Unreal Engine projects.
 
 * Cloud streaming configuration
 
