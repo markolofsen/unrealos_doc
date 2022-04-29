@@ -23,8 +23,16 @@ import PixelStreaming, { usePS, DebugData } from 'pixel-streaming'
 
 export default function Player(props) {
     const refPixelStreaming = React.useRef(null);
-    
+
     React.useEffect(() => {
+
+        /**
+         * String host to url with signal server.
+           If host starts wih `https` then it will be used `wss`
+           If starts with `http` then will be used `ws`
+           Example: `https://uuid1234567890.streamdomain.com`
+         */
+
         refPixelStreaming.current.cls.initConnection({
             host: 'http://127.0.0.1',
             port: 80,
@@ -84,9 +92,6 @@ export default function Player(props) {
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | metaSettings            | Settings for MetaEditor                                                                                                                                                                                                                                                                                                     | `object`   |
 | settings.pixelStreaming | Pixel Streaming Configuration                                                                                                                                                                                                                                                                                               | `object`   |
-| settings.connectOnStart | Connect to stream automatically. <br/>Default: `true`                                                                                                                                                                                                                                                                       | `bool`     |
-| settings.host           | String host to url with signal server.<br/>If host starts wih `https` then it will be used `wss` <br/>If starts with `http` then will be used `ws`<br/>Example: `https://uuid1234567890.streamdomain.com`                                                                                                                   | `string`   |
-| settings.port           | Port of signal server.<br/>Default: `80`                                                                                                                                                                                                                                                                                    | `int`      |
 | children                | The function receives parameters and renders the nested component <br/>Example: `{(payload) => (...)}` <br/><br/>**Incoming parameters:** <br/>`state` — [Object with state data](#ps-state)<br/>`initConnection()` — If `autoConnect={false}`, then use the `initConnection()` function to manually connect to the stream. | `function` |
 | onLoad                  | When the stream started                                                                                                                                                                                                                                                                                                     | `function` |
 | onConnect               | Called when the stream is running                                                                                                                                                                                                                                                                                           |            |
@@ -127,9 +132,13 @@ function App() {
     const PS = usePS()
 
     const handleConnection = () => {
-        PS.connector.initConnection()
+        PS.cls.setConnection({
+            host: 'http://127.0.0.1',
+            port: 80,
+        })
+        PS.cls.initConnection()
     }
-    
+
     return (...)
 }
 ```

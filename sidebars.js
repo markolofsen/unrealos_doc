@@ -31,6 +31,15 @@ module.exports = {
       },
       {
         type: "category",
+        label: "DevPanel",
+        items: [
+          'metaeditor/devpanel/localhost',
+          'metaeditor/devpanel/hotkeys',
+          'metaeditor/devpanel/commands',
+        ]
+      },
+      {
+        type: "category",
         label: "PixelStreaming",
         items: [
           'pixel-streaming/demo',
@@ -38,6 +47,9 @@ module.exports = {
           'pixel-streaming/samples',
         ]
       },
+    ],
+    'MetaPortal': [
+      'metaportal/commands',
     ],
     'Customization': [
       {
@@ -69,12 +81,6 @@ module.exports = {
           'unreal-engine/preparation/linux',
         ],
       },
-    ],
-    // collapsible: true,
-    // collapsed: false,
-    'Developer tools': [
-      'dev/hotkeys',
-      'dev/localhost',
     ],
     'Cloud Streaming': [
       'streaming/desc',

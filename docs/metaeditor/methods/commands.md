@@ -9,11 +9,14 @@ This page shows an example of sending a command from MetaEditor to Unreal Engine
 
 :::
 
-## Example
+## emitAsync()
 
 ```javascript
-import Button from '@mui/material/Button';
+// context
 import { usePlayer } from 'metaeditor/context/'
+
+// material
+import Button from '@mui/material/Button';
 
 function Demo() {
   const player = usePlayer()
@@ -41,6 +44,34 @@ function Demo() {
         Send command to Unreal Engine
       </Button>
     </MetaEditor>
+  )
+}
+```
+
+## metaEmitAsync()
+
+> With MetaPortal you can [add new commands](../../metaportal/commands.md) and test them through the [Developer Panel](../devpanel/commands.md).
+
+> Added commands in MetaPortal can be called through special uuid-shortcuts. This greatly simplifies the development and updating of commands.
+
+```javascript
+// context
+import { useSystem } from 'metaeditor/context/'
+
+// material
+import Button from '@mui/material/Button';
+
+function PortalCommands() {
+  const system = useSystem()
+
+  const handleEmit = async (uuid) => event => {
+    return await system.clsApi.metaEmitAsync(uuid)
+  }
+
+  return (
+    <Button onClick={handleEmit('2cd6dd')}>
+      Send command
+    </Button>
   )
 }
 ```
