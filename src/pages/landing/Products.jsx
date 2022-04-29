@@ -27,7 +27,7 @@ export default function Intro() {
       ['/docs/pixel-streaming/settings', 'ReactJS framework', 'A library of components for quickly connecting a web interface with Unreal Engine'],
       ['/docs/streaming/desc', 'Unreal Engine Streaming', "Autoscaling servers for distributing streaming Unreal Engine graphics to users' browsers."],
       ['/docs/unreal-engine/preparation/linux', 'Plugin for Unreal Engine', 'A free plugin for integrating MetaEditor with an Unreal Engine project via Pixel Streaming.'],
-      ['/docs/dev/localhost', 'Developer Portal', 'In MetaPortal, you can control the cost of streaming and configure projects created in Unreal Engine.'],
+      ['/docs/metaportal/description', 'Developer Portal', 'In MetaPortal, you can control the cost of streaming and configure projects created in Unreal Engine.'],
     ].map(([href, title, description]) => ({ href, title, description }))
 
     return (

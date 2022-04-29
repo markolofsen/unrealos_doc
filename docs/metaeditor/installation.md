@@ -30,7 +30,7 @@ import variables from '@site/variables.js';
 
 3. Set up a streaming connection:
    
-   * [Connecting to localhost](../dev/localhost.md)
+   * [Connecting to localhost](./devpanel/localhost.md)
 
 4. Set up streaming:
    

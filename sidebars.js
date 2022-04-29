@@ -49,6 +49,7 @@ module.exports = {
       },
     ],
     'MetaPortal': [
+      'metaportal/description',
       'metaportal/commands',
     ],
     'Customization': [
