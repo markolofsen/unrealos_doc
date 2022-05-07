@@ -219,7 +219,8 @@
   overflow: hidden;
 
   >li[data-li="bar"] {
-    background-color: #424343;
+    background-color: rgba(255, 255, 255, .05);
+    border-bottom: solid $divider 1px;
     padding: 10px 10px;
     display: flex;
 
@@ -249,13 +250,17 @@
 
     background-color: #000;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    // align-items: center;
+    // justify-content: center;
     position: relative;
     // overflow: hidden;
 
+    @include media-max($lg) {
+      min-height: 51.8vw;
+    }
+
     @include media-min($lg) {
-      min-height: 400px;
+      min-height: 24.8vw;
     }
 
     >[data-bg] {
@@ -264,7 +269,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      opacity: .5;
+      // opacity: .8;
     }
 
     >[data-bg="video"] {
@@ -273,10 +278,6 @@
       display: flex;
       align-items: center;
       justify-self: center;
-
-      @include media-max($sm) {
-        display: none;
-      }
 
       >video {
         width: 100%;
@@ -292,83 +293,59 @@
 
 .lapTopContent {
   z-index: 1;
-  width: 100%;
+  // width: 100%;
   cursor: default;
 
+  background-color: #000;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  // margin-top: 30px;
+  padding: 20px;
+  margin: 5px;
+  border-radius: $border-radius;
 
   @include media-max($lg) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: $space * 2;
-    gap: $space * 3;
+    padding: 15px;
   }
 
-  @include media-min($lg) {
-    @include padding(0, 5, 0, 5);
-    align-items: center;
-  }
+  >img {
+    width: 50px;
+    // margin-right: $space * 3;
+    margin-bottom: 10px;
 
-  >[data-li="content"] {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-
-    >img {
-      width: 90px;
-      margin-right: $space * 3;
-
-      @include media-max($lg) {
-        width: 70px;
-      }
-    }
-
-    >h4 {
-      @include typography(1.7);
-
-      @include media-max($lg) {
-        @include typography(1.2)
-      }
+    @include media-max($lg) {
+      width: 30px;
     }
   }
 
-  >[data-li="menu"] {
-    border: solid 1px $divider;
+  >h4 {
 
-    backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, .7);
-    padding: $space * 3;
-    border-radius: $border-radius;
     text-align: center;
 
-    @include media-min($md) {
-      max-width: 270px;
+    @include media-max($lg) {
+      // @include typography(.5);
+      font-size: 12px
     }
 
-    >ul {
-      margin-top: $space*2;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: $space * 2.4;
-
-      >li {
-        flex: 1 1 100px;
-        max-width: 100px;
-        height: 100px;
-        border: solid 1px $divider;
-        border-radius: $border-radius;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, .5);
-
-        font-size: 11px;
-        padding: $space * 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+    @include media-min($lg) {
+      @include typography(1);
+      padding: 0;
     }
   }
+
+  // @include media-max($lg) {
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  //   padding: $space * 2;
+  //   gap: $space * 3;
+  // }
+
+  // @include media-min($lg) {
+  //   @include padding(0, 5, 0, 5);
+  //   align-items: center;
+  // }
 }

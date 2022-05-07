@@ -27,37 +27,14 @@ export default function Intro() {
   const renderLaptopContent = () => {
 
     return (
-      <ul className={styles.lapTopContent}>
-        <li data-li="content">
-          <img src={logoUnreal} />
-          <h4>
-            Hyper-realistic
-            <br />
-            3D streaming
-            <br />
-            on your site
-          </h4>
-        </li>
-        <li data-li="menu">
-          <h6>
-            Web interface for interacting with 3D streaming
-          </h6>
-          <ul>
-            <li>
-              Open door
-            </li>
-            <li>
-              Change color
-            </li>
-            <li>
-              Record video
-            </li>
-            <li>
-              Ride The Track!
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <div className={styles.lapTopContent}>
+        <img src={logoUnreal} />
+        <h4>
+          Hyper-Realistic
+          <br />
+          3D websites
+        </h4>
+      </div>
     )
   }
 
