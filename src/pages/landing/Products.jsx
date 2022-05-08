@@ -6,7 +6,7 @@ import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 // sass
-import styles from './styles.module.scss';
+import styles from './Index.module.scss';
 
 
 export default function Intro() {

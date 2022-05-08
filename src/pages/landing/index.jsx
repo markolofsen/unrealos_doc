@@ -7,7 +7,7 @@ import Products from './Products'
 import Votes from './Votes'
 
 // sass
-import styles from './styles.module.scss';
+import styles from './Index.module.scss';
 
 export default function Landing() {
 

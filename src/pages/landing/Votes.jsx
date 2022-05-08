@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 // sass
-import styles from './styles.module.scss';
+import styles from './Index.module.scss';
 
 
 export default function VoteBadges() {
