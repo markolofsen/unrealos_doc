@@ -1,6 +1,6 @@
 ---
 title: How to compile Unreal Engine for Linux
-sidebar_label: For Linux
+sidebar_label: Compilation
 ---
 
 ## Compiling the project

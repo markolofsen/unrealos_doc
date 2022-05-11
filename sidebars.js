@@ -52,6 +52,10 @@ module.exports = {
       'metaportal/description',
       'metaportal/commands',
     ],
+    'MetaPlugin': [
+      'metaplugin/description',
+      'metaplugin/compilation',
+    ],
     'Customization': [
       {
         type: "category",
@@ -73,15 +77,6 @@ module.exports = {
         ]
       },
       'custom/mui/helper',
-    ],
-    'Uneal Engine': [
-      {
-        type: 'category',
-        label: 'Preparation',
-        items: [
-          'unreal-engine/preparation/linux',
-        ],
-      },
     ],
     'Cloud Streaming': [
       'streaming/desc',
