@@ -33,3 +33,25 @@ Upload the ZIP archive to Google Drive and give us a public link like this:
 `https://drive.google.com/file/d/1a-mavgG199Sqq0C0oKalgZwT0sI_E/view?usp=sharing`
 
 ### Profit!
+
+---
+
+## Steps:
+
+### Step 1
+![Compilation Unreal Engine for Pixel Streaming ](/assets/compiling_steps/1.png)
+
+### Step 2
+![Compilation Unreal Engine for Pixel Streaming ](/assets/compiling_steps/2.png)
+
+### Step 3
+![Compilation Unreal Engine for Pixel Streaming ](/assets/compiling_steps/3.png)
+
+### Step 4
+![Compilation Unreal Engine for Pixel Streaming ](/assets/compiling_steps/4.png)
+
+### Step 5
+![Compilation Unreal Engine for Pixel Streaming ](/assets/compiling_steps/5.png)
+
+### Step 6
+![Compilation Unreal Engine for Pixel Streaming ](/assets/compiling_steps/6.png)
