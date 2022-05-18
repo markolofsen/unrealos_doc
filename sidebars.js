@@ -11,16 +11,8 @@ module.exports = {
   someSidebar: {
     'MetaEditor': [
       'description',
-      'metaeditor/installation',
-      {
-        type: "category",
-        label: "Settings",
-        items: [
-          'metaeditor/settings/config',
-          'metaeditor/settings/deployment',
-          'metaeditor/settings/upgrade',
-        ]
-      },
+      'pixel-streaming/settings',
+      'pixel-streaming/demo',
       {
         type: "category",
         label: "Methods",
@@ -38,15 +30,6 @@ module.exports = {
           'metaeditor/devpanel/commands',
         ]
       },
-      {
-        type: "category",
-        label: "PixelStreaming",
-        items: [
-          'pixel-streaming/demo',
-          'pixel-streaming/settings',
-          'pixel-streaming/samples',
-        ]
-      },
     ],
     'MetaPortal': [
       'metaportal/description',
@@ -56,28 +39,28 @@ module.exports = {
       'metaplugin/description',
       'metaplugin/compilation',
     ],
-    'Customization': [
-      {
-        type: "category",
-        label: "Metalib",
-        items: [
-          'custom/metalib/installation',
-          'custom/metalib/hooks',
-          'custom/metalib/styles',
-          'custom/metalib/funcs',
-          'custom/metalib/helpers',
-          'custom/metalib/libs',
-          {
-            type: "category",
-            label: "Components",
-            items: [
-              'custom/metalib/components/formik',
-            ]
-          },
-        ]
-      },
-      'custom/mui/helper',
-    ],
+    // 'Customization': [
+    //   {
+    //     type: "category",
+    //     label: "Metalib",
+    //     items: [
+    //       'custom/metalib/installation',
+    //       'custom/metalib/hooks',
+    //       'custom/metalib/styles',
+    //       'custom/metalib/funcs',
+    //       'custom/metalib/helpers',
+    //       'custom/metalib/libs',
+    //       {
+    //         type: "category",
+    //         label: "Components",
+    //         items: [
+    //           'custom/metalib/components/formik',
+    //         ]
+    //       },
+    //     ]
+    //   },
+    //   'custom/mui/helper',
+    // ],
     'Cloud Streaming': [
       'streaming/desc',
       'streaming/spec',

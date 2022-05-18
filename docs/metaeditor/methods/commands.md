@@ -11,41 +11,8 @@ This page shows an example of sending a command from MetaEditor to Unreal Engine
 
 ## emitAsync()
 
-```javascript
-// context
-import { usePlayer } from 'metaeditor/context/'
-
-// material
-import Button from '@mui/material/Button';
-
-function Demo() {
-  const player = usePlayer()
-
-  const handleCommand = async (event) => {
-
-    await player.cls.emitAsync({
-      command: 'my_command_1',
-      request: {
-        // The request body should only contain a json object.
-        body: { rotate: true },
-      },
-
-      // If the callback emulation option is enabled, then the contents of fakeResponse will be returned as response.body
-      fakeResponse: undefined,
-    }).then(res => {
-      console.log(res)
-    })
-
-  }
-
-  return (
-    <MetaEditor {...props}>
-      <Button onClick={handleCommand}>
-        Send command to Unreal Engine
-      </Button>
-    </MetaEditor>
-  )
-}
+```typescript
+// soon
 ```
 
 ## metaEmitAsync()
@@ -54,45 +21,21 @@ function Demo() {
 
 > Added commands in MetaPortal can be called through special uuid-shortcuts. This greatly simplifies the development and updating of commands.
 
-```javascript
-// context
-import { useSystem } from 'metaeditor/context/'
-
-// material
-import Button from '@mui/material/Button';
-
-function PortalCommands() {
-  const system = useSystem()
-
-  const handleEmit = async (uuid) => event => {
-    return await system.clsApi.metaEmitAsync(uuid)
-  }
-
-  return (
-    <Button onClick={handleEmit('2cd6dd')}>
-      Send command
-    </Button>
-  )
-}
+```typescript
+// soon
 ```
 
 :::warning
 
-Demo function must be a child of the MetaEditor component.
+Your component should be wrapper in `<ContextProvider />`
 
-```javascript
-export default function App(props) {
-    return (
-      <MetaEditor {...props}>
-        <Demo />
-      </MetaEditor>
-    )
-}
+```typescript
+// soon
 ```
 
 :::
 
-## Parameters
+## Command Body
 
 | Keys              | Format   | Default value | Description                                                                                                                                                                                                                              |
 | ----------------- | -------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

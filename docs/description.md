@@ -38,16 +38,6 @@ When developing the MetaEditor, we created a universal architecture that makes i
 
 We have created and adapted a set of the ReactJS’s components to solve basic tasks of your web application (taking into account the features of streaming video)
 
-The MetaEditor Features
-
-* the React.js
-
-* the PixelStreaming
-
-* the Material (MUI)
-
-* the Next.js
-
 ## Unreal Engine Plugin
 
 Optionally, we developed a plugin for the Unreal Engine 5, which helps your web application to interact with a project on the Unreal Engine.
@@ -66,7 +56,6 @@ When developing a web application for the Unreal Engine, it is important to have
 - State tree. Shows the current state of your WebRTC streaming.
 - Emergency reboot. Allows you to restart the streaming server in case of any error (suitable for cloud streaming).
 - Advanced logging system. The MetaEditor decomposes system messages from a WebRTC connection and displays them in the developer's interface.
-- [Sentry](https://sentry.io) to track errors on the side of the client session
 
 Optionally, we have developed a plugin for the Unreal Engine 5, which helps your web application to interact with a project on the Unreal Engine.
 
