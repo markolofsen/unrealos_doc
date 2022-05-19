@@ -6,8 +6,6 @@ sidebar_label: Module update
 
 :::info
 To get the latest version, remove the old module and install the current one.
-
-Open [npmjs.com](https://www.npmjs.com/package/pixel-streaming)
 :::
 
 ```shell

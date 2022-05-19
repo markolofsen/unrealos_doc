@@ -10,8 +10,11 @@ slug: /
 ![img](/assets/preview.png)
 
 
+## Intro
 
-### The MetaEditor is a professional web application for developing solutions based on the ReactJS and the PixelStreaming.
+:::note MetaEditor
+The MetaEditor is a professional web application for developing solutions based on the ReactJS and the PixelStreaming.
+:::
 
 The standard implementation of the PixelStreaming significantly complicates developing your own reactive web applications for the Unreal Engine. Initially, the PixelStreaming was a no-architecture javascript solution for interacting, which has reactive web frameworks. Adapting the standard ReactJS for the PixelStreaming is a very long and laborious process, which significantly increases development time, because there are many technical problems to solve. It is related to the peculiarities of browsers, devices, and reactive technologies (like the ReactJS)
 

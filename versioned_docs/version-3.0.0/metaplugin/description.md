@@ -15,6 +15,6 @@ Documentation in progress
 
 - **Audi configurator**
   
-  - [Real-time demonstration](https://ps.metaeditor.io/player/lumen?view=1)
+  - [Real-time demonstration](https://ps.metaeditor.io/player/lumen)
   
   - [Download a ready-made project for Unreal Engine](https://metapublic.s3.amazonaws.com/CarConfigurator.zip)

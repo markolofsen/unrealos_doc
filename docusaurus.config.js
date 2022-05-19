@@ -222,7 +222,7 @@ module.exports = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: '2.0.0',
+              label: '3.0.0',
               // path: '0.1.3',
               // banner: 'none' | 'unreleased' | 'unmaintained'; // the banner to show at the top of a doc of that version
               badge: true,
