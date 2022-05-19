@@ -1,0 +1,39 @@
+{
+  "someSidebar": {
+    "MetaEditor": [
+      "description",
+      "pixel-streaming/settings",
+      "pixel-streaming/demo",
+      {
+        "type": "category",
+        "label": "Methods",
+        "items": [
+          "metaeditor/methods/commands",
+          "metaeditor/methods/callbacks"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "DevPanel",
+        "items": [
+          "metaeditor/devpanel/localhost",
+          "metaeditor/devpanel/hotkeys",
+          "metaeditor/devpanel/commands"
+        ]
+      }
+    ],
+    "MetaPortal": [
+      "metaportal/description",
+      "metaportal/commands"
+    ],
+    "MetaPlugin": [
+      "metaplugin/description",
+      "metaplugin/compilation"
+    ],
+    "Cloud Streaming": [
+      "streaming/desc",
+      "streaming/spec",
+      "streaming/faq"
+    ]
+  }
+}

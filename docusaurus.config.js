@@ -222,11 +222,14 @@ module.exports = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: '1.1.0',
+              label: '2.0.0',
               // path: '0.1.3',
               // banner: 'none' | 'unreleased' | 'unmaintained'; // the banner to show at the top of a doc of that version
-              // badge: true,
+              badge: true,
             },
+            '1.1.0': {
+              label: '1.1.0',
+            }
             // '1.0.0': {
             //     label: 'Android SDK v1.0.0',
             //     path: 'android-1.0.0',
@@ -234,7 +237,7 @@ module.exports = {
             // },
           },
           // onlyIncludeVersions: ['current', '0.1.2'],
-          onlyIncludeVersions: ['current'],
+          onlyIncludeVersions: ['current', '1.1.0'],
         },
         blog: {
           showReadingTime: true,
