@@ -18,7 +18,7 @@ export default function Intro() {
   const { siteConfig = {} } = context;
 
   const demoUrl = 'https://ps.metaeditor.io/'
-  const installUrl = '/docs/pixel-streaming/settings'
+  const installUrl = '/docs/pixel-streaming/settings/installation'
 
   const logoUnreal = useBaseUrl('assets/home/logo_ue.svg');
   const videoUrl = useBaseUrl('assets/home/preview.mp4');

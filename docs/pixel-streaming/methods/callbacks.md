@@ -1,33 +1,22 @@
 ---
-title: Callbacks
+title: Pixel Streaming Callbacks
 sidebar_label: Callbacks
-
 ---
 
 :::info
-
 This page shows how to get a callback from Unreal Engine with MetaEditor.
 
+Your Application should be wrapped in [ContextProvider](../settings/context_provider.md)
 :::
 
 ## Get command & callback event
 
-```typescript
+```tsx title="src/Callbacks.tsx"
 // soon
 ```
 
 ## Get async callback
 
-```typescript
+```tsx title="src/Callbacks.tsx"
 // soon
 ```
-
-:::warning
-
-Your component should be wrapper in `<ContextProvider />`
-
-```typ
-// soon
-```
-
-:::

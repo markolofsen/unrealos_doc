@@ -1,11 +1,11 @@
 ---
-title: Pixel Streaming settings
-sidebar_label: Settings
+title: Pixel Streaming Installation
+sidebar_label: Installation
 ---
 
 # PixelStreaming settings
 
-[Official Guide for Pixel Streaming](https://docs.unrealengine.com/5.0/en-US/hosting-and-networking-guide-for-pixel-streaming-in-unreal-engine/
+[Official Guide for Pixel Streaming](https://docs.unrealengine.com/5.0/en-US/hosting-and-networking-guide-for-pixel-streaming-in-unreal-engine/)
 
 ## Installation
 
@@ -15,9 +15,9 @@ npm install rsuite pixel-streaming
 yarn add rsuite pixel-streaming
 ```
 
-## Usage
+## Settings
 
-```typescript
+```tsx title="src/Player.tsx"
 import React from 'react'
 
 // libs

@@ -11,23 +11,31 @@ module.exports = {
   someSidebar: {
     'MetaEditor': [
       'description',
-      'pixel-streaming/settings',
       'pixel-streaming/demo',
+      {
+        type: "category",
+        label: "Settings",
+        items: [
+          'pixel-streaming/settings/installation',
+          'pixel-streaming/settings/context_provider',
+          'pixel-streaming/settings/api',
+        ]
+      },
       {
         type: "category",
         label: "Methods",
         items: [
-          'metaeditor/methods/commands',
-          'metaeditor/methods/callbacks',
+          'pixel-streaming/methods/commands',
+          'pixel-streaming/methods/commands_portal',
+          'pixel-streaming/methods/callbacks',
         ]
       },
       {
         type: "category",
         label: "DevPanel",
         items: [
-          'metaeditor/devpanel/localhost',
-          'metaeditor/devpanel/hotkeys',
-          'metaeditor/devpanel/commands',
+          'pixel-streaming/devpanel/localhost',
+          'pixel-streaming/devpanel/hotkeys',
         ]
       },
     ],
