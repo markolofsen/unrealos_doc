@@ -11,10 +11,9 @@ Added commands in MetaPortal can be called through special uuid-shortcuts. This 
 
 
 :::note How to find the uuid shortcut?
-1. In the list of commands in the developer panel, click on the subtitle
-   (example `camera_zoom #2c2453`)
+1. In the list of commands in the developer panel, click on copy button
 
-2. The copied label can be invoked via `emitUuidAsync()`
+2. The copied `uuid` can be invoked via `emitUuidAsync()`
 :::
 
 :::warning
@@ -71,7 +70,7 @@ export const CommandsUuid: React.FC<any> = () => {
 
 
 
-## Commands Body
+## Request Scheme
 
 | Keys              | Format   | Default value | Description                                                                                                                                                                                                                              |
 | ----------------- | -------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

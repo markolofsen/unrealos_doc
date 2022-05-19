@@ -13,18 +13,20 @@ import variables from '@site/variables.js';
 
 <ul>
   <li>
-    <a href="/feature-requests/">
-      Feature Requests
-    </a>
+    Ask your question in <a href={variables.contacts.discordUrl}>Discord App</a>
   </li>
   <li>
     Ask your question on <a href={variables.contacts.stackoverflowUrl}>StackOverflow</a>
   </li>
   <li>
-    Github <a href={variables.repo.issues}>Issues</a>
+    <a href="https://github.com/markolofsen/metaeditor/discussions">
+      Github Discussions
+    </a>
   </li>
   <li>
-    Ask your question in <a href={variables.contacts.discordUrl}>Discord App</a>
+    <a href={variables.repo.issues}>
+      Github Issues
+    </a>
   </li>
 </ul>
 
