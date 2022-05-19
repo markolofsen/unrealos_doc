@@ -19,6 +19,7 @@ module.exports = {
           'pixel-streaming/settings/installation',
           'pixel-streaming/settings/context_provider',
           'pixel-streaming/settings/api',
+          'pixel-streaming/settings/update',
         ]
       },
       {
