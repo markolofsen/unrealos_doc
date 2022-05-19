@@ -5,7 +5,7 @@ sidebar_label: Settings
 
 # PixelStreaming settings
 
-> [Hosting and Networking Guide for Pixel Streaming in Unreal Engine](https://docs.unrealengine.com/5.0/en-US/hosting-and-networking-guide-for-pixel-streaming-in-unreal-engine/
+[Official Guide for Pixel Streaming](https://docs.unrealengine.com/5.0/en-US/hosting-and-networking-guide-for-pixel-streaming-in-unreal-engine/
 
 ## Installation
 
