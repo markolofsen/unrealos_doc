@@ -1,0 +1,54 @@
+{
+  "someSidebar": {
+    "Guide": [
+      "guide/description",
+      "guide/instructions",
+      "guide/demo"
+    ],
+    "MetaEditor": [
+      "metaeditor/installation",
+      {
+        "type": "category",
+        "label": "Settings",
+        "items": [
+          "metaeditor/settings/context_provider",
+          "metaeditor/settings/api",
+          "metaeditor/settings/update"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Methods",
+        "items": [
+          "metaeditor/methods/commands",
+          "metaeditor/methods/commands_portal",
+          "metaeditor/methods/callbacks"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "DevPanel",
+        "items": [
+          "metaeditor/devpanel/localhost",
+          "metaeditor/devpanel/hotkeys"
+        ]
+      }
+    ],
+    "MetaPortal": [
+      "metaportal/description",
+      "metaportal/commands"
+    ],
+    "MetaPlugin": [
+      "metaplugin/description",
+      "metaplugin/compilation"
+    ],
+    "MetaClient": [
+      "metaclient/description"
+    ],
+    "MetaCloud": [
+      "metacloud/description",
+      "metacloud/spec",
+      "metacloud/faq"
+    ]
+  }
+}

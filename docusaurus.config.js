@@ -221,14 +221,22 @@ module.exports = {
           docItemComponent: '@theme/DocItem',
           lastVersion: 'current',
           versions: {
+
+            // yarn run docusaurus docs:version 1.1.0
+
             current: {
-              label: '3.0.0',
-              // path: '0.1.3',
+              label: 'v3.2',
+              // path: '3.2.0',
               // banner: 'none' | 'unreleased' | 'unmaintained'; // the banner to show at the top of a doc of that version
               badge: true,
             },
+            '3.0.0': {
+              label: 'v3.0',
+              path: '3.0.0',
+            },
             '1.1.0': {
-              label: '1.1.0',
+              label: 'v1.1',
+              path: '1.1.0',
             }
             // '1.0.0': {
             //     label: 'Android SDK v1.0.0',
@@ -237,7 +245,7 @@ module.exports = {
             // },
           },
           // onlyIncludeVersions: ['current', '0.1.2'],
-          onlyIncludeVersions: ['current', '1.1.0'],
+          onlyIncludeVersions: ['current', '3.0.0', '1.1.0'],
         },
         blog: {
           showReadingTime: true,
