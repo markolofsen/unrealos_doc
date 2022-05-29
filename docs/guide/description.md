@@ -1,11 +1,9 @@
 ---
 id: description
-title: Description
+title: React.js Pixel Streaming for Unreal Engine
 sidebar_label: Description
 slug: /
 ---
-
-# PixelStreaming for ReactJS
 
 ![img](/assets/preview.png)
 

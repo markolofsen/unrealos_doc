@@ -24,8 +24,8 @@ export default function Intro() {
 
   const renderList = () => {
     const list = [
-      ['/docs/pixel-streaming/settings/installation', 'ReactJS framework', 'A library of components for quickly connecting a web interface with Unreal Engine'],
-      ['/docs/streaming/desc', 'Unreal Engine Streaming', "Autoscaling servers for distributing streaming Unreal Engine graphics to users' browsers."],
+      ['/docs/metaeditor/installation', 'ReactJS framework', 'A library of components for quickly connecting a web interface with Unreal Engine'],
+      ['/docs/metacloud/description', 'Unreal Engine Streaming', "Autoscaling servers for distributing streaming Unreal Engine graphics to users' browsers."],
       ['/docs/metaplugin/description', 'Plugin for Unreal Engine', 'A free plugin for integrating MetaEditor with an Unreal Engine project via Pixel Streaming.'],
       ['/docs/metaportal/description', 'Developer Portal', 'In the MetaPortal, you can control the cost of streaming and configure created in Unreal Engine projects.'],
     ].map(([href, title, description]) => ({ href, title, description }))

@@ -25,7 +25,7 @@ import styles from './styles.module.css';
 // blocks
 import Landing from './landing/';
 
-import Description from '@site/docs/description.md'
+import Description from '@site/docs/guide/description.md'
 import Quotes from '@site/src/data/quotes';
 
 

@@ -15,7 +15,7 @@ sidebar_label: API
 ## How to connect project
 
 :::info
-Also, you can specify an API key in [settings](./installation#settings)
+Also, you can specify an API key in [settings](../installation#settings)
 :::
 
 1. Press `Ctrl+Z`

@@ -9,34 +9,37 @@
 
 module.exports = {
   someSidebar: {
+    'Guide': [
+      'guide/description',
+      'guide/instructions',
+      'guide/demo',
+    ],
     'MetaEditor': [
-      'description',
-      'pixel-streaming/demo',
+      'metaeditor/installation',
       {
         type: "category",
         label: "Settings",
         items: [
-          'pixel-streaming/settings/installation',
-          'pixel-streaming/settings/context_provider',
-          'pixel-streaming/settings/api',
-          'pixel-streaming/settings/update',
+          'metaeditor/settings/context_provider',
+          'metaeditor/settings/api',
+          'metaeditor/settings/update',
         ]
       },
       {
         type: "category",
         label: "Methods",
         items: [
-          'pixel-streaming/methods/commands',
-          'pixel-streaming/methods/commands_portal',
-          'pixel-streaming/methods/callbacks',
+          'metaeditor/methods/commands',
+          'metaeditor/methods/commands_portal',
+          'metaeditor/methods/callbacks',
         ]
       },
       {
         type: "category",
         label: "DevPanel",
         items: [
-          'pixel-streaming/devpanel/localhost',
-          'pixel-streaming/devpanel/hotkeys',
+          'metaeditor/devpanel/localhost',
+          'metaeditor/devpanel/hotkeys',
         ]
       },
     ],
@@ -48,6 +51,14 @@ module.exports = {
       'metaplugin/description',
       'metaplugin/compilation',
     ],
+    'MetaClient': [
+      'metaclient/description',
+    ],
+    'MetaCloud': [
+      'metacloud/description',
+      'metacloud/spec',
+      'metacloud/faq',
+    ]
     // 'Customization': [
     //   {
     //     type: "category",
@@ -70,10 +81,5 @@ module.exports = {
     //   },
     //   'custom/mui/helper',
     // ],
-    'Cloud Streaming': [
-      'streaming/desc',
-      'streaming/spec',
-      'streaming/faq',
-    ]
   },
 };

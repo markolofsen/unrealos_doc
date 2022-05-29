@@ -1,5 +1,5 @@
 ---
-title: Demo
+title: Pixel Streaming Demo
 sidebar_label: Demo
 ---
 

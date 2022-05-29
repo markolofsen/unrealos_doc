@@ -12,6 +12,6 @@ Open [npmjs.com](https://www.npmjs.com/package/pixel-streaming)
 
 ```shell
 cd your_project/
-rm -rf node_modules/pixel-streaming
-yarn install
+yarn remove pixel-streaming
+yarn add pixel-streaming
 ```
