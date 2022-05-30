@@ -9,6 +9,7 @@ module.exports = {
     url: `https://github.com/markolofsen/${namespace}`,
     git: `https://github.com/markolofsen/${namespace}.git`,
     issues: `https://github.com/markolofsen/${namespace}/issues`,
+    discussions: `https://github.com/markolofsen/${namespace}/discussions`,
   },
   company: {
     name: 'UnrealOS',
@@ -33,7 +34,7 @@ module.exports = {
   presets: {
     // editUrl: 'https://github.com/markolofsen/unrealos_doc/edit/main/',
   },
-  npmItems: ['pixel-streaming', 'unreal-pixel-streaming'].map(slug => ({
+  npmItems: ['pixel-streaming', 'pixel-streaming-server'].map(slug => ({
     label: slug,
     href: 'https://www.npmjs.com/package/' + slug,
   })),

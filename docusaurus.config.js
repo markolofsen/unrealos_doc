@@ -171,8 +171,8 @@ module.exports = {
               href: variables.repo.issues,
             },
             {
-              label: 'Feature Requests',
-              href: '/feature-requests/',
+              label: 'Discussions',
+              href: variables.repo.discussions,
             },
             ...variables.npmItems,
           ],
