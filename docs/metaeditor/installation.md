@@ -95,6 +95,7 @@ const playerConfig: PlayerPropsSchema = {
       FPS: 60,
     },
     Console: {
+      mode: 'console', // 'command'
       cursor: false,
       hudSats: true,
     }
