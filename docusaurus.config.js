@@ -72,6 +72,11 @@ module.exports = {
           label: 'Docs',
         },
         {
+          position: 'left',
+          to: '/blog',
+          label: 'Blog',
+        },
+        {
           to: 'community',
           label: 'Community',
           position: 'left',
@@ -251,7 +256,10 @@ module.exports = {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl: variables.presets.editUrl,
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
         },
+
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
