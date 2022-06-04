@@ -1,6 +1,6 @@
 ---
-title: Cloud Streaming Platform
-sidebar_label: Description
+title: Unreal Engine Hosting
+sidebar_label: Hosting
 ---
 
 
@@ -17,7 +17,7 @@ sidebar_label: Description
 
 Scalable Pixel Streaming is an extensible and unopinionated framework for automatically orchestrating and scaling Unreal Engine 
 
-[Pixel Streaming](https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/PixelStreaming/) deployments in the cloud, with batteries on key cloud platforms. Seamlessly deploy, scale and update Pixel Streaming applications without hassle.
+[Pixel Streaming](https://docs.unrealengine.com/5.0/en-US/overview-of-pixel-streaming-in-unreal-engine/) deployments in the cloud, with batteries on key cloud platforms. Seamlessly deploy, scale and update Pixel Streaming applications without hassle.
 
 
 
@@ -39,7 +39,7 @@ Scalable Pixel Streaming is an extensible and unopinionated framework for automa
 
 > The extensible architecture makes it easy to customise and extend deployments. Deploy Linux containers on selected cloud platforms like: AWS, Google Clouds or Azure.
 
-### **Scalable, cost-efficient cloud streaming**
+### **Scalable, cost-efficient cloud streaming (Unreal Engine Hosting)**
 
 > Stream global interactive 3D experiences without incurring massive costs thanks to a publishing platform designed for efficiency.
 

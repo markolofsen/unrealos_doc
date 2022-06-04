@@ -20,9 +20,9 @@ Absolutely! We have integrated Pixel streaming with our platform so that creator
 
 Yes. But this would take a great deal of technical expertise, years and money. So, unless scalable cloud deployments of interactive 3D is your core business, it is not often in your best interest to do it yourself. A few additional things to consider: - If you try to build it yourself, Unreal does not provide you with any servers. You have to find a cloud platform. - Unity also has a WebRTC based streaming plugin like Unreal that was recently released, but it is in the same boat as Unreal right now - you are not provided with servers or a scalable platform. To deploy and run something at scale sometimes appears easy, but it’s not. It's a lot of work and ongoing management in order to scale, realize cost-efficiencies and ensure optimal performance.
 
-### Why should I choose MetaEditor for interactive 3D cloud streaming?
+### Why should I choose MetaEditor for interactive 3D cloud streaming (Unreal Engine Hosting)?
 
-We offer a fully-managed 3D cloud streaming solution for publishing and distributing Unreal Engine or Unity game projects at scale for a variety of business use-cases, and make real-time 3D experiences accessible from a web browser on any connected device and screen size while keeping source data secure. MetaEditor eliminates any need for technical understandings or detail. We can support multiple users per server/box (vs. going directly to AWS who only support one user per app stream). We utilize the latest technology such as real-time ray tracing, and the new Nvidia Tesla T4 graphics. We are constantly innovating and staying one step ahead of the latest cloud gaming technologies.
+We offer a fully-managed 3D cloud streaming (Unreal Engine Hosting) solution for publishing and distributing Unreal Engine or Unity game projects at scale for a variety of business use-cases, and make real-time 3D experiences accessible from a web browser on any connected device and screen size while keeping source data secure. MetaEditor eliminates any need for technical understandings or detail. We can support multiple users per server/box (vs. going directly to AWS who only support one user per app stream). We utilize the latest technology such as real-time ray tracing, and the new Nvidia Tesla T4 graphics. We are constantly innovating and staying one step ahead of the latest cloud gaming technologies.
 
 ### What's the difference between publishing 3D applications via MetaEditor vs WebGL
 
@@ -38,9 +38,9 @@ AWS was the first cloud solution with high-end GPUs to support game projects cre
 
 ### What do you mean when you say “MetaEditor platform” ?
 
-This refers to the infrastructure that exists in the cloud and manages and scales your projects. Built with AWS, it includes the configuration, security, management, dynamic scaling of servers, etc. There are several layers to the cloud streaming solution we offer, and the MetaEditor platform refers to all the services that are running.
+This refers to the infrastructure that exists in the cloud and manages and scales your projects. Built with AWS, it includes the configuration, security, management, dynamic scaling of servers, etc. There are several layers to the cloud streaming (Unreal Engine Hosting) solution we offer, and the MetaEditor platform refers to all the services that are running.
 
-### How do you price your interactive 3D cloud streaming solution?
+### How do you price your interactive 3D cloud streaming (Unreal Engine Hosting) solution?
 
 We offer a bespoke pricing model. Our pricing largely depends on the specific use case. We offer both a high volume and low volume usage model. Generally, we charge an initial project fee and then develop a pricing plan based on the number of concurrent users and whether you require servers running 24/7 hours, regular or extended business hours or customized hours. We take into consideration the project file size as this informs us whether we can fit more than one project on one server. At the moment, with Unity projects we can only fit one project per server vs. Unreal projects, where we can fit more than one depending on file size. Generally there is a pilot phase (1-3 months), which then rolls into an ongoing production phase.
 
@@ -68,7 +68,7 @@ Multiple projects can be hosted on the same server, so long as the sum of the pr
 
 The MetaEditor platform will automatically scale your application to match demand. It creates new instances on demand. We do it in a way that doesn’t compromise user experience.
 
-### How does MetaEditor cloud streaming scale “instantly”?
+### How does MetaEditor cloud streaming (Unreal Engine Hosting) scale “instantly”?
 
 Simply put, if server capacity is under capacity vs number of requests, it will feel instant. If server capacity is over, then it will “spin” until the request is fulfilled.
 
