@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[3374],{4944:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/metaplugin","name":"metaplugin","count":1,"permalink":"/blog/tags/metaplugin"}')}}]);

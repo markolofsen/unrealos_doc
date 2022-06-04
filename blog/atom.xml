@@ -2,11 +2,166 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://metaeditor.io/blog</id>
     <title>React.js Pixel Streaming for Unreal Engine Blog</title>
-    <updated>2022-03-05T00:00:00.000Z</updated>
+    <updated>2022-06-04T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://metaeditor.io/blog"/>
     <subtitle>React.js Pixel Streaming for Unreal Engine Blog</subtitle>
     <icon>https://metaeditor.io/img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[web3.js]]></title>
+        <id>/2022/06/04/web3js</id>
+        <link href="https://metaeditor.io/blog/2022/06/04/web3js"/>
+        <updated>2022-06-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[MetaEditor.io demonstrates how to integrate web3.js into Unreal Engine web application.]]></summary>
+        <content type="html"><![CDATA[<p>MetaEditor.io demonstrates how to integrate web3.js into Unreal Engine web application.</p><p>With MetaEditor you can use cryptocurrency inside the game space.</p><p><a href="https://ps.metaeditor.io/" target="_blank" rel="noopener noreferrer">https://ps.metaeditor.io/</a></p>]]></content>
+        <author>
+            <name>Mark Effect</name>
+            <uri>https://github.com/markolofsen</uri>
+        </author>
+        <category label="unreal engine" term="unreal engine"/>
+        <category label="pixel streaming" term="pixel streaming"/>
+        <category label="web3js" term="web3js"/>
+        <category label="metamask" term="metamask"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gallery]]></title>
+        <id>/2022/06/03/gallery</id>
+        <link href="https://metaeditor.io/blog/2022/06/03/gallery"/>
+        <updated>2022-06-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Published real-time gallery with projects built on Unreal Engine.]]></summary>
+        <content type="html"><![CDATA[<p>Published real-time gallery with projects built on Unreal Engine.</p><p><a href="https://ps.metaeditor.io/gallery" target="_blank" rel="noopener noreferrer">https://ps.metaeditor.io/gallery</a></p>]]></content>
+        <author>
+            <name>Mark Effect</name>
+            <uri>https://github.com/markolofsen</uri>
+        </author>
+        <category label="unreal engine" term="unreal engine"/>
+        <category label="pixel streaming" term="pixel streaming"/>
+        <category label="demo" term="demo"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[New demos]]></title>
+        <id>/2022/06/01/demo</id>
+        <link href="https://metaeditor.io/blog/2022/06/01/demo"/>
+        <updated>2022-06-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We have added a new example that perfectly demonstrates the capabilities of Unreal Engine]]></summary>
+        <content type="html"><![CDATA[<p>We have added a new example that perfectly demonstrates the capabilities of Unreal Engine</p><p><a href="https://ps.metaeditor.io/" target="_blank" rel="noopener noreferrer">https://ps.metaeditor.io/</a></p>]]></content>
+        <author>
+            <name>Mark Effect</name>
+            <uri>https://github.com/markolofsen</uri>
+        </author>
+        <category label="unreal engine" term="unreal engine"/>
+        <category label="pixel streaming" term="pixel streaming"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MetaClient]]></title>
+        <id>/2022/05/18/metaclient</id>
+        <link href="https://metaeditor.io/blog/2022/05/18/metaclient"/>
+        <updated>2022-05-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Introducing MetaClient, a tool to run the Pixel Streaming server of Unreal Engine on your local machine]]></summary>
+        <content type="html"><![CDATA[<p>Introducing MetaClient, a tool to run the Pixel Streaming server of Unreal Engine on your local machine</p><p><a href="/docs/metaclient/description">Signalling Server for Pixel Streaming</a></p>]]></content>
+        <author>
+            <name>Mark Effect</name>
+            <uri>https://github.com/markolofsen</uri>
+        </author>
+        <category label="unreal engine" term="unreal engine"/>
+        <category label="pixel streaming" term="pixel streaming"/>
+        <category label="metaclient" term="metaclient"/>
+        <category label="server" term="server"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MetaEditor v.2]]></title>
+        <id>/2022/05/18/release</id>
+        <link href="https://metaeditor.io/blog/2022/05/18/release"/>
+        <updated>2022-05-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We have released a new version of MetaEditor. Abandoned MUI and Nextjs, leaving only the essentials. Not in production yet, but stable.]]></summary>
+        <content type="html"><![CDATA[<p>We have released a new version of MetaEditor. Abandoned MUI and Nextjs, leaving only the essentials. Not in production yet, but stable.</p><p><a href="https://github.com/markolofsen/metaeditor/tree/dev-v2" target="_blank" rel="noopener noreferrer">https://github.com/markolofsen/metaeditor/tree/dev-v2</a></p>]]></content>
+        <author>
+            <name>Mark Effect</name>
+            <uri>https://github.com/markolofsen</uri>
+        </author>
+        <category label="metaeditor" term="metaeditor"/>
+        <category label="unreal engine" term="unreal engine"/>
+        <category label="pixel streaming" term="pixel streaming"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MetaPlugin Release]]></title>
+        <id>/2022/05/11/release</id>
+        <link href="https://metaeditor.io/blog/2022/05/11/release"/>
+        <updated>2022-05-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Great news!]]></summary>
+        <content type="html"><![CDATA[<p>Great news!</p><p>We have released a plugin for Unreal Engine to connect MetaEditor to your projects.</p><p><a href="https://github.com/markolofsen/metaplugin-pixel-streaming" target="_blank" rel="noopener noreferrer">https://github.com/markolofsen/metaplugin-pixel-streaming</a></p>]]></content>
+        <author>
+            <name>Mark Effect</name>
+            <uri>https://github.com/markolofsen</uri>
+        </author>
+        <category label="metaeditor" term="metaeditor"/>
+        <category label="unreal engine" term="unreal engine"/>
+        <category label="pixel streaming" term="pixel streaming"/>
+        <category label="metaplugin" term="metaplugin"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vacancy]]></title>
+        <id>/2022/05/05/vacancy</id>
+        <link href="https://metaeditor.io/blog/2022/05/05/vacancy"/>
+        <updated>2022-05-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We are looking for a cool seller.]]></summary>
+        <content type="html"><![CDATA[<p>We are looking for a cool seller.</p><p>MetaEditor.io — The web platform for the business metaverses.</p>]]></content>
+        <author>
+            <name>Mark Effect</name>
+            <uri>https://github.com/markolofsen</uri>
+        </author>
+        <category label="metaeditor" term="metaeditor"/>
+        <category label="unreal engine" term="unreal engine"/>
+        <category label="pixel streaming" term="pixel streaming"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Product Hunt]]></title>
+        <id>/2022/04/16/product_hunt</id>
+        <link href="https://metaeditor.io/blog/2022/04/16/product_hunt"/>
+        <updated>2022-04-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We have published the MetaEditor project on Product Hunt and we really need your support.]]></summary>
+        <content type="html"><![CDATA[<p>We have published the MetaEditor project on Product Hunt and we really need your support. </p><p>We remind you that MetaEditor is Unreal Engine app's in Browser.</p><p>If you have a minute — <a href="https://www.producthunt.com/products/metaeditor" target="_blank" rel="noopener noreferrer">vote for us or leave a comment</a>.</p>]]></content>
+        <author>
+            <name>Mark Effect</name>
+            <uri>https://github.com/markolofsen</uri>
+        </author>
+        <category label="metaeditor" term="metaeditor"/>
+        <category label="streaming" term="streaming"/>
+        <category label="unreal engine" term="unreal engine"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pixel Streaming Video]]></title>
+        <id>/2022/04/16/promo_video</id>
+        <link href="https://metaeditor.io/blog/2022/04/16/promo_video"/>
+        <updated>2022-04-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Open Source MetaEditor offers a complete set of tools for professional developing and running the Unreal Engine’s Applications in browsers.]]></summary>
+        <content type="html"><![CDATA[<p>The Open Source MetaEditor offers a complete set of tools for professional developing and running the <a href="/">Unreal Engine’s Applications</a> in browsers.</p><iframe width="100%" height="300" src="https://www.youtube.com/embed/LYqFQVFEQGM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content>
+        <author>
+            <name>Mark Effect</name>
+            <uri>https://github.com/markolofsen</uri>
+        </author>
+        <category label="metaeditor" term="metaeditor"/>
+        <category label="youtube" term="youtube"/>
+        <category label="unreal engine" term="unreal engine"/>
+        <category label="pixel streaming" term="pixel streaming"/>
+        <category label="metaverse" term="metaverse"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[We have launched a portal]]></title>
+        <id>/2022/04/14/portal</id>
+        <link href="https://metaeditor.io/blog/2022/04/14/portal"/>
+        <updated>2022-04-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We have launched a portal for managing Unreal Engine projects]]></summary>
+        <content type="html"><![CDATA[<p>We have launched a portal for managing Unreal Engine projects</p><p><a href="https://portal.metaeditor.io" target="_blank" rel="noopener noreferrer">portal.metaeditor.io</a></p>]]></content>
+        <author>
+            <name>Mark Effect</name>
+            <uri>https://github.com/markolofsen</uri>
+        </author>
+        <category label="metaeditor" term="metaeditor"/>
+        <category label="portal" term="portal"/>
+        <category label="unreal engine" term="unreal engine"/>
+        <category label="pixel streaming" term="pixel streaming"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Welcome!]]></title>
         <id>welcome</id>
@@ -18,8 +173,7 @@
             <name>Mark Effect</name>
             <uri>https://github.com/markolofsen</uri>
         </author>
-        <category label="hola" term="hola"/>
         <category label="metaeditor" term="metaeditor"/>
-        <category label="unrealos" term="unrealos"/>
+        <category label="unreal engine" term="unreal engine"/>
     </entry>
 </feed>

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[8861],{69510:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/metaverse","name":"metaverse","count":1,"permalink":"/blog/tags/metaverse"}')}}]);

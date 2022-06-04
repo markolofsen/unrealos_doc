@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[1441],{3397:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/metaclient","name":"metaclient","count":1,"permalink":"/blog/tags/metaclient"}')}}]);
